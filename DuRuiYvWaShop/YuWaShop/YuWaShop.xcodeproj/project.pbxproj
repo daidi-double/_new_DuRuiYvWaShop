@@ -2005,7 +2005,7 @@
 		B3ACF11A1DEF07380056FD64 /* YWHomeCouponHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponHeaderView.xib; sourceTree = "<group>"; };
 		B3BE795B1DF6E08B0027702C /* YWHttpBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWHttpBase.h; sourceTree = "<group>"; };
 		B3BE981E1DF9588200B82FB3 /* JWHttpManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWHttpManger.h; sourceTree = "<group>"; };
-		B3BE981F1DF9588200B82FB3 /* JWHttpManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWHttpManger.m; sourceTree = "<group>"; };
+		B3BE981F1DF9588200B82FB3 /* JWHttpManger.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = JWHttpManger.m; sourceTree = "<group>"; };
 		B3C12A471DED217F000EF099 /* VipxoxPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipxoxPrefixHeader.pch; sourceTree = "<group>"; };
 		B3C12A481DED217F000EF099 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
 		B3C12A491DED217F000EF099 /* GlobalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalInfo.h; sourceTree = "<group>"; };
@@ -5811,6 +5811,8 @@
 		C14BA3561DF93A9F001BDFBD /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				C14BA3631DF93A9F001BDFBD /* YWBusinessMemberViewController.h */,
+				C14BA3641DF93A9F001BDFBD /* YWBusinessMemberViewController.m */,
 				C14BA3571DF93A9F001BDFBD /* BusinessMoneyViewController.h */,
 				C14BA3581DF93A9F001BDFBD /* BusinessMoneyViewController.m */,
 				C14BA3591DF93A9F001BDFBD /* IntroduceMoneyViewController.h */,
@@ -5825,8 +5827,6 @@
 				C14BA3621DF93A9F001BDFBD /* SignUserViewController.m */,
 				C14BA3651DF93A9F001BDFBD /* YWShowGetMoneyViewController.h */,
 				C14BA3661DF93A9F001BDFBD /* YWShowGetMoneyViewController.m */,
-				C14BA3631DF93A9F001BDFBD /* YWBusinessMemberViewController.h */,
-				C14BA3641DF93A9F001BDFBD /* YWBusinessMemberViewController.m */,
 				AA6EBD7C1E9A3F32007336CF /* ExchangeViewController.h */,
 				AA6EBD7D1E9A3F32007336CF /* ExchangeViewController.m */,
 				AA6EBD7E1E9A3F32007336CF /* ExchangeViewController.xib */,

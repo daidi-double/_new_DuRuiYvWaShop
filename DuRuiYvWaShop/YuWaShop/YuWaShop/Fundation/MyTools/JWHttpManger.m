@@ -99,6 +99,7 @@
 
 - (void)postUpdatePohotoWithUrl:(NSString *)urlStr withParams:(NSDictionary *)params withPhoto:(NSData *)Photodata compliation:(resultBlock)newBlock{
     [self.HUD show:YES];
+    
     self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"multipart/form-data", @"application/json", @"text/html", @"image/jpeg", @"image/png", @"application/octet-stream", @"text/json", nil];
     
@@ -110,8 +111,16 @@
         
     } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         newBlock(responseObject,nil);
-        [self.HUD hide:YES];
+        [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+            _HUD.progress = (float)totalBytesWritten/totalBytesExpectedToWrite;
+           
+        }];
         
+        if (_HUD.progress == 1) {
+            
+            [self.HUD hide: YES];
+        }
+
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         newBlock(nil,error);
         [JRToast showWithText:@"连接超时,请检查网络" bottomOffset:70*kScreen_Width/320 duration:3.0f];
@@ -125,8 +134,9 @@
         _HUD=[MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].delegate.window animated:YES];
         _HUD.delegate=self;
         _HUD.userInteractionEnabled=NO;
-        //        _HUD.mode=MBProgressHUDModeCustomView;
+//        _HUD.mode=MBProgressHUDModeAnnularDeterminate;
         _HUD.dimBackground=NO;
+        _HUD.labelText = @"请稍等";
         _HUD.removeFromSuperViewOnHide = YES;
     }
     return _HUD;

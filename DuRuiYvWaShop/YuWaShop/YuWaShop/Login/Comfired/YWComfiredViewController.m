@@ -113,11 +113,11 @@
 
 - (void)makeUI{
     self.isAgree = YES;
-    CGFloat upImgBtnWidth = (kScreen_Width-90.f-10.f*3)/3;
-    [self.upImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
-    [self.upUserImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
-    [self.upUsersImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
-    [self.upUserOtherImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
+//    CGFloat upImgBtnWidth = (kScreen_Width-90.f-10.f*3)/3;
+//    [self.upImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
+//    [self.upUserImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
+//    [self.upUsersImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
+//    [self.upUserOtherImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
     self.submitBtn.layer.cornerRadius = 5.f;
     self.submitBtn.layer.masksToBounds = YES;
     
@@ -202,8 +202,12 @@
 }
 
 #pragma mark - Button Action
-- (IBAction)submitBtnAction:(id)sender {
-    [self requestComfired];
+- (IBAction)submitBtnAction:(UIButton*)sender {
+    if ([self isCanCommit]) {
+        
+        [self requestComfired];
+        sender.userInteractionEnabled = NO;
+    }
 }
 - (IBAction)upImageBtnAction:(UIButton *)sender {
     self.cameraStatus = 0;
@@ -376,9 +380,7 @@
     }else{
         camera = self.cameraUserOtherImage;
     }
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
-    });
+
     [[HttpObject manager]postPhotoWithType:YuWaType_IMG_UP withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);
         MyLog(@"Regieter Code is %@",responsObj);
@@ -399,50 +401,57 @@
             [self requestUpComfired];
             
         }
+        
+        
     } failur:^(id errorData, NSError *error) {
         MyLog(@"Regieter Code pragram is %@",pragram);
         MyLog(@"Regieter Code error is %@",error);
         [self.HUD hide:YES];
     } withPhoto:UIImagePNGRepresentation(camera)];
 }
-- (void)requestComfired{
+- (BOOL)isCanCommit{
     if ([self.idTextField.text isEqualToString:@""]) {
         [self showHUDWithStr:@"请输入授权码" withSuccess:NO];
-        return;
+        return NO;
     }else if ([self.nameTextField.text isEqualToString:@""]) {
         [self showHUDWithStr:@"请输入店铺名称" withSuccess:NO];
-        return;
+        return NO;;
     }else if ([self.addressTextField.text isEqualToString:@""]) {
         [self showHUDWithStr:@"请输入店铺地址" withSuccess:NO];
-        return;
+        return NO;;
     }else if (self.tagIDArr.count<=0) {
         [self showHUDWithStr:@"请选择所属分类" withSuccess:NO];
-        return;
+        return NO;;
     }else if ([self.addressLabel.text isEqualToString:@"店铺商区"]) {
         [self showHUDWithStr:@"请选择商区" withSuccess:NO];
-        return;
+        return NO;;
     }else if (self.tagIDArr.count<=0) {
         [self showHUDWithStr:@"请选择店铺分类" withSuccess:NO];
-        return;
+        return NO;;
     }else if (!self.cameraImage) {
         [self showHUDWithStr:@"请上传营业执照" withSuccess:NO];
-        return;
+        return NO;;
     }else if (!self.cameraUserImage) {
         [self showHUDWithStr:@"请上传身份证正面照" withSuccess:NO];
-        return;
+        return NO;;
     }else if (!self.cameraUsersImage) {
         [self showHUDWithStr:@"请上传身份证反面照" withSuccess:NO];
-        return;
+        return NO;;
     }else if (!self.isAgree){
         [self showHUDWithStr:@"请阅读协议并同意" withSuccess:NO];
-        return;
+        return NO;;
     }else if (!self.cameraUserOtherImage){
         [self showHUDWithStr:@"请上传相关行业许可证" withSuccess:NO];
-        return;
+        return NO;;
     }else if (self.isAgree !=1){
         [self showHUDWithStr:@"请同意协议" withSuccess:NO];
-        return;
+        return NO;;
+    }else{
+        return YES;
     }
+}
+- (void)requestComfired{
+
     
     [self.geocoder geocodeAddressString:self.addressTextField.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         CLPlacemark * pl = [placemarks firstObject];
@@ -453,7 +462,8 @@
             [self requestChangeIconWithType:1];
             [self requestChangeIconWithType:2];
             [self requestChangeIconWithType:3];
-            [JRToast showWithText:@"可能需要点时间,请稍等" duration:3];
+//            [JRToast showWithText:@"可能需要点时间,请稍等" duration:3];
+            
         }else{
             [self showHUDWithStr:@"地址有误,请重试" withSuccess:NO];
         }

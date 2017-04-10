@@ -73,6 +73,9 @@
     }else if (indexPath.row==3){
         titleLabel.text=@"消费者";
         detailLabel.text=self.model.user_name;
+        if (self.model.user_name.length >= 11) {
+            detailLabel.text = [NSString stringWithFormat:@"%@****",[self.model.user_name substringToIndex:self.model.user_name.length - 4]];
+        }
         
     }else if (indexPath.row==4){
         titleLabel.text=@"消费时间";
@@ -125,6 +128,9 @@
 
         UILabel*label4=[view viewWithTag:4];
         label4.text=self.model.user_name;
+        if (self.model.user_name.length >= 11) {
+            label4.text = [NSString stringWithFormat:@"%@****",[self.model.user_name substringToIndex:self.model.user_name.length - 4]];
+        }
 
         
         return view;

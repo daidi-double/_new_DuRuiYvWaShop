@@ -79,7 +79,7 @@
     
     CGFloat proporton = [str floatValue];
     
-    ProgressView * gressView = [[ProgressView alloc]initWithFrame:CGRectMake(0, 0, kScreen_Width/3, kScreen_Width/3) backColor:[UIColor whiteColor] color:[UIColor orangeColor] proportion:proporton];
+    ProgressView * gressView = [[ProgressView alloc]initWithFrame:CGRectMake(0, 0, kScreen_Width/3, kScreen_Width/3) backColor:[UIColor whiteColor] color:[UIColor whiteColor] proportion:proporton];
     
     gressView.center = view.center;
     //如果需要内容数据时使用

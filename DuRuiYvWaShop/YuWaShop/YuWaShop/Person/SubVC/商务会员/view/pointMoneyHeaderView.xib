@@ -38,10 +38,10 @@
                     <state key="normal" title="可兑换积分：100"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="圆环" translatesAutoresizingMaskIntoConstraints="NO" id="8jP-YB-lUh">
-                    <rect key="frame" x="137.5" y="100" width="100" height="100"/>
+                    <rect key="frame" x="127.5" y="90" width="120" height="120"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="ofH-dp-CPR"/>
-                        <constraint firstAttribute="width" constant="100" id="pnV-vz-ydj"/>
+                        <constraint firstAttribute="height" constant="120" id="ofH-dp-CPR"/>
+                        <constraint firstAttribute="width" constant="120" id="pnV-vz-ydj"/>
                     </constraints>
                 </imageView>
             </subviews>

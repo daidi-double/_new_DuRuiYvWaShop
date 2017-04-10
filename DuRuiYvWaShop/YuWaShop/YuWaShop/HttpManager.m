@@ -87,9 +87,10 @@
         [formData appendPartWithFileData:Photodata name:@"img" fileName:fileName mimeType:@"image/png"];
         
     } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
         newBlock(responseObject,nil);
         [self.HUD hide:YES];
-        
+
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         newBlock(nil,error);
         [JRToast showWithText:@"连接超时,请检查网络" bottomOffset:70*kScreen_Width/320 duration:3.0f];
@@ -106,8 +107,9 @@
         _HUD=[MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].delegate.window animated:YES];
         _HUD.delegate=self;
         _HUD.userInteractionEnabled=NO;
-//        _HUD.mode=MBProgressHUDModeCustomView;
         _HUD.dimBackground=NO;
+        _HUD.mode=MBProgressHUDModeAnnularDeterminate;
+      
         _HUD.removeFromSuperViewOnHide = YES;
         
         

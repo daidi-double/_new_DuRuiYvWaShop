@@ -74,7 +74,9 @@
     }else  if(indexPath.row == 3){
       cell.detailTextLabel.text = @"1%";
     }else if(indexPath.row == 0){
-        cell.detailTextLabel.text = @"2-3个工作日内到账";
+        cell.detailTextLabel.text = @"工商银行账户24小时内到账,其他银行48小时内到账";
+        cell.detailTextLabel.numberOfLines = 2;
+        cell.detailTextLabel.textAlignment = 0;
     }else{
         cell.textLabel.text = @"";
     }

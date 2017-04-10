@@ -132,7 +132,7 @@
                         <constraint firstItem="Tk1-h6-xAT" firstAttribute="leading" secondItem="0JL-Dj-XA2" secondAttribute="leading" constant="8" id="v26-4U-1jh"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2-3个工作日内到账" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHJ-F1-0gi">
+                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-2个工作日内到账" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHJ-F1-0gi">
                     <rect key="frame" x="40" y="289" width="295" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="vjt-6h-IXs"/>

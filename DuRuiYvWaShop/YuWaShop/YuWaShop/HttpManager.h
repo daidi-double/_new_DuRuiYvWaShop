@@ -27,5 +27,4 @@ typedef void(^resultBlock)(id data,NSError*error);
 -(void)postUpdatePohotoWithUrl:(NSString*)urlStr withParams:(NSDictionary*)params withPhoto:(NSData*)data compliation:(resultBlock)newBlock;
 
 
-
 @end
