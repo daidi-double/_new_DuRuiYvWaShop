@@ -27,7 +27,7 @@
 @property(nonatomic,strong)NSMutableArray*maMallDatas;
 @property(nonatomic,strong)NSString*total_money;       //总的钱
 @property(nonatomic,strong)NSString*total_settlement;   //总的待结算
-
+@property (nonatomic, strong) UIView *headerView;
 @property(nonatomic,assign)int pagen;
 @property(nonatomic,assign)int pages;
 
@@ -122,22 +122,22 @@
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (section==0) {
-        UIView*view=[[NSBundle mainBundle]loadNibNamed:@"IncomeDetailView" owner:nil options:nil].firstObject;
+
         
-        UILabel*label1=[view viewWithTag:1];
+        UILabel*label1=[self.headerView viewWithTag:1];
         label1.text=self.total_money;
         
-        UILabel*label3=[view viewWithTag:3];
+        UILabel*label3=[self.headerView viewWithTag:3];
         label3.text=self.total_settlement;
         
         
-        UILabel*label5=[view viewWithTag:5];
+        UILabel*label5=[self.headerView viewWithTag:5];
         label5.text=@"时间";
         
-        UILabel*label6=[view viewWithTag:6];
+        UILabel*label6=[self.headerView viewWithTag:6];
         label6.text=@"款项类型";
         
-        UILabel*label7=[view viewWithTag:7];
+        UILabel*label7=[self.headerView viewWithTag:7];
         if ([self.type isEqualToString:@"2"]) {
             label7.text=@"积分";
         }else{
@@ -146,7 +146,7 @@
         }
       
         
-        return view;
+        return self.headerView;
     }
     
     return nil;
@@ -263,7 +263,12 @@
         _tableView.delegate=self;
         _tableView.dataSource=self;
     }
-    return _tableView;
+    return  _tableView;
 }
-
+-(UIView *)headerView{
+    if (!_headerView) {
+           _headerView=[[NSBundle mainBundle]loadNibNamed:@"IncomeDetailView" owner:nil options:nil].firstObject;
+    }
+    return _headerView;
+}
 @end
