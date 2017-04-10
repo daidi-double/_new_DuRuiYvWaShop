@@ -49,6 +49,7 @@
 
 -(void)giveValueWithModel:(ShopdetailModel *)model{
     //默认的数据
+    
     UIImageView*imageView=[self viewWithTag:1];
     [imageView sd_setImageWithURL:[NSURL URLWithString:model.customer_img] placeholderImage:[UIImage imageNamed:@"placeholder"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
@@ -64,7 +65,7 @@
     //星星数量 -------------------------------------------------------
     CGFloat realZhengshu;
     CGFloat realXiaoshu;
-
+    
     NSString*starNmuber=model.score;
     NSString*zhengshu=[starNmuber substringToIndex:1];
     realZhengshu=[zhengshu floatValue];
@@ -97,29 +98,25 @@
         
         
     }
-
+    
     // --------------------------------------------------------
     
 #pragma  50 的地方
+    
     NSString*detailStr=model.customer_content;
-   MyLable *detailLabel=[self viewWithTag:112];
+    MyLable *detailLabel=[self viewWithTag:112];
     if (!detailLabel) {
-        MyLog(@"model.rep_list = %@",model.rep_list);
         detailLabel=[[MyLable alloc]initWithFrame:CGRectMake(65, 50, kScreen_Width-65-50, 0)];
         detailLabel.font=FONT_CN_24;
         detailLabel.numberOfLines=0;
         detailLabel.tag=112;
         [detailLabel setVerticalAlignment:VerticalAlignmentTop];
-       [self.contentView addSubview:detailLabel];
+        [self.contentView addSubview:detailLabel];
     }
     
-       detailLabel.text=detailStr;
+    detailLabel.text=detailStr;
     CGFloat strHeight=[detailLabel.text boundingRectWithSize:CGSizeMake(kScreen_Width-65-50, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:detailLabel.font} context:nil].size.height;
-//    if (strHeight < 16.8*4) {
-//        detailLabel.height = strHeight;
-//    }else{
-//        detailLabel.height = 16.8 * 4;
-//    }
+    
     detailLabel.height=strHeight;//1行高度为16.8
     
     
@@ -153,74 +150,41 @@
     //图片的底部
     NSUInteger VNumber=(imageArray.count-1)/3;
     CGFloat imageVHeight;
-
+    
     if (imageArray.count>0) {
         imageVHeight=Height+(Height+VJianJu)*VNumber+10;
     }else{
         imageVHeight=0;
     }
-    CGFloat realImageViewBottom=Top+imageVHeight;
-//    if (strHeight <= 16.8*4) {
-//        
-//        realImageViewBottom=Top+imageVHeight;     //图片底部的位置
-//    }else{
-//        
-//        realImageViewBottom = imageVHeight+Top/1.4;
-//        
-//    }
+    CGFloat realImageViewBottom=Top+imageVHeight;//图片底部
     
-//    
-//    if (detailLabel.height > 16.8*4 ) {
-//        static int a = 0;
-//        UIButton * allCommentBtn = nil;
-//        if (a == 0) {
-//        allCommentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        }
-//        allCommentBtn.frame = CGRectMake(65, realImageViewBottom - 20, 80, 20);
-////        [allCommentBtn setBackgroundColor:CNaviColor];
-//        [allCommentBtn setTitle:@"查看全部" forState:UIControlStateNormal];
-////        [allCommentBtn setTitle:@"收起内容" forState:UIControlStateSelected];
-//        [allCommentBtn setTitleColor:CNaviColor forState:UIControlStateNormal];
-//        [allCommentBtn setTitleColor:CNaviColor forState:UIControlStateSelected];
-//        allCommentBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-//        allCommentBtn.selected = NO;
-//        [allCommentBtn addTarget:self action:@selector(seeMore:) forControlEvents:UIControlEventTouchUpInside];
-//        
-//        [self.contentView addSubview:allCommentBtn];
-//            a ++ ;
-//       
-//    
-//    }
-
+    
     [self.lineView removeFromSuperview];
     [self.messageImageView removeFromSuperview];
     [self.sellerShowLabel removeFromSuperview];
     self.sellerShowLabel=nil;
     
-    
-    
-    
-    NSString*seller_content=model.seller_content;
-    if (seller_content==nil||[seller_content isEqualToString:@""]) {
+    if (model.rep_list.count == 0) {
         return;
     }
     
     self.lineView=[[UIView alloc]initWithFrame:CGRectMake(65, realImageViewBottom, kScreen_Width-65, 1)];
     self.lineView.backgroundColor=RGBCOLOR(226, 226, 226, 1);
     [self.contentView addSubview:self.lineView];
-
-    self.messageImageView=[[UIImageView alloc]initWithFrame:CGRectMake(65, self.lineView.bottom+2, 20, 20)];
-    self.messageImageView.image=[UIImage imageNamed:@"messageImage"];
-    [self.contentView addSubview:self.messageImageView];
     
     self.sellerShowLabel=[[MyLable alloc]initWithFrame:CGRectMake(65+20+10, self.lineView.bottom+2, kScreen_Width-65-30-20, 0)];
-    self.sellerShowLabel.text = seller_content;
+    
     self.sellerShowLabel.font = [UIFont systemFontOfSize:14];
     self.sellerShowLabel.numberOfLines=0;
-    CGFloat labelHeight=[seller_content boundingRectWithSize:CGSizeMake(kScreen_Width-65-30-20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+    
     MyLable * seller_contentLabel;
-    if (seller_contentLabel) {
-        [seller_contentLabel removeFromSuperview];
+    //    if (seller_contentLabel) {
+    [seller_contentLabel removeFromSuperview];
+    //    }
+    for (MyLable * viewLabel in self.contentView.subviews) {
+        if (viewLabel.tag > 1000) {
+            [viewLabel removeFromSuperview];
+        }
     }
     CGFloat repLabelHeight = 0.0;
     if (self.rep_contents.count != 0) {
@@ -242,15 +206,13 @@
     
     [self.allRep_contents addObject:self.rep_contents];
     [self.allRep_contents addObject:self.labelHeight];
-    
-    self.sellerShowLabel.height =labelHeight;
+    [self.messageImageView removeFromSuperview];
+    [seller_contentLabel removeFromSuperview];
     for (int i = 0; i < model.rep_list.count; i ++) {
-        self.messageImageView = [[UIImageView alloc]initWithFrame:CGRectMake(65, 60 + labelHeight + strHeight+ [_allRep_contents[1][i] floatValue]*i +5, 20, 20)];
-        seller_contentLabel = [[MyLable alloc]initWithFrame:CGRectMake(95, 60 + labelHeight + strHeight+ [_allRep_contents[1][i] floatValue]*i +5 , kScreen_Width - 65 -30 -20, [_allRep_contents[1][i] floatValue] +5)];
-//        if (i == 0) {
-//            self.messageImageView.y = 60 + labelHeight + strHeight+ 5;
-//            seller_contentLabel.y = 60 + labelHeight + strHeight + 5;
-//        }
+        self.messageImageView = [[UIImageView alloc]initWithFrame:CGRectMake(65, 60  + strHeight+ [_allRep_contents[1][i] floatValue]*i +5, 20, 20)];
+        self.messageImageView.tag = 1001+i;
+        seller_contentLabel = [[MyLable alloc]initWithFrame:CGRectMake(95, 60  + strHeight+ [_allRep_contents[1][i] floatValue]*i +5 , kScreen_Width - 65 -30 -20, [_allRep_contents[1][i] floatValue] +5)];
+        seller_contentLabel.tag = 2000 +i;
         self.messageImageView.image=[UIImage imageNamed:@"messageImage"];
         [self.contentView addSubview:self.messageImageView];
         seller_contentLabel.font = [UIFont systemFontOfSize:14];
@@ -262,29 +224,9 @@
     }
     
     [self.contentView addSubview:self.sellerShowLabel];
-
+    
 }
 
-//- (void)seeMore:(UIButton*)sender{
-//    sender.selected = !sender.selected;
-//    MyLable *detailLabel=[self viewWithTag:112];
-//    CGFloat strHeight=[detailLabel.text boundingRectWithSize:CGSizeMake(kScreen_Width-65-50, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:detailLabel.font} context:nil].size.height;
-//
-//    if (sender.selected == YES) {
-//        detailLabel.numberOfLines = 0;
-//        detailLabel.height = strHeight;
-//        sender.y = strHeight + 50;
-//        [sender setTitle:@"收起内容" forState:UIControlStateNormal];
-//
-//    }else{
-////        [self.cellDelegate changCellHeight:1];
-//        detailLabel.numberOfLines = 4;
-//         [sender setTitle:@"查看全部" forState:UIControlStateNormal];
-//    }
-//    [self.cellDelegate changCellHeight:0];
-//    
-//}
-//
 
 +(CGFloat)getCellHeight:(ShopdetailModel*)model{
     NSString*detailStr=model.customer_content;
@@ -311,7 +253,7 @@
     }
     
     
-    if (model.seller_content==nil||[model.seller_content isEqualToString:@""]) {
+    if (model.rep_list.count==0) {
         return imageBottom;
     }
     CGFloat repLabelHeight = 0.0;
@@ -331,19 +273,18 @@
     }
     
     //图片的底部
-    //    CGFloat labelHeight=[model.seller_content boundingRectWithSize:CGSizeMake(kScreen_Width-65-30 -20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
-    CGRect labelH = [model.seller_content boundingRectWithSize:CGSizeMake(kScreen_Width-65-30 -20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil];
     
-    //        return imageBottom +labelHeight +20;
-    //    MyLog(@"imageBottom + labelH.size.height + 10 = %f,%f,%f",imageBottom + labelH.size.height + 10,imageBottom,labelH.size.height);
+    //    CGRect labelH = [model.seller_content boundingRectWithSize:CGSizeMake(kScreen_Width-65-30 -20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil];
     
-    return imageBottom + labelH.size.height + 20 + labelHeight;
+    
+    return imageBottom  + 20 + labelHeight;
+    
     
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

@@ -33,10 +33,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-1P-TcA">
-                        <rect key="frame" x="340" y="25" width="15" height="15"/>
+                        <rect key="frame" x="340" y="25" width="10" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="zl5-8A-WZ6"/>
-                            <constraint firstAttribute="width" constant="15" id="ztg-GR-yVw"/>
+                            <constraint firstAttribute="width" constant="10" id="ztg-GR-yVw"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6EM-qX-BuS">
@@ -146,7 +146,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="JHg-1P-TcA" secondAttribute="trailing" constant="20" id="1WI-Ul-7cA"/>
+                    <constraint firstAttribute="trailing" secondItem="JHg-1P-TcA" secondAttribute="trailing" constant="25" id="1WI-Ul-7cA"/>
                     <constraint firstItem="0BH-em-lio" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4DI-Sx-i88"/>
                     <constraint firstItem="93B-2g-Fux" firstAttribute="width" secondItem="lXv-iZ-Fw3" secondAttribute="width" id="87N-wg-k5O"/>
                     <constraint firstAttribute="trailing" secondItem="6EM-qX-BuS" secondAttribute="trailing" id="Bmq-Aj-90k"/>

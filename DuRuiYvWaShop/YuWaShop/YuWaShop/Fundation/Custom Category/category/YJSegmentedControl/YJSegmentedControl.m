@@ -11,7 +11,7 @@
 @interface YJSegmentedControl ()<YJSegmentedControlDelegate>{
     CGFloat witdthFloat;
     UIView * buttonDownView;
-    NSInteger selectSeugment;
+    
 }
 @end
 
@@ -20,7 +20,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.btnTitleSource = [NSMutableArray array];
-        selectSeugment = 0;
+        _selectSeugment = 0;
     }
     return self;
 }
@@ -82,32 +82,32 @@
 
 -(void)selectTheSegument:(NSInteger)segument{
     
-    if (selectSeugment != segument) {
+    if (_selectSeugment != segument) {
         
-        [self.btnTitleSource[selectSeugment] setSelected:NO];
+        [self.btnTitleSource[_selectSeugment] setSelected:NO];
         [self.btnTitleSource[segument] setSelected:YES];
         
         [UIView animateWithDuration:0.2 animations:^{
             
             [buttonDownView setFrame:CGRectMake(segument * witdthFloat,self.bounds.size.height - 2, witdthFloat, 2)];
         }];
-        selectSeugment = segument;
-        [self.delegate segumentSelectionChange:selectSeugment];
+        _selectSeugment = segument;
+        [self.delegate segumentSelectionChange:_selectSeugment];
     }
 }
 
 -(void)segumentSelectionSelected:(NSInteger)segument{
-    if (selectSeugment != segument) {
-        [self.btnTitleSource[selectSeugment] setSelected:NO];
+    if (_selectSeugment != segument) {
+        [self.btnTitleSource[_selectSeugment] setSelected:NO];
         [self.btnTitleSource[segument] setSelected:YES];
         
         [UIView animateWithDuration:0.2 animations:^{
             
             [buttonDownView setFrame:CGRectMake(segument * witdthFloat,self.bounds.size.height - 2, witdthFloat, 2)];
         }];
-        selectSeugment = segument;
+        _selectSeugment = segument;
     }
-    [self.delegate segumentSelectionChange:selectSeugment];
+    [self.delegate segumentSelectionChange:_selectSeugment];
 }
 
 @end

@@ -26,10 +26,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="NJW-TY-IBI">
-                        <rect key="frame" x="350" y="14" width="15" height="15"/>
+                        <rect key="frame" x="350" y="14" width="10" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="NJW-TY-IBI" secondAttribute="height" multiplier="1:1" id="Arh-YO-jYI"/>
-                            <constraint firstAttribute="width" constant="15" id="VHj-Gx-eiZ"/>
+                            <constraint firstAttribute="width" secondItem="NJW-TY-IBI" secondAttribute="height" multiplier="1:1" constant="-5" id="Arh-YO-jYI"/>
+                            <constraint firstAttribute="width" constant="10" id="VHj-Gx-eiZ"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3l-6D-aWB">
@@ -42,7 +42,7 @@
                 <constraints>
                     <constraint firstItem="k3l-6D-aWB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6lp-Hf-31s"/>
                     <constraint firstItem="p99-TY-yyf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="O2K-Tk-mXl"/>
-                    <constraint firstAttribute="trailing" secondItem="NJW-TY-IBI" secondAttribute="trailing" constant="10" id="ZcM-IY-MDL"/>
+                    <constraint firstAttribute="trailing" secondItem="NJW-TY-IBI" secondAttribute="trailing" constant="15" id="ZcM-IY-MDL"/>
                     <constraint firstItem="NJW-TY-IBI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dDG-Qy-fev"/>
                     <constraint firstItem="p99-TY-yyf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tzk-N9-Y9i"/>
                     <constraint firstItem="NJW-TY-IBI" firstAttribute="leading" secondItem="k3l-6D-aWB" secondAttribute="trailing" constant="10" id="zGz-wl-VDv"/>

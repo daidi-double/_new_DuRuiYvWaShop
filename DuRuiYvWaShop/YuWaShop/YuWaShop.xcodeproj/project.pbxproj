@@ -50,6 +50,9 @@
 		AA3C41841E8DD9510052C732 /* PCDetailMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C41661E8DD9510052C732 /* PCDetailMoneyViewController.xib */; };
 		AA3C41851E8DD9510052C732 /* PCMoneyDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C41681E8DD9510052C732 /* PCMoneyDetailTableViewCell.m */; };
 		AA3C41861E8DD9510052C732 /* PCMoneyDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C41691E8DD9510052C732 /* PCMoneyDetailTableViewCell.xib */; };
+		AA6EBD7F1E9A3F32007336CF /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6EBD7D1E9A3F32007336CF /* ExchangeViewController.m */; };
+		AA6EBD801E9A3F32007336CF /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6EBD7E1E9A3F32007336CF /* ExchangeViewController.xib */; };
+		AA6EBD831E9A4470007336CF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6EBD821E9A4470007336CF /* ProgressView.m */; };
 		AACC80B61E8FE11A0023CA6D /* YWOderDetaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC80B41E8FE11A0023CA6D /* YWOderDetaleViewController.m */; };
 		AACC80B71E8FE11A0023CA6D /* YWOderDetaleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AACC80B51E8FE11A0023CA6D /* YWOderDetaleViewController.xib */; };
 		AACC80BB1E8FE40F0023CA6D /* OrderDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC80BA1E8FE40F0023CA6D /* OrderDetailModel.m */; };
@@ -894,6 +897,11 @@
 		AA3C41671E8DD9510052C732 /* PCMoneyDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCMoneyDetailTableViewCell.h; path = "废 钱包中详情/PCMoneyDetailTableViewCell.h"; sourceTree = "<group>"; };
 		AA3C41681E8DD9510052C732 /* PCMoneyDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCMoneyDetailTableViewCell.m; path = "废 钱包中详情/PCMoneyDetailTableViewCell.m"; sourceTree = "<group>"; };
 		AA3C41691E8DD9510052C732 /* PCMoneyDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PCMoneyDetailTableViewCell.xib; path = "废 钱包中详情/PCMoneyDetailTableViewCell.xib"; sourceTree = "<group>"; };
+		AA6EBD7C1E9A3F32007336CF /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		AA6EBD7D1E9A3F32007336CF /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		AA6EBD7E1E9A3F32007336CF /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
+		AA6EBD811E9A4470007336CF /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		AA6EBD821E9A4470007336CF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		AACC80B31E8FE11A0023CA6D /* YWOderDetaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWOderDetaleViewController.h; sourceTree = "<group>"; };
 		AACC80B41E8FE11A0023CA6D /* YWOderDetaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWOderDetaleViewController.m; sourceTree = "<group>"; };
 		AACC80B51E8FE11A0023CA6D /* YWOderDetaleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWOderDetaleViewController.xib; sourceTree = "<group>"; };
@@ -5819,6 +5827,9 @@
 				C14BA3661DF93A9F001BDFBD /* YWShowGetMoneyViewController.m */,
 				C14BA3631DF93A9F001BDFBD /* YWBusinessMemberViewController.h */,
 				C14BA3641DF93A9F001BDFBD /* YWBusinessMemberViewController.m */,
+				AA6EBD7C1E9A3F32007336CF /* ExchangeViewController.h */,
+				AA6EBD7D1E9A3F32007336CF /* ExchangeViewController.m */,
+				AA6EBD7E1E9A3F32007336CF /* ExchangeViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -5862,6 +5873,8 @@
 				C14BA3981DF93A9F001BDFBD /* pointMoneyHeaderView.h */,
 				C14BA3991DF93A9F001BDFBD /* pointMoneyHeaderView.m */,
 				C14BA39A1DF93A9F001BDFBD /* pointMoneyHeaderView.xib */,
+				AA6EBD811E9A4470007336CF /* ProgressView.h */,
+				AA6EBD821E9A4470007336CF /* ProgressView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -6317,6 +6330,7 @@
 				B3F07E611DE68C51005116EA /* YWBasicTableViewCell.xib in Resources */,
 				B31097101DE44EA00033A984 /* Assets.xcassets in Resources */,
 				B31098691DE4543E0033A984 /* YWDataAnalyseViewController.xib in Resources */,
+				AA6EBD801E9A3F32007336CF /* ExchangeViewController.xib in Resources */,
 				C14BA3AD1DF93A9F001BDFBD /* BusinessMumberHeaderView.xib in Resources */,
 				C17499621DF68F4500F17B77 /* CommentTableViewCell.xib in Resources */,
 				B317AFBD1DE5D3C90093C511 /* PersonHeaderBG31@2x.png in Resources */,
@@ -6816,6 +6830,7 @@
 				B35C9EED1DEC3FE80051E352 /* RBNodeDetailRecommendHeader.m in Sources */,
 				B3C12A5B1DED3312000EF099 /* YWUserShopAdminModel.m in Sources */,
 				B3334B911E14CB2800710A7D /* YWHomeRefundTableViewCell.m in Sources */,
+				AA6EBD831E9A4470007336CF /* ProgressView.m in Sources */,
 				B31098D21DE4543E0033A984 /* UIImage+WebP.m in Sources */,
 				C17499681DF68F9E00F17B77 /* ShopdetailModel.m in Sources */,
 				B32347141DEBD73C002C72E1 /* YWPCEOnTableViewCell.m in Sources */,
@@ -6885,6 +6900,7 @@
 				B35C9EDF1DEC3FE80051E352 /* RBNodeDCommentTableViewCell.m in Sources */,
 				B32737801DE82237001C57DF /* YWPersonNewsDetailModel.m in Sources */,
 				B35C9F3E1DEC3FE80051E352 /* TZImagePickerController.m in Sources */,
+				AA6EBD7F1E9A3F32007336CF /* ExchangeViewController.m in Sources */,
 				B35C9F301DEC3FE80051E352 /* JWTextView.m in Sources */,
 				B3ACF1141DEF06F70056FD64 /* YWHomeCouponHeaderView.m in Sources */,
 				B32737641DE7EBB0001C57DF /* YWPCCutPickerView.m in Sources */,

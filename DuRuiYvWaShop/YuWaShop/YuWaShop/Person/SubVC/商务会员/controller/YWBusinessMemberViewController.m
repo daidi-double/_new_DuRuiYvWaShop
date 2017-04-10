@@ -31,7 +31,7 @@
 #define CELL1  @"MyUserCell"
 
 
-@interface YWBusinessMemberViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface YWBusinessMemberViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 @property(nonatomic,strong)UITableView*tableView;
 
 
@@ -176,7 +176,12 @@
         }
         subLabel.text=@"当前积分";
         timeLabel.text=[JWTools currentTime];
-        
+        UILabel * totalLabel = [cell viewWithTag:11];
+        totalLabel.text = @"总积分(sp)";
+        UILabel * todaysLabel = [cell viewWithTag:13];
+        todaysLabel.text = @"今日积分(sp)";
+        UILabel * waitsLabel = [cell viewWithTag:15];
+        waitsLabel.text = @"待结算积分(sp)";
         totailLabel.text=self.scoreModel.total_score;
         todayLabel.text=self.scoreModel.today_score;
         waitLabel.text=self.scoreModel.settlement_score;
@@ -200,16 +205,26 @@
         
         UILabel*directBinding=[cell viewWithTag:1];   //直接锁定
         directBinding.text=[NSString stringWithFormat:@"%@人",self.BiningModel.my_direct_user_nums];
-        
+       
         UILabel*indirectBinding=[cell viewWithTag:22];  //间接锁定
         indirectBinding.text=[NSString stringWithFormat:@"%@人",self.BiningModel.my_indirect_user_nums];
-        
+        UIView * tapView = [cell viewWithTag:666];
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(indirctActionTap)];
+        tap.numberOfTapsRequired = 1;
+        tap.numberOfTouchesRequired = 1;
+        tap.delegate = self;
+        [tapView addGestureRecognizer:tap];
         return cell;
     }
     
     return cell;
 }
 
+- (void)indirctActionTap{
+    SignUserViewController*vc=[[SignUserViewController alloc]init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
         IntroduceMoneyViewController*vc=[[IntroduceMoneyViewController alloc]init];
@@ -222,8 +237,9 @@
         
         
     }else if (indexPath.section==2){
-        SignUserViewController*vc=[[SignUserViewController alloc]init];
-        [self.navigationController pushViewController:vc animated:YES];
+//        SignUserViewController*vc=[[SignUserViewController alloc]init];
+//        
+//        [self.navigationController pushViewController:vc animated:YES];
         
     }
     

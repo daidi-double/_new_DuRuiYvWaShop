@@ -10,6 +10,6 @@
 
 @interface pointMoneyHeaderView : UIView
 
-@property(nonatomic,strong)void(^touchGetMoney)();
-@property(nonatomic,strong)void(^touchPointDetail)();
+//@property(nonatomic,strong)void(^touchGetMoney)();
+//@property(nonatomic,strong)void(^touchPointDetail)();
 @end

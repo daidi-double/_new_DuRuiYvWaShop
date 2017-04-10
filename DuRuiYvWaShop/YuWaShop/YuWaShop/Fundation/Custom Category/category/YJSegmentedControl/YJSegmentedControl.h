@@ -26,6 +26,7 @@
 @property (strong, nonatomic) UIColor * selectColor;
 @property (strong, nonatomic) UIFont * titleFont;
 @property (nonatomic, strong) UIColor * buttonDownColor;
+@property (nonatomic,assign) NSInteger selectSeugment;
 @property (nonatomic,assign)BOOL isCancelSame;
 
 -(void)selectTheSegument:(NSInteger)segument;
