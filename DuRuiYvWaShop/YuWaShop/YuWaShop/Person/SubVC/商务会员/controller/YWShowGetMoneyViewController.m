@@ -256,7 +256,7 @@
 }
 */
 
-#pragma mark  --set
+#pragma mark   --set
 -(UITableView *)tableView{
     if (!_tableView) {
         _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64+40, kScreen_Width, kScreen_Height-64-40) style:UITableViewStyleGrouped];
