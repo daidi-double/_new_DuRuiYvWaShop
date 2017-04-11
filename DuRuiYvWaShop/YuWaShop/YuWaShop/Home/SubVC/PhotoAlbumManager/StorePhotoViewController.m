@@ -160,10 +160,7 @@
 
     //改变名字
     photoBrowser.changeNameBlock=^(NSInteger selectedNumber,NSString*title){
-        if (self.status==0) {
-            [JRToast showWithText:@"商品信息不能修改"];
-            return ;
-        }
+
         
         [self changePhotoTitle:selectedNumber andTitle:title];
         
@@ -171,10 +168,7 @@
     
     //删除照片
     photoBrowser.deletePhotoBlock=^(NSInteger selectedNumber){
-//        if (self.status==0) {
-//            [JRToast showWithText:@"商品信息不能修改"];
-//            return ;
-//        }
+
 
         [self deletePhoto:selectedNumber];
         
@@ -190,16 +184,9 @@
 
 #pragma mark  --touch
 -(void)touchRightItem{
-//    if (self.status==0) {
-//        //
-//        [JRToast showWithText:@"该相册不能添加图片"];
-//        
-//    }else{
-          [self makeLocalImagePicker];
-//    }
-    
-  
-    
+
+   [self makeLocalImagePicker];
+
 }
 
 #pragma mark  --  photoChoose

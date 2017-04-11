@@ -11,6 +11,7 @@
 @interface YWHomePayBillViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *cutShowBtn;
 @property (weak, nonatomic) IBOutlet UILabel *cutLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *cutSwitchBtn;
 @property (weak, nonatomic) IBOutlet UITextField *costTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cutTextField;
 @property (weak, nonatomic) IBOutlet UILabel *payLabel;
@@ -41,9 +42,9 @@
     if (cutInter%10 == 0) {
         self.cutLabel.text = cutInter== 100?@"全付":[NSString stringWithFormat:@"%zi折",(cutInter/10)];
     }else{
-        self.cutLabel.text = [NSString stringWithFormat:@"%zi折",cutInter];
+        self.cutLabel.text = [NSString stringWithFormat:@"%.1f折",[UserSession instance].cut/10];
     }
-    
+    self.cutSwitchBtn.on = YES;
     self.cutShowBtn.layer.cornerRadius = 3.f;
     self.cutShowBtn.layer.masksToBounds = YES;
     self.submitBtn.layer.cornerRadius = 5.f;

@@ -2629,7 +2629,7 @@
 			path = SortView;
 			sourceTree = "<group>";
 		};
-		B30E4DED1DEF0397008684BA /* Coupon */ = {
+		B30E4DED1DEF0397008684BA /* 优惠券 */ = {
 			isa = PBXGroup;
 			children = (
 				B3ACF1091DEF06A40056FD64 /* AddCoupon */,
@@ -2640,6 +2640,7 @@
 				B30E4DEF1DEF03B7008684BA /* YWHomeCouponViewController.m */,
 				B30E4DF01DEF03B7008684BA /* YWHomeCouponViewController.xib */,
 			);
+			name = "优惠券";
 			path = Coupon;
 			sourceTree = "<group>";
 		};
@@ -5458,7 +5459,7 @@
 				C17499581DF68ED900F17B77 /* commentManager */,
 				B3F177F21DEFF270007DB9A3 /* Noticafication */,
 				B3F177E21DEFD60A007DB9A3 /* AdvanceOrder */,
-				B30E4DED1DEF0397008684BA /* Coupon */,
+				B30E4DED1DEF0397008684BA /* 优惠券 */,
 				B30E4DC81DEEBAE6008684BA /* Compare */,
 				B302EACE1DEDA8CA0000B0A0 /* 提现 */,
 				B302EAB81DED63E20000B0A0 /* Commodities */,
