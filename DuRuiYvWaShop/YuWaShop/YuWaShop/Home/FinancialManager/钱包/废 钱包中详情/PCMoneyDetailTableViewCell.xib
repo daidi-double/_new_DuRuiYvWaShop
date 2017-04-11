@@ -16,26 +16,26 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA3-3p-V6m">
-                        <rect key="frame" x="23" y="34" width="0.0" height="0.0"/>
+                        <rect key="frame" x="8" y="34" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.45490196078431372" green="0.45098039215686275" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fP-G5-ciF">
-                        <rect key="frame" x="345" y="33.5" width="0.0" height="0.0"/>
+                        <rect key="frame" x="350" y="33.5" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.94509803921568625" green="0.7686274509803922" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-No-0QW">
-                        <rect key="frame" x="355" y="24" width="10" height="20"/>
+                        <rect key="frame" x="360" y="26.5" width="5" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="10" id="Y9b-el-rrJ"/>
-                            <constraint firstAttribute="height" constant="20" id="ni4-ae-JV4"/>
+                            <constraint firstAttribute="width" constant="5" id="Y9b-el-rrJ"/>
+                            <constraint firstAttribute="height" constant="15" id="ni4-ae-JV4"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYW-9k-89h">
@@ -50,7 +50,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="7yu-No-0QW" secondAttribute="trailing" constant="10" id="9WL-YE-HVd"/>
-                    <constraint firstItem="yA3-3p-V6m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="UMk-sH-Dng"/>
+                    <constraint firstItem="yA3-3p-V6m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="UMk-sH-Dng"/>
                     <constraint firstItem="yYW-9k-89h" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="20" id="WtW-XQ-TLx"/>
                     <constraint firstItem="yA3-3p-V6m" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dYo-JH-Chc"/>
                     <constraint firstItem="0fP-G5-ciF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="k08-Uw-uUw"/>

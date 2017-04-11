@@ -100,6 +100,9 @@
         }else{
              if (self.status == 0) {
             cell.textLabel.text = [NSString stringWithFormat:@"￥%@",model.seller_money];
+                 if ([model.type containsString:@"介绍分红"] || [model.type containsString:@"介绍积分"]) {
+                     cell.textLabel.text = [NSString stringWithFormat:@"%@",model.money];
+                 }
             cell.textLabel.textColor = RGBCOLOR(249, 207, 112, 1);
             cell.textLabel.font = [UIFont systemFontOfSize:35];
             

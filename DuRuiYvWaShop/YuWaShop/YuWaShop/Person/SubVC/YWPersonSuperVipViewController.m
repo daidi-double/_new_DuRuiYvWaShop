@@ -22,10 +22,6 @@
     [self callService];
 }
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    [super touchesBegan:touches withEvent:event];
-//}
-
 - (void)callService{
     if (![UserSession instance].phone||[[UserSession instance].phone isEqualToString:@""]) {
         [self showHUDWithStr:@"暂无数据,请稍后重试" withSuccess:NO];

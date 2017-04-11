@@ -20,6 +20,8 @@
 @property (nonatomic,assign)NSInteger pages;
 @property (nonatomic,assign)NSInteger status;
 @property (nonatomic,strong)NSMutableArray * dataArr;
+@property (nonatomic,strong)NSMutableArray * imageAry;
+@property (nonatomic,strong)NSMutableArray * colorAry;
 @property (nonatomic,strong)YJSegmentedControl * segmentControl;
 
 @end
@@ -28,10 +30,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.title = @"优惠促销";
-//    [self makeUI];
-//    [self dataSet];
-//    [self setupRefresh];
+    self.title = @"优惠促销";
+    [self makeUI];
+    [self dataSet];
+    [self setupRefresh];
+}
+- (NSMutableArray *)imageAry{
+    if (!_imageAry) {
+        _imageAry = [NSMutableArray array];
+    }
+    return _imageAry;
+}
+
+- (NSMutableArray*)colorAry{
+    if (!_colorAry) {
+        _colorAry = [NSMutableArray array];
+    }
+    return _colorAry;
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -52,7 +67,10 @@
     self.status = 1;
     self.pagens = @"10";
     self.dataArr = [NSMutableArray arrayWithCapacity:0];
-    
+    NSArray * youhuiquanAry = @[@"youhuiquan_03",@"youhuiquan_06",@"youhuiquan_08",@"youhuiquan_10"];
+    NSArray * colorAry = @[RGBCOLOR(255, 193, 0, 1),RGBCOLOR(54, 192, 250, 1),RGBCOLOR(7, 225, 158, 1),RGBCOLOR(255, 94, 108, 1)];
+    [self.imageAry addObjectsFromArray:youhuiquanAry];
+    [self.colorAry addObjectsFromArray:colorAry];
     [self.tableView registerNib:[UINib nibWithNibName:@"YWHomeCouponTableViewCell" bundle:nil] forCellReuseIdentifier:@"YWHomeCouponTableViewCell"];
 }
 
@@ -69,7 +87,7 @@
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80.f;
+    return 110.f;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 40.f;
@@ -102,6 +120,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     YWHomeCouponTableViewCell * couponCell = [tableView dequeueReusableCellWithIdentifier:@"YWHomeCouponTableViewCell"];
     couponCell.model = self.dataArr[indexPath.row];
+    NSInteger number = indexPath.row%4;
+    couponCell.youhuiquanImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",self.imageAry[number]]];
+    couponCell.cutNumberLabel.textColor = self.colorAry[number];
+    couponCell.conditionLabel.textColor = self.colorAry[number];
+    couponCell.youhuiquanStrLabel.textColor = self.colorAry[number];
     return couponCell;
 }
 

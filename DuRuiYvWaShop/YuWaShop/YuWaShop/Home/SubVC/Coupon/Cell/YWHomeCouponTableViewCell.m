@@ -33,7 +33,7 @@
     conditionStr = [conditionStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
     self.conditionLabel.text = [NSString stringWithFormat:@"满%@减",conditionStr];
     self.nameLabel.text = [NSString stringWithFormat:@"%@",self.model.name];
-    self.timeLabel.text = [NSString stringWithFormat:@"有效期%@至%@",[JWTools dateWithYearMonthDayStr:self.model.begin_time],[JWTools dateWithYearMonthDayStr:self.model.end_time]];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@至%@",[JWTools dateWithYearMonthDayStr:self.model.begin_time],[JWTools dateWithYearMonthDayStr:self.model.end_time]];
 }
 
 @end

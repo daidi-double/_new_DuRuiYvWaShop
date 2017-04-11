@@ -12,6 +12,8 @@
 @interface YWHomeCouponTableViewCell : UITableViewCell
 
 @property (nonatomic,strong)YWHomeCouponModel * model;
+@property (weak, nonatomic) IBOutlet UIImageView *youhuiquanImageView;
+@property (weak, nonatomic) IBOutlet UILabel *youhuiquanStrLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *cutNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *conditionLabel;

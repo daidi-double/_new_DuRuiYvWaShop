@@ -113,7 +113,7 @@
     
     UILabel * timeLabel = [cell viewWithTag:6];
     
-    timeLabel.text = [self timeWithBeforeTime:[model.ctime doubleValue]];
+    timeLabel.text = [self distanceTimeWithBeforeTime:[model.ctime doubleValue]];
     
 
     UILabel * methodLabel = [cell viewWithTag:4];
@@ -162,12 +162,7 @@
             MyLog(@"distanceStr 2 = %@",distanceStr);
         }
         
-    }
-    else if(distanceTime <24*60*60*365){
-        [df setDateFormat:@"yyyy-MM-dd"];
-        distanceStr = [df stringFromDate:beDate];
-    }
-    else{
+    }else{
         [df setDateFormat:@"yyyy-MM-dd HH:mm"];
         distanceStr = [df stringFromDate:beDate];
     }
