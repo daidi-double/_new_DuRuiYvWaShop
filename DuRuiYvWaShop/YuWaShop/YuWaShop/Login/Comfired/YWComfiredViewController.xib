@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,6 +18,7 @@
                 <outlet property="chooseTagBGView" destination="MbU-Qr-efO" id="cZT-Sp-ZV5"/>
                 <outlet property="idTextField" destination="04p-7J-ZYo" id="bqB-y4-gBZ"/>
                 <outlet property="nameTextField" destination="OSr-oS-gQM" id="BOW-LD-x7p"/>
+                <outlet property="progress1" destination="PHb-6r-hOU" id="0SX-w1-JyG"/>
                 <outlet property="submitBtn" destination="FSc-lm-lcp" id="Ecz-BN-fTa"/>
                 <outlet property="upImageBtn" destination="Zoz-M7-WLN" id="oTO-Pz-m8u"/>
                 <outlet property="upUserImageBtn" destination="zR7-by-aEK" id="JgV-Ed-wLi"/>
@@ -54,7 +55,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5p-Zj-WtV">
-                            <rect key="frame" x="189" y="507" width="186" height="30"/>
+                            <rect key="frame" x="188" y="507" width="187" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="协议详情">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -262,6 +263,13 @@
                                 <action selector="explain:" destination="-1" eventType="touchUpInside" id="lMT-2V-AsE"/>
                             </connections>
                         </button>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PHb-6r-hOU">
+                            <rect key="frame" x="113" y="248" width="150" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="fa0-dh-Gc8"/>
+                                <constraint firstAttribute="width" constant="150" id="o3O-Ob-CG2"/>
+                            </constraints>
+                        </progressView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -324,6 +332,7 @@
                         <constraint firstItem="Pcu-t2-zrh" firstAttribute="width" secondItem="NIX-dh-VJ9" secondAttribute="width" id="f1v-ej-5wc"/>
                         <constraint firstItem="JWu-OR-wNK" firstAttribute="top" secondItem="kGt-Zj-FwE" secondAttribute="bottom" constant="5" id="gKI-he-FCs"/>
                         <constraint firstItem="NHG-wA-cvF" firstAttribute="centerY" secondItem="72U-F7-Mme" secondAttribute="centerY" constant="5" id="hLW-dN-0Zv"/>
+                        <constraint firstItem="PHb-6r-hOU" firstAttribute="centerX" secondItem="4oa-vD-mTa" secondAttribute="centerX" id="i0M-Yi-N8T"/>
                         <constraint firstItem="opU-aX-fod" firstAttribute="leading" secondItem="kGt-Zj-FwE" secondAttribute="leading" id="i1v-xI-dr9"/>
                         <constraint firstItem="Pcu-t2-zrh" firstAttribute="height" secondItem="NIX-dh-VJ9" secondAttribute="height" id="iYL-gE-UsA"/>
                         <constraint firstItem="zR7-by-aEK" firstAttribute="leading" secondItem="Zoz-M7-WLN" secondAttribute="leading" id="ing-Xc-OIb"/>
@@ -342,6 +351,7 @@
                         <constraint firstItem="LAx-O0-Q4n" firstAttribute="centerY" secondItem="Ac8-DS-jrR" secondAttribute="centerY" id="uan-Kr-bLE"/>
                         <constraint firstItem="zR7-by-aEK" firstAttribute="top" secondItem="C4Q-xj-vzK" secondAttribute="bottom" constant="11" id="vhH-vV-F9a"/>
                         <constraint firstItem="mSq-Pz-Yk9" firstAttribute="top" secondItem="coj-qK-MYh" secondAttribute="bottom" id="wVt-Xb-tff"/>
+                        <constraint firstItem="kGt-Zj-FwE" firstAttribute="top" secondItem="PHb-6r-hOU" secondAttribute="bottom" constant="8" id="wpO-KR-DOK"/>
                         <constraint firstItem="Ac8-DS-jrR" firstAttribute="top" secondItem="Pp7-gv-0VP" secondAttribute="bottom" id="xWo-ix-XDs"/>
                         <constraint firstItem="OSr-oS-gQM" firstAttribute="leading" secondItem="04p-7J-ZYo" secondAttribute="leading" id="xlt-Ic-shw"/>
                         <constraint firstItem="C4Q-xj-vzK" firstAttribute="leading" secondItem="urV-QT-4u6" secondAttribute="leading" id="z68-AC-mUh"/>

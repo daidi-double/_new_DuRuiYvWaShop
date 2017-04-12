@@ -40,6 +40,10 @@
 @property (nonatomic,strong)UIImage * cameraUserOtherImage;
 @property (nonatomic,copy)NSString * cameraUserOtherImageURL;
 @property (nonatomic,strong) UIImageView * explainView;
+@property (weak, nonatomic) IBOutlet UIProgressView *progress1;
+@property (nonatomic,assign) int count;
+@property (nonatomic,assign) int upImageCount;
+@property (nonatomic,strong) UIView* zhezhao;
 
 @property (weak, nonatomic) IBOutlet UIView *chooseTagBGView;
 
@@ -63,7 +67,6 @@
 @property (nonatomic,copy)NSString * addressName;
 @property (nonatomic,copy)NSString * addressSubName;
 @property (nonatomic,assign)NSInteger cameraStatus;
-
 @property (nonatomic,strong)CLGeocoder * geocoder;
 @property (nonatomic,copy)NSString * latitudeStr;
 @property (nonatomic,copy)NSString * longitudeStr;
@@ -76,8 +79,25 @@
     [super viewDidLoad];
     [self makeNavi];
     [self makeUI];
+    UIView * view = [[UIView alloc]initWithFrame:self.view.bounds];
+    view.backgroundColor = [UIColor grayColor];
+    view.alpha = 0.3;
+    view.hidden = YES;
+    [self.view addSubview:view];
+    self.zhezhao = view;
 }
-
+-(void)progress2{
+    if (self.count != 4) {
+        self.count= self.count + 1;
+        self.progress1.progress+=0.2;
+    }else if (self.upImageCount == 4){
+        self.progress1.progress+=0.2;
+        self.count++;
+    }else if (self.count == 5){
+        self.progress1.hidden = YES;
+        self.zhezhao.hidden = YES;
+    }
+}
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.HUD hide:YES];
@@ -204,7 +224,8 @@
 #pragma mark - Button Action
 - (IBAction)submitBtnAction:(UIButton*)sender {
     if ([self isCanCommit]) {
-        
+        self.zhezhao.hidden = NO;
+        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(progress2) userInfo:nil repeats:YES];
         [self requestComfired];
         sender.userInteractionEnabled = NO;
     }
@@ -372,7 +393,6 @@
     UIImage * camera;
     if (type == 0) {
         camera = self.cameraImage;
-        [self.HUD show:YES];
     }else if (type == 1){
         camera = self.cameraUserImage;
     }else if (type == 2){
@@ -384,6 +404,7 @@
     [[HttpObject manager]postPhotoWithType:YuWaType_IMG_UP withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);
         MyLog(@"Regieter Code is %@",responsObj);
+        self.upImageCount ++;
         if (type == 0) {
             self.cameraImageURL = responsObj[@"data"];
             if (!self.cameraImageURL)self.cameraImageURL=@"";
