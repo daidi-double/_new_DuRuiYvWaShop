@@ -94,6 +94,7 @@
     ShowGetMoneyTableViewCell*cell=[tableView dequeueReusableCellWithIdentifier:CELL0];
     
     if (self.maMallDatas.count<1) {
+       
         return cell;
     }
     ShowDetailModel*model=self.maMallDatas[indexPath.row];
@@ -106,7 +107,8 @@
     categoryLabel.text=model.type;
     
     UILabel*moneyLabel=[cell viewWithTag:3];
-    moneyLabel.text=model.money;
+    moneyLabel.text= [NSString stringWithFormat:@"%.4f",[model.money floatValue]];
+    
     
     return cell;
 }
@@ -121,15 +123,14 @@
 
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
     if (section==0) {
 
-        
         UILabel*label1=[self.headerView viewWithTag:1];
-        label1.text=self.total_money;
+        label1.text= [NSString stringWithFormat:@"%@",self.total_money];
         
         UILabel*label3=[self.headerView viewWithTag:3];
-        label3.text=self.total_settlement;
-        
+        label3.text= [NSString stringWithFormat:@"%@",self.total_settlement];
         
         UILabel*label5=[self.headerView viewWithTag:5];
         label5.text=@"时间";
@@ -144,10 +145,7 @@
             label7.text=@"金额";
 
         }
-      
 
-        
-        
         return self.headerView;
     }
     
