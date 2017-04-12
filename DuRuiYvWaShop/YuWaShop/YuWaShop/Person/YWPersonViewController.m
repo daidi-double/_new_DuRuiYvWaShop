@@ -152,14 +152,9 @@
 }
 
 - (void)callService{
-//    if (![UserSession instance].phone) {
-//        [self showHUDWithStr:@"获取客服电话失败,请重试" withSuccess:NO];
-//        [UserSession userShoperSalePhone];
-//    
-//        return;
-//    }
+
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-// if (![UserSession instance].phone) {
+
      [alertController addAction:[UIAlertAction actionWithTitle:@"4001505599" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
          UIWebView* callWebview =[[UIWebView alloc] init];
          //        NSURL * telURL =[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",[UserSession instance].phone]];
@@ -167,15 +162,6 @@
          [callWebview loadRequest:[NSURLRequest requestWithURL:telURL]];
          [self.view addSubview:callWebview];
      }]];
-// }else{
-//    [alertController addAction:[UIAlertAction actionWithTitle:[UserSession instance].phone style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        UIWebView* callWebview =[[UIWebView alloc] init];
-////        NSURL * telURL =[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",[UserSession instance].phone]];
-//        NSURL * telURL =[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",[UserSession instance].phone]];
-//        [callWebview loadRequest:[NSURLRequest requestWithURL:telURL]];
-//        [self.view addSubview:callWebview];
-//    }]];
-// }
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
@@ -236,6 +222,7 @@
         MyLog(@"Regieter Code pragram is %@",pragram);
         MyLog(@"Regieter Code error is %@",error);
     } withPhoto:UIImagePNGRepresentation(self.cameraImage)];
+    
 }
 
 - (void)requestUpIconURL{
