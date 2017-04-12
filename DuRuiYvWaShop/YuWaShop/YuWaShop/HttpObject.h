@@ -125,10 +125,6 @@ typedef enum YuWaType{
     
 }kYuWaType;
 
-
-
-
-
 @interface HttpObject : NSObject
 #pragma mark - Singleton
 + (id)manager;

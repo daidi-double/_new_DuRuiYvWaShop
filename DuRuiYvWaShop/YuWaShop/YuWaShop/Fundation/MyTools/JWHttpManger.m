@@ -107,15 +107,15 @@
         
     } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         newBlock(responseObject,nil);
-        [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-            _HUD.progress = (float)totalBytesWritten/totalBytesExpectedToWrite;
-           
-        }];
+//        [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+//            self.HUD.progress = (float)totalBytesWritten/totalBytesExpectedToWrite;
+//           
+//        }];
+//        MyLog(@"%f",self.HUD.progress);
+//        if (self.HUD.progress == 1.00) {
         
-        if (_HUD.progress == 1) {
-            
             [self.HUD hide: YES];
-        }
+//        }
 
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         newBlock(nil,error);
