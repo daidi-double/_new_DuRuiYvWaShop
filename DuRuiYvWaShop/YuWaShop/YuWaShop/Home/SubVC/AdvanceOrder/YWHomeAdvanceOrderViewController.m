@@ -146,7 +146,7 @@
 }
 #pragma mark - TableView Refresh
 - (void)setupRefresh{
-    self.tableView.mj_header = [UIScrollView scrollRefreshGifHeaderWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{
+    self.tableView.mj_header = [UIScrollView scrollRefreshGifHeaderWithImgName:@"newheader " withImageCount:60 withRefreshBlock:^{
         [self headerRereshing];
     }];
     self.tableView.mj_footer = [UIScrollView scrollRefreshGifFooterWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{
@@ -158,7 +158,7 @@
     [self requestDataWithPages:0];
 }
 - (void)footerRereshing{
-    self.pages++; 
+    self.pages++;
     [self requestDataWithPages:self.pages];
 }
 - (void)cancelRefreshWithIsHeader:(BOOL)isHeader{
