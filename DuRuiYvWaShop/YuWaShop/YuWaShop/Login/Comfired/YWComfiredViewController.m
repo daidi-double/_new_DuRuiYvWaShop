@@ -225,7 +225,7 @@
 - (IBAction)submitBtnAction:(UIButton*)sender {
     if ([self isCanCommit]) {
         self.zhezhao.hidden = NO;
-        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(progress2) userInfo:nil repeats:YES];
+        [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(progress2) userInfo:nil repeats:YES];
         [self requestComfired];
         sender.userInteractionEnabled = NO;
     }
