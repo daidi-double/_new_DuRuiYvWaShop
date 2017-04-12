@@ -101,6 +101,7 @@
 //            [alertVC addTextFieldWithConfigurationHandler:^(UITextField *textField){
 //                textField.placeholder = @"请输入您对客户的回复";
 //                textField.secureTextEntry = NO;
+            
 //            }];
             UIAlertAction * OKAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 UITextField * replayTextField = alertVC.textFields.firstObject;
@@ -199,8 +200,13 @@
     NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"id":@([model.orderID integerValue]),@"seller_message":rePlay,@"status":@(type),@"push_title":[NSString stringWithFormat:@"%@的订单%@",[UserSession instance].nickName,(type==2?@"预定成功":@"已被取消")],@"push_content":rePlay};
     
     [[HttpObject manager]postDataWithType:YuWaType_Shoper_ShopAdmin_BookReply withPragram:pragram success:^(id responsObj) {
-        MyLog(@"Regieter Code pragram is %@",pragram);
-        MyLog(@"Regieter Code is %@",responsObj);
+        // json数据或者NSDictionary转为NSData，responseObject为json数据或者NSDictionary
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:pragram options:NSJSONWritingPrettyPrinted error:nil];
+        // NSData转为NSString
+        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"!!!!!!!!!%@", jsonStr);
+        MyLog(@"！！！Regieter Code pragram is %@",pragram);
+        MyLog(@"！！！Regieter Code is %@",jsonStr);
         [self.dataArr removeObjectAtIndex:indexPath.row];
         [self showHUDWithStr:@"回复成功" withSuccess:YES];
         [self.tableView reloadData];
