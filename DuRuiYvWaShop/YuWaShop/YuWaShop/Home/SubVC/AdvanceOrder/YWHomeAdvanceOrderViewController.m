@@ -158,7 +158,7 @@
     [self requestDataWithPages:0];
 }
 - (void)footerRereshing{
-    self.pages++;
+    self.pages++; 
     [self requestDataWithPages:self.pages];
 }
 - (void)cancelRefreshWithIsHeader:(BOOL)isHeader{
