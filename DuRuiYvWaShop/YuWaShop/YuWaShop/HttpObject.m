@@ -388,18 +388,34 @@
         case YuWaType_IMG_UP://上传图片
             urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_IMG_UP];
             break;
-            
+          
+        case YuWaType_IMG_UP_NOHUD://上传图片
+            urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_IMG_UP];
+            break;
         default:
             break;
     }
-    [[JWHttpManger shareManager] postUpdatePohotoWithUrl:urlStr withParams:pragram withPhoto:photo compliation:^(id data, NSError *error) {
+    if (type == YuWaType_IMG_UP_NOHUD) {
+        [[JWHttpManger shareManager] postNoHudUpdatePohotoWithUrl:urlStr withParams:pragram withPhoto:photo compliation:^(id data, NSError *error) {
+            MyLog(@"认证中");
+            if (data&&[data[@"errorCode"] integerValue] == 0) {
+                success(data);
+                
+            }else{
+                fail(data,error);
+            }
+        }];
+ 
+    }else{
+           [[JWHttpManger shareManager] postUpdatePohotoWithUrl:urlStr withParams:pragram withPhoto:photo compliation:^(id data, NSError *error) {
         if (data&&[data[@"errorCode"] integerValue] == 0) {
             success(data);
-            
+           
         }else{
             fail(data,error);
         }
     }];
+    }
 }
 
 @end
