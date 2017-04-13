@@ -177,6 +177,10 @@
             timeNow = [[NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:[NSDate date]]] integerValue];
             return [NSString stringWithFormat:@"%zi分钟前",timeNow - time];
         }
+        if (timeNow - time< 0) {
+            dateFormatter.dateFormat =@"HH:mm";
+            return [NSString stringWithFormat:@"今天 %@",[dateFormatter stringFromDate:date]];
+        }
         return [NSString stringWithFormat:@"%zi小时前",timeNow - time];
     }
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm";

@@ -37,15 +37,15 @@
                                 <action selector="addCouponBtnAction:" destination="-1" eventType="touchUpInside" id="DQ2-4S-IUN"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couponHeaderImg" translatesAutoresizingMaskIntoConstraints="NO" id="h1h-8W-Qam">
-                            <rect key="frame" x="170" y="64" width="35" height="35"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="发布优惠券" translatesAutoresizingMaskIntoConstraints="NO" id="h1h-8W-Qam">
+                            <rect key="frame" x="160" y="64" width="55" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="35" id="2fz-8Q-w6Y"/>
-                                <constraint firstAttribute="height" constant="35" id="IFW-yv-1Gt"/>
+                                <constraint firstAttribute="width" constant="55" id="2fz-8Q-w6Y"/>
+                                <constraint firstAttribute="height" constant="30" id="IFW-yv-1Gt"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布商家自发券" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPF-4Q-q40">
-                            <rect key="frame" x="0.0" y="99" width="375" height="46"/>
+                            <rect key="frame" x="0.0" y="94" width="375" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="46" id="uJd-4Y-5ap"/>
                             </constraints>
@@ -83,6 +83,6 @@
         </view>
     </objects>
     <resources>
-        <image name="couponHeaderImg" width="88" height="88"/>
+        <image name="发布优惠券" width="54" height="34"/>
     </resources>
 </document>
