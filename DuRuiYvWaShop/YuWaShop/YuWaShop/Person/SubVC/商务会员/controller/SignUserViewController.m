@@ -93,6 +93,10 @@
     
     UILabel*nameLabel=[cell viewWithTag:1];
     nameLabel.text=model.user_name;
+    //判断是否为手机号码，是就隐藏一部分
+    if (model.user_name.length >= 11 && [JWTools isNumberWithStr:model.user_name]) {
+        nameLabel.text = [NSString stringWithFormat:@"%@****",[model.user_name substringToIndex:model.user_name.length - 4]];
+    }
    
     UILabel*moneyLabel=[cell viewWithTag:2];
     moneyLabel.text=[NSString stringWithFormat:@"总分红金额:%@",model.money];

@@ -73,7 +73,8 @@
     }else if (indexPath.row==3){
         titleLabel.text=@"消费者";
         detailLabel.text=self.model.user_name;
-        if (self.model.user_name.length >= 11) {
+    //判断是否显示的是电话，是就做隐秘处理
+        if (self.model.user_name.length >= 11 && [JWTools isNumberWithStr:self.model.user_name]) {
             detailLabel.text = [NSString stringWithFormat:@"%@****",[self.model.user_name substringToIndex:self.model.user_name.length - 4]];
         }
         
