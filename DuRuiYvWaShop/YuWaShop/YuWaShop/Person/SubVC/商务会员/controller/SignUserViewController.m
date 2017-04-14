@@ -17,7 +17,9 @@
 #define CELL0    @"SignUserTableViewCell"
 
 @interface SignUserViewController ()<UITableViewDelegate,UITableViewDataSource,YJSegmentedControlDelegate>
-
+{
+    UIButton * markBtn;
+}
 @property(nonatomic,strong)UITableView*tableView;
 
 @property(nonatomic,strong)NSMutableArray*maMallDatas;
@@ -32,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    self.title=@"锁定会员";
-    self.type=@"0";
+    self.type=self.status;
     self.automaticallyAdjustsScrollViewInsets=NO;
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:CELL0 bundle:nil] forCellReuseIdentifier:CELL0];
@@ -74,8 +76,48 @@
 
 -(void)makeTopChooseView{
     NSArray*arrayTitle=@[@"直接锁定",@"间接锁定"];
-    YJSegmentedControl*chooseView=[YJSegmentedControl segmentedControlFrame:CGRectMake(0, 64, kScreen_Width, 40) titleDataSource:arrayTitle backgroundColor:[UIColor whiteColor] titleColor:[UIColor blackColor] titleFont:[UIFont systemFontOfSize:14] selectColor:CNaviColor buttonDownColor:CNaviColor Delegate:self];
-    [self.view addSubview:chooseView];
+    UIView * bgView = [[UIView alloc]initWithFrame:CGRectMake(20,69, kScreen_Width - 40, 30)];
+    bgView.backgroundColor = CNaviColor;
+    bgView.layer.masksToBounds = YES;
+    bgView.layer.cornerRadius = 5;
+    [self.view addSubview:bgView];
+    for (int i = 0; i<2; i ++ ) {
+        
+        UIButton * segmentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        segmentBtn.frame = CGRectMake(2+bgView.width/2*i, 2, bgView.width/2-4, 26);
+        segmentBtn.layer.borderColor = CNaviColor.CGColor;
+        segmentBtn.layer.borderWidth = 2.f;
+        segmentBtn.layer.cornerRadius = 5.f;
+        [segmentBtn setTitle:arrayTitle[i] forState:UIControlStateNormal];
+        [segmentBtn setTitleColor:CNaviColor forState:UIControlStateNormal];
+        [segmentBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        [segmentBtn setBackgroundColor:[UIColor whiteColor]];
+        segmentBtn.tag = i +1;
+        if ([self.status isEqualToString:@"0"]) {
+            if (i == 0) {
+                segmentBtn.selected = YES;
+                [segmentBtn setBackgroundColor:CNaviColor];
+                [markBtn setBackgroundColor:[UIColor whiteColor]];
+                markBtn.selected = NO;
+                markBtn = segmentBtn;
+            }
+        }else{
+            if (i == 1) {
+                segmentBtn.selected = YES;
+                [segmentBtn setBackgroundColor:CNaviColor];
+                [markBtn setBackgroundColor:[UIColor whiteColor]];
+                markBtn.selected = NO;
+                markBtn = segmentBtn;
+                
+            }
+        }
+        
+        
+        [segmentBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [segmentBtn addTarget:self action:@selector(segumentSelectionChangeAction:) forControlEvents:UIControlEventTouchUpInside];
+        [bgView addSubview:segmentBtn];
+    }
+
     
 }
 
@@ -116,15 +158,22 @@
     return 0.01;
 }
 
-
-#pragma mark  --delegate
--(void)segumentSelectionChange:(NSInteger)selection{
-    if (selection==0) {
+-(void)segumentSelectionChangeAction:(UIButton*)sender{
+    if (sender.tag==1) {
         self.type=@"0";
     }else{
         self.type=@"1";
     }
-    [self.tableView.mj_header beginRefreshing];
+    if (sender.selected == YES) {
+        return;
+    }
+    [sender setBackgroundColor:CNaviColor];
+    [markBtn setBackgroundColor:[UIColor whiteColor]];
+    sender.selected = YES;
+    markBtn.selected = NO;
+    markBtn = sender;
+    //    [self.tableView.mj_header beginRefreshing];
+    [self setUpMJRefresh];
 }
 
 #pragma mark  --getDatas

@@ -58,6 +58,10 @@
     
     UILabel*nameLabel=[self viewWithTag:2];
     nameLabel.text=model.customer_name;
+    if ([JWTools isNumberWithStr:model.customer_name]) {
+        NSString * str = [model.customer_name substringToIndex:7];
+        nameLabel.text = [NSString stringWithFormat:@"%@****",str];
+    }
     
     UILabel*timeLabel=[self viewWithTag:3];
     timeLabel.text=[JWTools getTime:model.ctime];

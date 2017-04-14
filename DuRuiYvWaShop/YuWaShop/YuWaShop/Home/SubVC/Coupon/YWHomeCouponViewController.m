@@ -87,7 +87,7 @@
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 99.f;
+    return 115.f;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 40.f;
@@ -114,20 +114,14 @@
 }
 
 #pragma mark - UITableViewDataSource
-//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    
-//}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     YWHomeCouponTableViewCell * couponCell = [tableView dequeueReusableCellWithIdentifier:@"YWHomeCouponTableViewCell"];
     couponCell.model = self.dataArr[indexPath.row];
-//    NSInteger number = indexPath.row%4;
-//    couponCell.youhuiquanImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",self.imageAry[number]]];
-//    couponCell.cutNumberLabel.textColor = self.colorAry[number];
-//    couponCell.conditionLabel.textColor = self.colorAry[number];
-//    couponCell.youhuiquanStrLabel.textColor = self.colorAry[number];
+
     return couponCell;
 }
 
