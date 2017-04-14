@@ -25,6 +25,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qh0-xQ-eXk">
                         <rect key="frame" x="160" y="-1" width="208" height="100"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youhuiquan_061" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-Cv-hVM">
+                                <rect key="frame" x="8" y="9" width="171" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fg1-Cv-hVM" secondAttribute="height" multiplier="8:5" constant="40.219999999999999" id="JIi-wL-Jfy"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.4.10-2017.4.20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAt-8s-8bx">
                                 <rect key="frame" x="28.5" y="42" width="129" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -55,12 +61,6 @@
                                     <constraint firstItem="YST-CN-orw" firstAttribute="centerY" secondItem="mHK-bD-0Ed" secondAttribute="centerY" id="q2G-23-VaE"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youhuiquan_061" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-Cv-hVM">
-                                <rect key="frame" x="8" y="9" width="171" height="82"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Fg1-Cv-hVM" secondAttribute="height" multiplier="8:5" constant="40.219999999999999" id="JIi-wL-Jfy"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
