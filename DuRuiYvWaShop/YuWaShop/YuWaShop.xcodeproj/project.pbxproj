@@ -677,7 +677,6 @@
 		B3ACF1111DEF06E10056FD64 /* YWHomeCouponModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ACF1101DEF06E10056FD64 /* YWHomeCouponModel.m */; };
 		B3ACF1141DEF06F70056FD64 /* YWHomeCouponHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ACF1131DEF06F70056FD64 /* YWHomeCouponHeaderView.m */; };
 		B3ACF1181DEF070C0056FD64 /* YWHomeCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3ACF1161DEF070C0056FD64 /* YWHomeCouponTableViewCell.m */; };
-		B3ACF1191DEF070C0056FD64 /* YWHomeCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3ACF1171DEF070C0056FD64 /* YWHomeCouponTableViewCell.xib */; };
 		B3ACF11B1DEF07380056FD64 /* YWHomeCouponHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3ACF11A1DEF07380056FD64 /* YWHomeCouponHeaderView.xib */; };
 		B3BE98201DF9588200B82FB3 /* JWHttpManger.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BE981F1DF9588200B82FB3 /* JWHttpManger.m */; };
 		B3C12A511DED217F000EF099 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C12A481DED217F000EF099 /* HttpManager.m */; };
@@ -2001,7 +2000,6 @@
 		B3ACF1131DEF06F70056FD64 /* YWHomeCouponHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWHomeCouponHeaderView.m; sourceTree = "<group>"; };
 		B3ACF1151DEF070C0056FD64 /* YWHomeCouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWHomeCouponTableViewCell.h; sourceTree = "<group>"; };
 		B3ACF1161DEF070C0056FD64 /* YWHomeCouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWHomeCouponTableViewCell.m; sourceTree = "<group>"; };
-		B3ACF1171DEF070C0056FD64 /* YWHomeCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponTableViewCell.xib; sourceTree = "<group>"; };
 		B3ACF11A1DEF07380056FD64 /* YWHomeCouponHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponHeaderView.xib; sourceTree = "<group>"; };
 		B3BE795B1DF6E08B0027702C /* YWHttpBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWHttpBase.h; sourceTree = "<group>"; };
 		B3BE981E1DF9588200B82FB3 /* JWHttpManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWHttpManger.h; sourceTree = "<group>"; };
@@ -5397,7 +5395,6 @@
 			children = (
 				B3ACF1151DEF070C0056FD64 /* YWHomeCouponTableViewCell.h */,
 				B3ACF1161DEF070C0056FD64 /* YWHomeCouponTableViewCell.m */,
-				B3ACF1171DEF070C0056FD64 /* YWHomeCouponTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -6409,7 +6406,6 @@
 				AA37888E1E8ABA4700B7F9CC /* YWBankViewController.xib in Resources */,
 				B35C9F221DEC3FE80051E352 /* JWEmojisKeyBoards.xib in Resources */,
 				AA3788881E8ABA4700B7F9CC /* YWBankTableViewCell.xib in Resources */,
-				B3ACF1191DEF070C0056FD64 /* YWHomeCouponTableViewCell.xib in Resources */,
 				B35C9EE81DEC3FE80051E352 /* RBNodeDetailCommentHeader.xib in Resources */,
 				B35C9F0F1DEC3FE80051E352 /* MDHotelRightBtn.xib in Resources */,
 				B35C9F091DEC3FE80051E352 /* RBHomeViewController.xib in Resources */,
