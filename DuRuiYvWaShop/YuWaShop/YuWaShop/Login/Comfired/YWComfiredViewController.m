@@ -84,14 +84,15 @@
     view.alpha = 0.3;
     view.hidden = YES;
     [self.view addSubview:view];
+    self.progress1.hidden = YES;
     self.zhezhao = view;
 }
 -(void)progress2{
     if (self.count != 4) {
         self.count= self.count + 1;
-        self.progress1.progress+=0.2;
+        self.progress1.progress+=0.22;
     }else if (self.upImageCount == 4){
-        self.progress1.progress+=0.2;
+        self.progress1.progress+=0.22;
         self.count++;
     }else if (self.count == 5){
         self.progress1.hidden = YES;
@@ -133,11 +134,7 @@
 
 - (void)makeUI{
     self.isAgree = YES;
-//    CGFloat upImgBtnWidth = (kScreen_Width-90.f-10.f*3)/3;
-//    [self.upImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
-//    [self.upUserImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
-//    [self.upUsersImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
-//    [self.upUserOtherImageBtn setBackgroundImage:[JWTools imageWithSize:CGSizeMake(upImgBtnWidth, 50.f) borderColor:[UIColor lightGrayColor] borderWidth:4.f withCornerRadius:5.f] forState:UIControlStateNormal];
+
     self.submitBtn.layer.cornerRadius = 5.f;
     self.submitBtn.layer.masksToBounds = YES;
     
@@ -225,6 +222,7 @@
 - (IBAction)submitBtnAction:(UIButton*)sender {
     if ([self isCanCommit]) {
         self.zhezhao.hidden = NO;
+        self.progress1.hidden = NO;
         [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(progress2) userInfo:nil repeats:YES];
         [self requestComfired];
         sender.userInteractionEnabled = NO;
@@ -389,7 +387,6 @@
 #pragma mark - Http
 - (void)requestChangeIconWithType:(NSInteger)type{
     NSDictionary * pragram = @{@"img":@"img"};
-    
     UIImage * camera;
     if (type == 0) {
         camera = self.cameraImage;
@@ -401,7 +398,7 @@
         camera = self.cameraUserOtherImage;
     }
 
-    [[HttpObject manager]postPhotoWithType:YuWaType_IMG_UP withPragram:pragram success:^(id responsObj) {
+    [[HttpObject manager]postPhotoWithType:YuWaType_IMG_UP_NOHUD withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);
         MyLog(@"Regieter Code is %@",responsObj);
         self.upImageCount ++;
@@ -506,6 +503,7 @@
         YWComfiringViewController * vc = [[YWComfiringViewController alloc]init];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [JPUSHService setAlias:[UserSession instance].account callbackSelector:nil object:nil];
+            [UserSession instance].comfired_Status = 1;
             [self.navigationController pushViewController:vc animated:YES];
         });
     } failur:^(id responsObj, NSError *error) {

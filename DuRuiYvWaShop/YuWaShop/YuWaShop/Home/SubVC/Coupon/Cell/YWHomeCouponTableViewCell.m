@@ -28,7 +28,7 @@
 - (void)dataSet{
     NSString * cutNumberStr = [self.model.discount_fee stringByReplacingOccurrencesOfString:@".00" withString:@""];
     cutNumberStr = [cutNumberStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
-    self.cutNumberLabel.text = [NSString stringWithFormat:@"%@元",cutNumberStr];
+    self.cutNumberLabel.text = [NSString stringWithFormat:@"￥%@",cutNumberStr];
     NSString * conditionStr = [self.model.min_fee stringByReplacingOccurrencesOfString:@".00" withString:@""];
     conditionStr = [conditionStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
     self.conditionLabel.text = [NSString stringWithFormat:@"满%@减",conditionStr];

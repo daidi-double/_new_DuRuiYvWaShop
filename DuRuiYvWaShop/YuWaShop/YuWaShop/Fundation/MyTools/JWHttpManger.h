@@ -22,6 +22,8 @@
 
 -(void)postUpdatePohotoWithUrl:(NSString*)urlStr withParams:(NSDictionary*)params withPhoto:(NSData*)data compliation:(resultBlock)newBlock;
 
+-(void)postNoHudUpdatePohotoWithUrl:(NSString*)urlStr withParams:(NSDictionary*)params withPhoto:(NSData*)data compliation:(resultBlock)newBlock;
+
 #pragma mark - Singleton
 + (id)shareManager;
 

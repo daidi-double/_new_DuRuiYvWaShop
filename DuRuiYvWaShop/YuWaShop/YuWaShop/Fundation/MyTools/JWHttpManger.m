@@ -107,23 +107,33 @@
         
     } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         newBlock(responseObject,nil);
-//        [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-//            self.HUD.progress = (float)totalBytesWritten/totalBytesExpectedToWrite;
-//           
-//        }];
-//        MyLog(@"%f",self.HUD.progress);
-//        if (self.HUD.progress == 1.00) {
-        
             [self.HUD hide: YES];
-//        }
-
+        
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         newBlock(nil,error);
         [JRToast showWithText:@"连接超时,请检查网络" bottomOffset:70*kScreen_Width/320 duration:3.0f];
         [self.HUD hide:YES];
     }];
 }
-
+- (void)postNoHudUpdatePohotoWithUrl:(NSString *)urlStr withParams:(NSDictionary *)params withPhoto:(NSData *)Photodata compliation:(resultBlock)newBlock{
+    self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"multipart/form-data", @"application/json", @"text/html", @"image/jpeg", @"image/png", @"application/octet-stream", @"text/json", nil];
+    
+    [self POST:urlStr parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *fileName = [NSString stringWithFormat:@"%@.png", [formatter stringFromDate:[NSDate date]]];
+        [formData appendPartWithFileData:Photodata name:@"img" fileName:fileName mimeType:@"image/png"];
+        
+    } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        newBlock(responseObject,nil);
+        
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        newBlock(nil,error);
+        [JRToast showWithText:@"连接超时,请检查网络" bottomOffset:70*kScreen_Width/320 duration:3.0f];
+       
+    }];
+}
 #pragma mark - HUD
 -(MBProgressHUD *)HUD{
     if (!_HUD) {

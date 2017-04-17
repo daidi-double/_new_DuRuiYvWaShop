@@ -24,6 +24,7 @@ typedef enum YuWaType{
     
     
     YuWaType_IMG_UP, //上传图片
+    YuWaType_IMG_UP_NOHUD, //上传图片
    
     YuWaType_RB_HOME, //发现首页
     YuWaType_RB_DETAIL, //笔记详情

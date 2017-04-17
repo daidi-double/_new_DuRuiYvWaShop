@@ -27,6 +27,10 @@
 }
 - (void)dataSet{
     self.nameLabel.text = self.model.customer_name;
+    //判断是否为手机号码，是就隐藏一部分
+    if (self.model.customer_name.length >= 11 && [JWTools isNumberWithStr:self.model.customer_name]) {
+        self.nameLabel.text = [NSString stringWithFormat:@"%@****",[self.model.customer_name substringToIndex:self.model.customer_name.length - 4]];
+    }
     self.timeLabel.text = [JWTools dateWithStr:self.model.pay_time];
     self.priceLabel.text = [NSString stringWithFormat:@"+%@元",self.model.pay_money];
     

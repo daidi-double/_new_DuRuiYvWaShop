@@ -95,6 +95,7 @@
     YWHomeAdvanceOrderTableViewCell * advanceOrderCell = [tableView dequeueReusableCellWithIdentifier:@"YWHomeAdvanceOrderTableViewCell"];
     advanceOrderCell.status = self.status;
     advanceOrderCell.model = self.dataArr[indexPath.row];
+    WEAKSELF;
     if (self.status <= 1) {
         advanceOrderCell.rePlayBlock = ^(){
             UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"Hello Boss" message:@"请接收您的订单" preferredStyle:UIAlertControllerStyleAlert];
@@ -105,7 +106,7 @@
 //            }];
             UIAlertAction * OKAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 UITextField * replayTextField = alertVC.textFields.firstObject;
-                [self requestDelOrderWithReplay:replayTextField.text withIndexPath:indexPath withType:2];
+                [weakSelf requestDelOrderWithReplay:replayTextField.text withIndexPath:indexPath withType:2];
             }];
             
             UIAlertAction * delAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -113,8 +114,8 @@
             }];
             [alertVC addAction:delAction];
             [alertVC addAction:OKAction];
-            self.alertVC = alertVC;
-            [self presentViewController:self.alertVC animated:YES completion:nil];
+            weakSelf.alertVC = alertVC;
+            [weakSelf presentViewController:weakSelf.alertVC animated:YES completion:nil];
         };
         advanceOrderCell.rejectBlock = ^(){
             UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"Hello Boss" message:@"请输入拒绝的理由" preferredStyle:UIAlertControllerStyleAlert];
@@ -124,7 +125,7 @@
             }];
                 UIAlertAction * OKAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 UITextField * rejectTextField = alertVC.textFields.firstObject;
-                [self requestDelOrderWithReplay:rejectTextField.text withIndexPath:indexPath withType:3];
+                [weakSelf requestDelOrderWithReplay:rejectTextField.text withIndexPath:indexPath withType:3];
             }];
             
             UIAlertAction * delAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -132,8 +133,8 @@
             }];
             [alertVC addAction:delAction];
             [alertVC addAction:OKAction];
-            self.alertVC = alertVC;
-            [self presentViewController:self.alertVC animated:YES completion:nil];
+            weakSelf.alertVC = alertVC;
+            [weakSelf presentViewController:weakSelf.alertVC animated:YES completion:nil];
 
         };
     }
@@ -146,11 +147,12 @@
 }
 #pragma mark - TableView Refresh
 - (void)setupRefresh{
+    WEAKSELF;
     self.tableView.mj_header = [UIScrollView scrollRefreshGifHeaderWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{
-        [self headerRereshing];
+        [weakSelf headerRereshing];
     }];
     self.tableView.mj_footer = [UIScrollView scrollRefreshGifFooterWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{
-        [self footerRereshing];
+        [weakSelf footerRereshing];
     }];
 }
 - (void)headerRereshing{
