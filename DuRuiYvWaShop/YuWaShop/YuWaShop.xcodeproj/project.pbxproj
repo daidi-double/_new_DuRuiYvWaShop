@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253542381EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */; };
 		AA2B2BEE1E8CA6FC008CB3C6 /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2B2BEC1E8CA6FC008CB3C6 /* SuccessViewController.m */; };
 		AA2B2BEF1E8CA6FC008CB3C6 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA2B2BED1E8CA6FC008CB3C6 /* SuccessViewController.xib */; };
 		AA2BB25C1E7F71F40030BDEB /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2BB25B1E7F71F40030BDEB /* MyLabel.m */; };
@@ -825,6 +826,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponTableViewCell.xib; sourceTree = "<group>"; };
 		AA2B2BEB1E8CA6FC008CB3C6 /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessViewController.h; sourceTree = "<group>"; };
 		AA2B2BEC1E8CA6FC008CB3C6 /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessViewController.m; sourceTree = "<group>"; };
 		AA2B2BED1E8CA6FC008CB3C6 /* SuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccessViewController.xib; sourceTree = "<group>"; };
@@ -5395,6 +5397,7 @@
 			children = (
 				B3ACF1151DEF070C0056FD64 /* YWHomeCouponTableViewCell.h */,
 				B3ACF1161DEF070C0056FD64 /* YWHomeCouponTableViewCell.m */,
+				253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -6111,7 +6114,7 @@
 					B31096FF1DE44EA00033A984 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = JQ283T24DV;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -6329,6 +6332,7 @@
 				B31097101DE44EA00033A984 /* Assets.xcassets in Resources */,
 				B31098691DE4543E0033A984 /* YWDataAnalyseViewController.xib in Resources */,
 				AA6EBD801E9A3F32007336CF /* ExchangeViewController.xib in Resources */,
+				253542381EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib in Resources */,
 				C14BA3AD1DF93A9F001BDFBD /* BusinessMumberHeaderView.xib in Resources */,
 				C17499621DF68F4500F17B77 /* CommentTableViewCell.xib in Resources */,
 				B317AFBD1DE5D3C90093C511 /* PersonHeaderBG31@2x.png in Resources */,
@@ -7116,7 +7120,7 @@
 				CODE_SIGN_ENTITLEMENTS = YuWaShop/YuWaShop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mingbang Network Technology Co., Ltd. (JQ283T24DV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JQ283T24DV;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YuWaShop/VipxoxPrefixHeader.pch";
 				INFOPLIST_FILE = YuWaShop/Info.plist;
@@ -7132,8 +7136,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.duruikeji.YuWaShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "83faae64-cd69-4f90-a74f-82fa43a592e7";
+				PROVISIONING_PROFILE_SPECIFIER = luoyun2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -7146,7 +7150,7 @@
 				CODE_SIGN_ENTITLEMENTS = YuWaShop/YuWaShop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mingbang Network Technology Co., Ltd. (JQ283T24DV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JQ283T24DV;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YuWaShop/VipxoxPrefixHeader.pch";
 				INFOPLIST_FILE = YuWaShop/Info.plist;
@@ -7162,8 +7166,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.duruikeji.YuWaShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "83faae64-cd69-4f90-a74f-82fa43a592e7";
+				PROVISIONING_PROFILE_SPECIFIER = luoyun2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
