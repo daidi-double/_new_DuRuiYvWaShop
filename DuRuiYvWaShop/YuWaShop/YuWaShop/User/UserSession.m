@@ -71,8 +71,9 @@ static UserSession * user=nil;
 
 + (void)getDataFromUserDefault{//get local saved data
     NSString * accountDefault = [KUSERDEFAULT valueForKey:AUTOLOGIN];
+    NSString * passwordDefault = [KUSERDEFAULT valueForKey:AUTOLOGINCODE];
     if (accountDefault) {
-        if ([accountDefault isEqualToString:@""]){
+        if ([accountDefault isEqualToString:@""] || passwordDefault == nil){
             [UserSession isLogion];
             return;
         }

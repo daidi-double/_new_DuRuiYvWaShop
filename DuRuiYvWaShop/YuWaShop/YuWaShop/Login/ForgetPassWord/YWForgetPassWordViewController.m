@@ -9,7 +9,7 @@
 #import "YWForgetPassWordViewController.h"
 #import "JPUSHService.h"
 #import "VIPTabBarController.h"
-
+#import "YWLoginViewController.h"
 @interface YWForgetPassWordViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
@@ -134,10 +134,15 @@
                 [self.navigationController popToRootViewControllerAnimated:YES];
             });
         }else{
-            [self.navigationController popToRootViewControllerAnimated:YES];
-            VIPTabBarController * rootTabBarVC = (VIPTabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-            rootTabBarVC.selectedIndex = 0;
-            rootTabBarVC.hidesBottomBarWhenPushed = NO;
+            UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"温馨提醒" message:@"您的密码已修改，请重新登入" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction * ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                YWLoginViewController * loginVC = [[YWLoginViewController alloc]init];
+
+                [self.navigationController pushViewController:loginVC animated:YES];
+            }];
+            [alertVC addAction:ok];
+            [self presentViewController:alertVC animated:YES completion:nil];
+
         }
     } failur:^(id responsObj, NSError *error) {
         MyLog(@"Pragram is %@",pragram);
