@@ -59,12 +59,12 @@
         
     }];
     
-    //上拉刷新
-    self.tableView.mj_footer = [UIScrollView scrollRefreshGifFooterWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{
-        self.pages++;
-        [self getDatas];
-        
-    }];
+//    //上拉刷新
+//    self.tableView.mj_footer = [UIScrollView scrollRefreshGifFooterWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{
+//        self.pages++;
+//        [self getDatas];
+//        
+//    }];
     
     [self.tableView.mj_header beginRefreshing];
     
@@ -199,7 +199,7 @@
             [JRToast showWithText:data[@"errorMessage"]];
         }
         [self.tableView.mj_header endRefreshing];
-        [self.tableView.mj_footer endRefreshing];
+//        [self.tableView.mj_footer endRefreshing];
         
     }];
     
