@@ -64,6 +64,11 @@
     [self dataSet];
     [self makeUI];
     [self requestData];
+    //获取通知中心单例对象
+    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
+    //添加当前类对象为一个观察者，name和object设置为nil，表示接收一切通知
+    [center addObserver:self selector:@selector(notice:) name:@"123" object:nil];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -418,7 +423,9 @@
     }
     return self.recommendCell;
 }
-
+-(void)notice:(id)sender{
+    [self requestData];
+}
 #pragma mark - TableView Refresh
 - (void)setupRefresh{
     self.tableView.mj_footer = [UIScrollView scrollRefreshGifFooterWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{

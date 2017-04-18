@@ -55,7 +55,6 @@
 - (void)makeUI{
     WEAKSELF;
     self.headerView = [[[NSBundle mainBundle]loadNibNamed:@"YWPersonHeaderView" owner:nil options:nil]firstObject];
-    
     self.headerView.chooseBtnBlock = ^(NSInteger choosedBtn){//1门店2会员3分红
         UIViewController * vc;
         switch (choosedBtn) {
