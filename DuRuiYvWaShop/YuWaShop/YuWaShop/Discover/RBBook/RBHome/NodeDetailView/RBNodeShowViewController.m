@@ -87,6 +87,7 @@
         self.addToAldumView = nil;
     }
     if ([[[UIApplication sharedApplication].delegate.window.subviews lastObject] isKindOfClass:[MBProgressHUD class]])[[[UIApplication sharedApplication].delegate.window.subviews lastObject] removeFromSuperview];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"123" object:nil];
 }
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
