@@ -25,6 +25,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+   self.OrderDetaleTableView.backgroundColor = RGBCOLOR(234, 234, 234, 1);
     if (self.status == 0) {
         [self getDatas];//近期账单详情
         
@@ -56,7 +57,7 @@
             return 80;
         }
     }
-    return 44;
+    return 30;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 1) {
@@ -69,6 +70,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"orderCell0"];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.textColor = RGBCOLOR(114, 115, 114, 1);
     cell.detailTextLabel.textColor = RGBCOLOR(114, 115, 114, 1);
     cell.textLabel.font = [UIFont systemFontOfSize:15];
@@ -76,6 +78,7 @@
     if (self.dataAry.count>0) {
         OrderDetailModel * model = self.dataAry[0];
     if (indexPath.section == 0) {
+        cell.textLabel.textColor = RGBCOLOR(95, 96, 98, 1);
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         if (indexPath.row == 0) {
             if (self.status == 0) {
@@ -109,17 +112,21 @@
             cell.detailTextLabel.text = @"实际收款额";
              }else{
                  cell.textLabel.text = [NSString stringWithFormat:@"￥%@",model.total_money];
-                 cell.textLabel.textColor = RGBCOLOR(249, 207, 112, 1);
+                 cell.textLabel.textColor = RGBCOLOR(229, 193, 64, 1);
                  cell.textLabel.font = [UIFont systemFontOfSize:35];
                  
                  cell.detailTextLabel.text = @"(订单总额)";
              }
         }
     }else{
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
+        cell.textLabel.textColor = RGBCOLOR(132, 132 ,132, 1);
+        cell.detailTextLabel.textColor = RGBCOLOR(182, 182 ,182, 1);
         if (indexPath.row == 0) {
             cell.textLabel.text = @"明细";
-            UIView * line = [[UIView alloc]initWithFrame:CGRectMake(16, cell.height-0.5, cell.width-32, 0.5)];
-            line.backgroundColor = [UIColor lightGrayColor];
+            UIView * line = [[UIView alloc]initWithFrame:CGRectMake(16, 29.5, cell.width-32, 0.5)];
+            line.backgroundColor = RGBCOLOR(240, 242, 240, 1);
             [cell.contentView addSubview:line];
         }else{
             if (indexPath.row == 1) {

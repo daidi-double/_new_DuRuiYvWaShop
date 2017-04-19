@@ -82,10 +82,10 @@
     }];
     
 }
-- (void)setInfavs:(NSString *)infavs{
-    if (!infavs)return;
-    _infavs = infavs;
-    if ([self.infavs isEqualToString:@"0"]) {
+- (void)setIs_fans:(NSString *)is_fans{
+    if (!is_fans)return;
+    _is_fans = is_fans;
+    if ([self.is_fans isEqualToString:@"0"]) {
         self.attentiionBtn.backgroundColor = CNaviColor;
         [self.attentiionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.attentiionBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
@@ -128,9 +128,9 @@
 
 - (IBAction)attentiionBtnAction:(id)sender {
     if ([UserSession instance].isLogin) {
-        self.infavs = [self.infavs isEqualToString:@"0"]?@"1":@"0";
+        self.is_fans = [self.is_fans isEqualToString:@"0"]?@"1":@"0";
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            if ([self.infavs isEqualToString:@"1"]) {
+            if ([self.is_fans isEqualToString:@"1"]) {
                 [self requestAttention];
             }else{
                 [self requestAttentionCancel];

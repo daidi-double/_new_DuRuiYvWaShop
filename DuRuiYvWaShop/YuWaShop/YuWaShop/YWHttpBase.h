@@ -39,6 +39,7 @@
 #define HTTP_RB_ALDUM @"/api.php/Note/getUserAlbumLists/" //获取用户专辑列表
 #define HTTP_RB_CREATE_ALDUM @"/api.php/Note/addAlbum/" //创建专辑
 #define HTTP_RB_COLLECTION_TO_ALDUM @"/api.php/Note/addToMyAlbum/" //添加收藏到我的专辑
+#define HTTP_PRESON_BASEINFO   @"/api.php/User/getNewBaseInfo"//获取关注人数等
 #define HTTP_RB_COLLECTION_CANCEL @"/api.php/Note/delMyNoteAlbum/" //取消收藏
 #define HTTP_RB_ATTENTION_ADD @"/api.php/User/addAttention/" //关注发布者
 #define HTTP_RB_ATTENTION_CANCEL @"/api.php/User/delAttention/" //删除关注
@@ -218,6 +219,8 @@
 
 #define HTTP_MYABOUNT              @"/api.php/User/myAttention/"   //我的关注
 #define HTTP_MYFANS                @"/api.php/User/myFans/"        //我的粉丝
+#define HTTP_MYNOTEBEPRAISE        @"/api.php/User/myPraised/"     //被赞
+#define HTTP_MYNOTEBECOLLECT       @"/api.php/User/myCollected/"   //被收藏
 #define HTTP_TAABOUNT              @"/api.php/User/otherAttention/"  //他的关注
 #define HTTP_TAFANS                @"/api.php/User/otherFans/"       //他的粉丝
 #define HTTP_ADDABOUT              @"/api.php/User/addAttention/"    //加关注

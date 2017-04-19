@@ -221,7 +221,7 @@
     }
     if (self.dataModel&&!self.authorHeader.model){
         self.authorHeader.isUser = [self.dataModel.user.userid integerValue]==([UserSession instance].uid?[UserSession instance].uid:0)?YES:NO;
-        self.authorHeader.infavs = self.dataModel.is_fans;
+        self.authorHeader.is_fans = self.dataModel.is_fans;
         self.authorHeader.model = self.dataModel.user;
     }
     return self.authorHeader;

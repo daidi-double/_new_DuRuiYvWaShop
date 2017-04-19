@@ -20,7 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *delBtn;
 @property (nonatomic,assign)BOOL isUser;//是否是自己
-@property (nonatomic,copy)NSString * infavs;
+@property (nonatomic,copy)NSString * infavs;//是否收藏
+@property (nonatomic,copy)NSString * is_fans;//是否关注
 @property (nonatomic,strong)RBNodeUserModel * model;
 
 

@@ -28,6 +28,7 @@
 
 - (void)likeBtnImageAnimation{
     CGPoint center = CGPointMake(self.likeBtn.x + self.likeBtn.imageView.width/2 + self.likeBtn.imageView.x, self.likeBtn.center.y);
+    MyLog(@"like%d",_isLike);
     self.showLikeImageView.image = [UIImage imageNamed:_isLike?@"icon-like":@"icon-dislike"];
     self.showLikeImageView.alpha = 0.f;
     self.showLikeImageView.frame = CGRectMake(center.x - 1.f, center.y - 1.f, 2.f, 2.f);
@@ -51,9 +52,10 @@
         self.likeBlock(_isLike);
         return;
     }
+    WEAKSELF;
     self.isLike = !_isLike;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self requestLike];
+        [weakSelf requestLike];
     }); 
     [self.likeBtn setImage:[UIImage imageNamed:_isLike == YES?@"icon-like":@"icon-dislike"] forState:UIControlStateNormal];
     [self likeBtnImageAnimation];
