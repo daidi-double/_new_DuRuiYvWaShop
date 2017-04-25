@@ -43,6 +43,7 @@
 
 //2
 -(void)postDatasNoHudWithUrl:(NSString *)urlStr withParams:(NSDictionary *)params compliation:(resultBlock)newBlock{
+    
     AFHTTPRequestOperationManager*manager=[AFHTTPRequestOperationManager manager];
     [manager POST:urlStr parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
           newBlock(responseObject,nil);
@@ -79,24 +80,26 @@
     AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes=[manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"multipart/form-data", @"application/json", @"text/html", @"image/jpeg", @"image/png", @"application/octet-stream", @"text/json", nil];
-    
-    [manager POST:urlStr parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.dateFormat = @"yyyyMMddHHmmss";
-        NSString *fileName = [NSString stringWithFormat:@"%@.png", [formatter stringFromDate:[NSDate date]]];
-        [formData appendPartWithFileData:Photodata name:@"img" fileName:fileName mimeType:@"image/png"];
-        
-    } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        
-        newBlock(responseObject,nil);
-        [self.HUD hide:YES];
-
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        newBlock(nil,error);
-        [JRToast showWithText:@"连接超时,请检查网络" bottomOffset:70*kScreen_Width/320 duration:3.0f];
-        [self.HUD hide:YES];
-        
-    }];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [manager POST:urlStr parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            formatter.dateFormat = @"yyyyMMddHHmmss";
+            NSString *fileName = [NSString stringWithFormat:@"%@.png", [formatter stringFromDate:[NSDate date]]];
+            [formData appendPartWithFileData:Photodata name:@"img" fileName:fileName mimeType:@"image/png"];
+            
+        } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+            
+//            dispatch_sync(dispatch_get_main_queue(), ^{
+            newBlock(responseObject,nil);
+                [self.HUD hide:YES];
+//            });
+            
+        } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+            newBlock(nil,error);
+                [JRToast showWithText:@"连接超时,请检查网络" bottomOffset:70*kScreen_Width/320 duration:3.0f];
+                [self.HUD hide:YES];
+        }];
+    });
     
     
 }
