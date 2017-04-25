@@ -9,6 +9,8 @@
 #import "YWMyContactViewController.h"
 #import "PCBottomTableViewCell.h"
 
+#import "defineButton.h"
+#import "YWFansViewController.h"
 #import "YJSegmentedControl.h"
 
 #import "RBHomeCollectionViewCell.h"
@@ -21,7 +23,9 @@
 #import "YWLoginViewController.h"
 #define CELL0   @"PCBottomTableViewCell"
 @interface YWMyContactViewController ()<UITableViewDelegate,UITableViewDataSource,YJSegmentedControlDelegate,PCBottomTableViewCellDelegate,TZImagePickerControllerDelegate>
-
+{
+    UIView * menuView;
+}
 @property(nonatomic,strong)UITableView*tableView;
 @property (nonatomic,strong)RBHomeCollectionViewCell * heighCell;   //collectionView 的cell
 
@@ -36,6 +40,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.tableView.mj_header beginRefreshing];
+    
+    [self getNewBaseInfo];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,6 +51,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:CELL0 bundle:nil] forCellReuseIdentifier:CELL0];
     [self setUpMJRefresh];
      self.heighCell = [[[NSBundle mainBundle]loadNibNamed:@"RBHomeCollectionViewCell" owner:nil options:nil]firstObject];
+    
 }
 
 
@@ -55,7 +62,103 @@
     YJSegmentedControl*segment=[YJSegmentedControl segmentedControlFrame:CGRectMake(0, 64, kScreen_Width, 30) titleDataSource:titleArray backgroundColor:[UIColor whiteColor] titleColor:[UIColor grayColor] titleFont:[UIFont systemFontOfSize:14] selectColor:CNaviColor buttonDownColor:CNaviColor Delegate:self];
     [self.view addSubview:segment];
     
+    UIBarButtonItem * rightBtn = [[UIBarButtonItem alloc]initWithTitle:@"关注" style:UIBarButtonItemStylePlain target:self action:@selector(guanzhu)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    
+    
 }
+//下拉菜单
+- (void)menu{
+    if (!menuView) {
+        
+        menuView = [[UIView alloc]initWithFrame:CGRectMake(kScreen_Width * 0.68f, 64, kScreen_Width * 0.32, 35 * 4 +50.f)];
+        menuView.backgroundColor = CNaviColor;
+        [self.view addSubview:menuView];
+    }
+    NSMutableArray*fourArray=[NSMutableArray array];
+    if ([UserSession instance].attentionCount == nil) {
+        [UserSession instance].attentionCount = @"0";
+    }
+    if ([UserSession instance].fans == nil) {
+        [UserSession instance].fans = @"0";
+    }
+    if ([UserSession instance].praised == nil) {
+        [UserSession instance].praised = @"0";
+    }
+    if ([UserSession instance].collected == nil) {
+        [UserSession instance].collected = @"0";
+    }
+    
+    [fourArray addObject:@[@"关注",[UserSession instance].attentionCount]];
+    [fourArray addObject:@[@"粉丝",[UserSession instance].fans]];
+    [fourArray addObject:@[@"被赞",[UserSession instance].praised]];
+    [fourArray addObject:@[@"被收藏",[UserSession instance].collected]];
+    
+    CGFloat btnHeight = (menuView.frame.size.height - 20 - 30)/4;
+    MyLog(@"btnHeight = %f",btnHeight);
+    for (int i=0; i<4; i++) {
+        defineButton*button=[[defineButton alloc]init];
+        button.frame = CGRectMake(25, 10+( btnHeight +10)* i,menuView.width *0.9, btnHeight);
+        button.tag = 12 + i;
+        [button addTarget:self action:@selector(touchFourButton:) forControlEvents:UIControlEventTouchUpInside];
+        
+        button.topLabel.text=fourArray[i][0];
+        button.bottomLabel.text=fourArray[i][1];
+        
+        [menuView addSubview:button];
+        
+        if (i==3) {
+            button.VlineView.hidden=YES;
+        }
+        
+        
+    }
+    menuView.hidden = YES;
+}
+-(void)guanzhu{
+    
+    menuView.hidden = !menuView.hidden;
+
+}
+
+#pragma mark  --touch
+
+-(void)touchFourButton:(UIButton*)sender{
+    menuView.hidden = !menuView.hidden;
+    NSInteger number =sender.tag-11;
+        MyLog(@"%lu",number);
+    if (number==1) {
+        
+        // 关注
+        YWFansViewController*vc=[[YWFansViewController alloc]init];
+        vc.whichFriend=TheFirendsAbount;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+        
+        
+    }else if (number==2){
+        //粉丝
+        YWFansViewController*vc=[[YWFansViewController alloc]init];
+        vc.whichFriend=TheFirendsFans;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+        
+    }else if (number==3){
+        
+        //被赞
+        YWFansViewController*vc=[[YWFansViewController alloc]init];
+        vc.whichFriend=TheFriendsBePraise;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else if (number==4){
+        //被收藏
+        YWFansViewController*vc=[[YWFansViewController alloc]init];
+        vc.whichFriend=TheFriendsBeCollected;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+}
+
 
 -(void)setUpMJRefresh{
     self.pagen=10;
@@ -296,7 +399,23 @@
 //    [self.tableView .mj_footer endRefreshing];
 
 }
-
+-(void)getNewBaseInfo{
+    NSString * urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_PRESON_BASEINFO];
+    NSDictionary * pragrams = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"user_type":@(2)};
+    HttpManager * manager = [[HttpManager alloc]init];
+    [manager postDatasNoHudWithUrl:urlStr withParams:pragrams compliation:^(id data, NSError *error) {
+        MyLog(@"关注data = %@",data);
+        NSInteger number = [data[@"errorCode"] integerValue];
+        if (number == 0) {
+            [UserSession instance].praised = data[@"data"][@"praised"];
+            [UserSession instance].attentionCount = data[@"data"][@"attentioncount"];
+            [UserSession instance].fans = data[@"data"][@"fans"];
+            [UserSession instance].collected = data[@"data"][@"collected"];
+            [self menu];
+           
+        }
+    }];
+}
 
 /*
 #pragma mark - Navigation

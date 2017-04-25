@@ -64,6 +64,11 @@
     [self dataSet];
     [self makeUI];
     [self requestData];
+    //获取通知中心单例对象
+    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
+    //添加当前类对象为一个观察者，name和object设置为nil，表示接收一切通知
+    [center addObserver:self selector:@selector(notice:) name:@"123" object:nil];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -82,6 +87,7 @@
         self.addToAldumView = nil;
     }
     if ([[[UIApplication sharedApplication].delegate.window.subviews lastObject] isKindOfClass:[MBProgressHUD class]])[[[UIApplication sharedApplication].delegate.window.subviews lastObject] removeFromSuperview];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"123" object:nil];
 }
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
@@ -132,7 +138,7 @@
             [weakSelf reSetBottomToolsView];
         }
     };
-    
+
     self.toolsBottomView.commentBlock = ^(){
         [weakSelf commentActionWithNodeDic:@{@"nodeID":weakSelf.model.homeID}];
     };
@@ -215,7 +221,7 @@
     }
     if (self.dataModel&&!self.authorHeader.model){
         self.authorHeader.isUser = [self.dataModel.user.userid integerValue]==([UserSession instance].uid?[UserSession instance].uid:0)?YES:NO;
-        self.authorHeader.infavs = self.dataModel.is_fans;
+        self.authorHeader.is_fans = self.dataModel.is_fans;
         self.authorHeader.model = self.dataModel.user;
     }
     return self.authorHeader;
@@ -418,7 +424,9 @@
     }
     return self.recommendCell;
 }
-
+-(void)notice:(id)sender{
+    [self requestData];
+}
 #pragma mark - TableView Refresh
 - (void)setupRefresh{
     self.tableView.mj_footer = [UIScrollView scrollRefreshGifFooterWithImgName:@"newheader" withImageCount:60 withRefreshBlock:^{
@@ -438,13 +446,18 @@
 
 #pragma mark - Http
 - (void)requestData{
-    NSDictionary * pragram = @{@"token":[UserSession instance].token,@"note_id":self.model.homeID,@"device_id":[JWTools getUUID],@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1)};
+    if (self.note_id == nil) {
+        self.note_id = self.model.homeID;
+        
+    }
+
+    NSDictionary * pragram = @{@"token":[UserSession instance].token,@"note_id":self.note_id,@"device_id":[JWTools getUUID],@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1)};
     
     [[HttpObject manager]postDataWithType:YuWaType_RB_DETAIL withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is 1 %@",pragram);
         MyLog(@"Regieter Code is %@",responsObj);
         NSMutableDictionary * dataDic = [RBNodeShowModel dataDicSetWithDic:responsObj[@"data"]];
-        [dataDic setObject:self.model.homeID forKey:@"id"];
+        [dataDic setObject:self.note_id forKey:@"id"];
         self.dataModel = [RBNodeShowModel yy_modelWithDictionary:dataDic];
         self.scrollToolsHeight = 0.f;
         [self reSetBottomToolsView];
@@ -455,7 +468,11 @@
     }];
 }
 - (void)requestDataWithPages:(NSInteger)page{
-    NSDictionary * pragram = @{@"note_id":self.model.homeID,@"pagen":self.pagens,@"pages":[NSString stringWithFormat:@"%zi",page],@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1)};
+    if (self.note_id == nil) {
+        self.note_id = self.model.homeID;
+        
+    }
+    NSDictionary * pragram = @{@"note_id":self.note_id,@"pagen":self.pagens,@"pages":[NSString stringWithFormat:@"%zi",page],@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1)};
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(RefreshTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self cancelRefreshWithIsHeader:(page==0?YES:NO)];
@@ -522,7 +539,12 @@
 }
 
 - (void)requestCancelToAldum{
-    NSDictionary * pragram = @{@"note_id":self.model.homeID,@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1)};
+    if (self.note_id == nil) {
+        self.note_id = self.model.homeID;
+        
+    }
+
+    NSDictionary * pragram = @{@"note_id":self.note_id,@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1)};
     
     [[HttpObject manager]postNoHudWithType:YuWaType_RB_COLLECTION_CANCEL withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);

@@ -12,7 +12,7 @@
 @interface RBNodeShowViewController : RBBasicViewController
 
 @property (nonatomic,strong)RBHomeModel * model;
-
+@property (nonatomic,strong)NSString * note_id;
 @property (nonatomic,assign)BOOL isUser;//是否是自己
 
 @end

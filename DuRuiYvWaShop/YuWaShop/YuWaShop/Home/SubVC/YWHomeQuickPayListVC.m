@@ -33,6 +33,7 @@
     self.dataArr = [NSMutableArray arrayWithCapacity:0];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"YWHomeQuickPayListTableViewCell" bundle:nil] forCellReuseIdentifier:@"YWHomeQuickPayListTableViewCell"];
+    self.tableView.backgroundColor = RGBCOLOR(233, 238, 241, 1);
 }
 
 #pragma mark - UITableViewDelegate

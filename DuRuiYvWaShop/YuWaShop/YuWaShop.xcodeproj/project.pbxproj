@@ -26,6 +26,12 @@
 		AA37888C1E8ABA4700B7F9CC /* PassWordTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37887A1E8ABA4700B7F9CC /* PassWordTextView.m */; };
 		AA37888D1E8ABA4700B7F9CC /* YWBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37887C1E8ABA4700B7F9CC /* YWBankViewController.m */; };
 		AA37888E1E8ABA4700B7F9CC /* YWBankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA37887D1E8ABA4700B7F9CC /* YWBankViewController.xib */; };
+		AA3C14121EA729F000530095 /* defineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C14111EA729F000530095 /* defineButton.m */; };
+		AA3C14151EA73D6000530095 /* YWFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C14141EA73D6000530095 /* YWFansViewController.m */; };
+		AA3C141D1EA73D7900530095 /* AbountAndFansModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C14171EA73D7900530095 /* AbountAndFansModel.m */; };
+		AA3C141E1EA73D7900530095 /* NotePraiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C14191EA73D7900530095 /* NotePraiseModel.m */; };
+		AA3C141F1EA73D7900530095 /* YWFansTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C141B1EA73D7900530095 /* YWFansTableViewCell.m */; };
+		AA3C14201EA73D7900530095 /* YWFansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C141C1EA73D7900530095 /* YWFansTableViewCell.xib */; };
 		AA3C416A1E8DD9510052C732 /* DayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C41361E8DD9510052C732 /* DayDetailViewController.m */; };
 		AA3C416B1E8DD9510052C732 /* DayDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C41371E8DD9510052C732 /* DayDetailViewController.xib */; };
 		AA3C416C1E8DD9510052C732 /* FinancailBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C413A1E8DD9510052C732 /* FinancailBaseModel.m */; };
@@ -856,6 +862,17 @@
 		AA37887B1E8ABA4700B7F9CC /* YWBankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWBankViewController.h; sourceTree = "<group>"; };
 		AA37887C1E8ABA4700B7F9CC /* YWBankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWBankViewController.m; sourceTree = "<group>"; };
 		AA37887D1E8ABA4700B7F9CC /* YWBankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWBankViewController.xib; sourceTree = "<group>"; };
+		AA3C14101EA729F000530095 /* defineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defineButton.h; sourceTree = "<group>"; };
+		AA3C14111EA729F000530095 /* defineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = defineButton.m; sourceTree = "<group>"; };
+		AA3C14131EA73D6000530095 /* YWFansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWFansViewController.h; sourceTree = "<group>"; };
+		AA3C14141EA73D6000530095 /* YWFansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWFansViewController.m; sourceTree = "<group>"; };
+		AA3C14161EA73D7900530095 /* AbountAndFansModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbountAndFansModel.h; sourceTree = "<group>"; };
+		AA3C14171EA73D7900530095 /* AbountAndFansModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbountAndFansModel.m; sourceTree = "<group>"; };
+		AA3C14181EA73D7900530095 /* NotePraiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotePraiseModel.h; sourceTree = "<group>"; };
+		AA3C14191EA73D7900530095 /* NotePraiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotePraiseModel.m; sourceTree = "<group>"; };
+		AA3C141A1EA73D7900530095 /* YWFansTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWFansTableViewCell.h; sourceTree = "<group>"; };
+		AA3C141B1EA73D7900530095 /* YWFansTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWFansTableViewCell.m; sourceTree = "<group>"; };
+		AA3C141C1EA73D7900530095 /* YWFansTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWFansTableViewCell.xib; sourceTree = "<group>"; };
 		AA3C41351E8DD9510052C732 /* DayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayDetailViewController.h; sourceTree = "<group>"; };
 		AA3C41361E8DD9510052C732 /* DayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayDetailViewController.m; sourceTree = "<group>"; };
 		AA3C41371E8DD9510052C732 /* DayDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayDetailViewController.xib; sourceTree = "<group>"; };
@@ -2334,6 +2351,25 @@
 				AA2B2BED1E8CA6FC008CB3C6 /* SuccessViewController.xib */,
 			);
 			name = viewControll;
+			sourceTree = "<group>";
+		};
+		AA3C140F1EA729CA00530095 /* 关注 */ = {
+			isa = PBXGroup;
+			children = (
+				AA3C14161EA73D7900530095 /* AbountAndFansModel.h */,
+				AA3C14171EA73D7900530095 /* AbountAndFansModel.m */,
+				AA3C14181EA73D7900530095 /* NotePraiseModel.h */,
+				AA3C14191EA73D7900530095 /* NotePraiseModel.m */,
+				AA3C141A1EA73D7900530095 /* YWFansTableViewCell.h */,
+				AA3C141B1EA73D7900530095 /* YWFansTableViewCell.m */,
+				AA3C141C1EA73D7900530095 /* YWFansTableViewCell.xib */,
+				AA3C14131EA73D6000530095 /* YWFansViewController.h */,
+				AA3C14141EA73D6000530095 /* YWFansViewController.m */,
+				AA3C14101EA729F000530095 /* defineButton.h */,
+				AA3C14111EA729F000530095 /* defineButton.m */,
+			);
+			name = "关注";
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		AA3C41341E8DD9510052C732 /* FinancialManager */ = {
@@ -5976,6 +6012,7 @@
 		C1B4271F1DFA5E4A00A3132E /* 我的笔记 */ = {
 			isa = PBXGroup;
 			children = (
+				AA3C140F1EA729CA00530095 /* 关注 */,
 				C1B4273F1DFA772100A3132E /* 我的专辑列表 */,
 				C1B427261DFA741600A3132E /* 笔记专辑影评评论 */,
 				C1B427201DFA5E4A00A3132E /* Controller */,
@@ -6200,6 +6237,7 @@
 				B3F07F121DE72DE9005116EA /* YWPCEveryPayViewController.xib in Resources */,
 				B317AFC31DE5D3C90093C511 /* PersonHeaderBG37@2x.png in Resources */,
 				B3F177F71DEFF28D007DB9A3 /* YWHomeNoticaficationViewController.xib in Resources */,
+				AA3C14201EA73D7900530095 /* YWFansTableViewCell.xib in Resources */,
 				B35C9EB91DEC3FE80051E352 /* countrycoderule.plist in Resources */,
 				B35C9E911DEC3FE80051E352 /* YWMessageViewController.xib in Resources */,
 				AA3C41711E8DD9510052C732 /* FinancialTableViewCell.xib in Resources */,
@@ -6482,6 +6520,7 @@
 				AAF128271E8BB58700121621 /* CheckPhoneCodeViewController.m in Sources */,
 				B310988B1DE4543E0033A984 /* JWThirdTools.m in Sources */,
 				B3ACF1181DEF070C0056FD64 /* YWHomeCouponTableViewCell.m in Sources */,
+				AA3C14151EA73D6000530095 /* YWFansViewController.m in Sources */,
 				C14BA3A31DF93A9F001BDFBD /* BindingPersonModel.m in Sources */,
 				C14BA3B41DF93A9F001BDFBD /* MybindingShopTableViewCell.m in Sources */,
 				B35C9EDD1DEC3FE80051E352 /* RBHomeRecommendModel.m in Sources */,
@@ -6569,6 +6608,7 @@
 				B35C9D0E1DEC3ECD0051E352 /* EaseTextView.m in Sources */,
 				B35C9EF61DEC3FE80051E352 /* RBNodeUserModel.m in Sources */,
 				B35C9D001DEC3ECD0051E352 /* EaseCustomMessageCell.m in Sources */,
+				AA3C141D1EA73D7900530095 /* AbountAndFansModel.m in Sources */,
 				B35C9EDB1DEC3FE80051E352 /* RBHomeListImagesModel.m in Sources */,
 				B35C9CEE1DEC3ECD0051E352 /* UIViewController+DismissKeyboard.m in Sources */,
 				AA3C41731E8DD9510052C732 /* AccountIncomeModel.m in Sources */,
@@ -6809,6 +6849,7 @@
 				AA3C41791E8DD9510052C732 /* MoneyPackModel.m in Sources */,
 				B35C9F161DEC3FE80051E352 /* RBNewAlbumCollectionViewCell.m in Sources */,
 				B3C12A6C1DED3575000EF099 /* YWHomeQuickPayListTableViewCell.m in Sources */,
+				AA3C141F1EA73D7900530095 /* YWFansTableViewCell.m in Sources */,
 				AA3C416E1E8DD9510052C732 /* ForMoneyModel.m in Sources */,
 				B35C9CFD1DEC3ECD0051E352 /* EaseViewController.m in Sources */,
 				B35C9EF01DEC3FE80051E352 /* RBNodeShowCommentTargetModel.m in Sources */,
@@ -6851,6 +6892,7 @@
 				B35C9F401DEC3FE80051E352 /* TZPhotoPreviewCell.m in Sources */,
 				B31098D51DE4543E0033A984 /* UIView+WebCacheOperation.m in Sources */,
 				B3F07E661DE6938D005116EA /* YWPersonNoticaficationViewController.m in Sources */,
+				AA3C141E1EA73D7900530095 /* NotePraiseModel.m in Sources */,
 				B35C9EF71DEC3FE80051E352 /* RBNodeShowViewController.m in Sources */,
 				B31098C71DE4543E0033A984 /* NSData+ImageContentType.m in Sources */,
 				B35C9D021DEC3ECD0051E352 /* EaseMessageTimeCell.m in Sources */,
@@ -6896,6 +6938,7 @@
 				B35C9CC71DEC3ECD0051E352 /* MWZoomingScrollView.m in Sources */,
 				B35C9CD91DEC3ECD0051E352 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				B35C9CEA1DEC3ECD0051E352 /* EaseUserModel.m in Sources */,
+				AA3C14121EA729F000530095 /* defineButton.m in Sources */,
 				AA3C41751E8DD9510052C732 /* GetMoneyToBankViewController.m in Sources */,
 				B3F07F0C1DE72DD7005116EA /* YWPCCutSetViewController.m in Sources */,
 				B35C9EDF1DEC3FE80051E352 /* RBNodeDCommentTableViewCell.m in Sources */,

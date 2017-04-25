@@ -16,6 +16,7 @@
 @property (nonatomic,copy)NSString * bankName;
 @property (nonatomic,copy)NSString * bankCard;
 @property (nonatomic,copy)NSString * bankCardID;
+@property (nonatomic,copy)NSString * userName;
 @end
 
 @implementation GetMyMoneyViewController
@@ -50,11 +51,11 @@
     YWBankViewController * bankVC = [[YWBankViewController alloc]init];
     WEAKSELF;
     bankVC.status = 1;
-    bankVC.getBankCardBlock = ^(NSString * bankName,NSString * bankCard,NSString * bankCardID){
+    bankVC.getBankCardBlock = ^(NSString * bankName,NSString * bankCard,NSString * bankCardID,NSString * userName){
         weakSelf.bankName = bankName;
         weakSelf.bankCard = bankCard;
         weakSelf.bankCardID = bankCardID;
-        
+        weakSelf.userName = userName;
 
         NSString * card = [bankCard substringFromIndex:bankCard.length - 4];
         
@@ -85,7 +86,7 @@
 }
 - (void)requestData{
     NSString * urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_GETMYTOBANK];
-    NSDictionary * pragrams = @{@"user_id":@([UserSession instance].uid),@"device_id":[JWTools getUUID],@"user_type":@(2),@"token":[UserSession instance].token, @"user_card_id":self.bankCardID,@"money":self.inputMoneyTF.text};
+    NSDictionary * pragrams = @{@"user_id":@([UserSession instance].uid),@"device_id":[JWTools getUUID],@"user_type":@(2),@"token":[UserSession instance].token, @"name":self.userName,@"money":self.inputMoneyTF.text,@"bank":self.bankName,@"card":self.bankCard};
     HttpManager * manager = [[HttpManager alloc]init];
     [manager postDatasNoHudWithUrl:urlStr withParams:pragrams compliation:^(id data, NSError *error) {
         
