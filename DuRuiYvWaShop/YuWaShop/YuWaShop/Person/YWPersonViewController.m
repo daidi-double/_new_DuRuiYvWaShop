@@ -37,10 +37,15 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0.f];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self refreshUI];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [UserSession userToComfired];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear: animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0.f];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];

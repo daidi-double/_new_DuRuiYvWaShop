@@ -50,7 +50,10 @@
     [self makeTopHeader];
     
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    self.navigationController.navigationBarHidden= NO;
+}
 -(void)setUpMJRefresh{
     self.status=1;
     self.pagen=10;

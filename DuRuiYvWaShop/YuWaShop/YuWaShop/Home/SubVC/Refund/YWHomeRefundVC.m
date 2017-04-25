@@ -34,7 +34,10 @@
     [self setupRefresh];
     [self requestDataWithPages:0];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    self.navigationController.navigationBarHidden= NO;
+}
 - (void)makeUI{
     self.headerView = [[UIView alloc]initWithFrame:CGRectMake(0.f, 0.f, kScreen_Width, 50.f)];
     self.headerView.backgroundColor = [UIColor whiteColor];

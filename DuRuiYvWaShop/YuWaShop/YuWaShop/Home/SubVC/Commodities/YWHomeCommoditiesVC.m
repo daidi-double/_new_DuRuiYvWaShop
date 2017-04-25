@@ -29,9 +29,11 @@
     [self dataSet];
     [self setupRefresh];
 }
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.tableView.mj_header beginRefreshing];
+    [self.navigationController setNavigationBarHidden:NO     animated:YES];
 }
 
 - (void)makeUI{

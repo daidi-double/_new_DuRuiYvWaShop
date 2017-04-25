@@ -28,7 +28,10 @@
     [self dataSet];
     [self requestMyAcountMoney];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 - (void)dataSet{
     
     _addFastivalBtn.layer.masksToBounds = YES;
