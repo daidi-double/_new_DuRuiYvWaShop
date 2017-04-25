@@ -34,7 +34,10 @@
     [self setupRefresh];
     [self requestDataWithPages:0];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    self.navigationController.navigationBarHidden= NO;
+}
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     [[UIApplication sharedApplication].keyWindow removeGestureRecognizer:self.tap];

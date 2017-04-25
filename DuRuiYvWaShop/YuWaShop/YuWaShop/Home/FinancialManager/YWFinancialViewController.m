@@ -43,6 +43,10 @@
     self.navigationItem.rightBarButtonItem = rightBtn;
      [self financialInfo];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 - (void)payList{
     
     PCDetailMoneyViewController * vc = [[PCDetailMoneyViewController alloc]init];

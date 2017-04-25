@@ -26,8 +26,12 @@
     [self dataSet];
     [self setupRefresh];
     [self requestDataWithPages:0];
-}
 
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+        self.navigationController.navigationBarHidden = NO;
+}
 - (void)dataSet{
     self.pagens = @"10";
     self.dataArr = [NSMutableArray arrayWithCapacity:0];

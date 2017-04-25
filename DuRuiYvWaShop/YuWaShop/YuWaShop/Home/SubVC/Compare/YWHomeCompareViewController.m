@@ -41,7 +41,10 @@
 //    [self setupRefresh];
 //    [self requestDataWithPages:0];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 - (void)dataSet{
     if ([[UserSession instance].shopTypeID isEqualToString:@"0"]){
         [UserSession userCompareType];
