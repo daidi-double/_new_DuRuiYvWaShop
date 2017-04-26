@@ -136,7 +136,7 @@
 #define HTTP_Shoper_ShopAdmin_AddRecord   @"/api.php/ShopAdmin/addRecord/"   //买单收银，生成二维码
 #define HTTP_Shoper_ShopAdmin_RecordLists   @"/api.php/ShopAdmin/myRecordLists/"   //闪惠记录
 #define HTTP_Shoper_ShopAdmin_GoodsLists   @"/api.php/ShopAdmin/goodsLists/"   //商品管理之商品列表,支持分页
-#define HTTP_Shoper_ShopAdmin_AddGoods   @"/api.php/ShopAdmin/addGoods/"   //商品管理之添加商品
+#define HTTP_Shoper_ShopAdmin_AddGoods   @"/api.php/ShopAdmin/addgoodsClassify/ "   //商品管理之添加商品
 #define HTTP_Shoper_ShopAdmin_ChangeGoods @"/api.php/ShopAdmin/goodsEdit/"
 //修改商品
 #define HTTP_Shoper_ShopAdmin_DelGoods   @"/api.php/ShopAdmin/delGoods/"   //商品管理之删除商品

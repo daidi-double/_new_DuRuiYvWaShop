@@ -34,8 +34,12 @@
     [super viewWillAppear:animated];
     [self.tableView.mj_header beginRefreshing];
     [self.navigationController setNavigationBarHidden:NO     animated:YES];
+      self.tabBarController.tabBar.hidden = YES;
 }
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
 - (void)makeUI{
     self.addCommoditiesBtn.layer.cornerRadius = 5.f;
     self.addCommoditiesBtn.layer.masksToBounds = YES;
