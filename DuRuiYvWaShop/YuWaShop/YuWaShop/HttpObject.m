@@ -336,6 +336,9 @@
         case YuWaType_Shoper_ShopAdmin_GoodsLists://商品管理之商品列表,支持分页
             urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_Shoper_ShopAdmin_GoodsLists];
             break;
+        case YuWaType_Shoper_ShopAdmin_AddGoodsCategory://商品管理之分类列表,支持分页
+            urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_SHOP_SHOPADMIN_CATEGORY];
+            break;
         case YuWaType_Shoper_ShopAdmin_SetBaseInfo://设置店铺基本信息
             urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_Shoper_ShopAdmin_SetBaseInfo];
             break;

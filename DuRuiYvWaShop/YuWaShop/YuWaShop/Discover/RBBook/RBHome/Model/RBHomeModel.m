@@ -34,6 +34,7 @@
     [userDic setObject:dic[@"header_img"]?dic[@"header_img"]:@"" forKey:@"images"];
     [userDic setObject:dic[@"user_id"]?dic[@"user_id"]:@"" forKey:@"userid"];
     [userDic setObject:dic[@"nickname"]?dic[@"nickname"]:@"" forKey:@"nickname"];
+    [userDic setObject:dic[@"user_type"]?dic[@"user_type"]:@"" forKey:@"user_type"];
     [dataDic setObject:userDic forKey:@"user"];
     
     [imgDic setObject:dic[@"first_img"]?dic[@"first_img"]:@"" forKey:@"original"];

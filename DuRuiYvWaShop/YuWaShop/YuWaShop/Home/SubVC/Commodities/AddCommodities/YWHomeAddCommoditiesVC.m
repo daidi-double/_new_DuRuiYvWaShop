@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 @property (weak, nonatomic) IBOutlet UIButton *imageBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *shopImage;
+@property (weak, nonatomic) IBOutlet UITextField *discountPriceTextField;
 
 @property (nonatomic,copy)NSString * cameraImageStr;
 
@@ -43,6 +44,7 @@
         self.nameTextField.text = commoditiesModel.goods_name;
         self.introTextField.text = commoditiesModel.goods_info;
         self.priceTextField.text = commoditiesModel.goods_price;
+        self.discountPriceTextField.text = commoditiesModel.goods_disprice;
         [self.shopImage sd_setImageWithURL:[NSURL URLWithString:commoditiesModel.goods_img]];
         [self.submitBtn setTitle:@"确认修改" forState:UIControlStateNormal];
     }
@@ -121,6 +123,10 @@
         self.priceTextField.text = @"";
         [self showHUDWithStr:@"请输入正确的商品价格哟~" withSuccess:NO];
         return;
+    }else if ([self.discountPriceTextField.text isEqualToString:@""]||[self.discountPriceTextField.text floatValue]<=0.f) {
+        self.priceTextField.text = @"";
+        [self showHUDWithStr:@"请输入正确的商品价格哟~" withSuccess:NO];
+        return;
     }
     
     if (!self.shopImage.image) {
@@ -129,6 +135,7 @@
     }
     
     self.priceTextField.text = [NSString stringWithFormat:@"%.2f",[self.priceTextField.text floatValue]];
+    self.discountPriceTextField.text = [NSString stringWithFormat:@"%.2f",[self.discountPriceTextField.text floatValue]];
     
     NSDictionary * pragram = @{@"img":@"img"};
     
@@ -149,7 +156,7 @@
     } withPhoto:UIImagePNGRepresentation(self.shopImage.image)];
 }
 - (void)requestUpData{
-    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"goods_name":self.nameTextField.text,@"goods_info":self.introTextField.text,@"goods_price":@([self.priceTextField.text floatValue]),@"goods_img":self.cameraImageStr};
+    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"goods_name":self.nameTextField.text,@"goods_info":self.introTextField.text,@"goods_price":@([self.priceTextField.text floatValue]),@"goods_disprice":self.discountPriceTextField.text,@"goods_img":self.cameraImageStr,@"goods_cat_id":self.catID};
     
     [[HttpObject manager]postDataWithType:YuWaType_Shoper_ShopAdmin_AddGoods withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);
@@ -158,13 +165,14 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.navigationController popViewControllerAnimated:YES];
         });
+
     } failur:^(id responsObj, NSError *error) {
         MyLog(@"Regieter Code pragram is %@",pragram);
         MyLog(@"Regieter Code error is %@",responsObj);
     }];
 }
 - (void)changShopInfo{
-    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"goods_name":self.nameTextField.text,@"goods_info":self.introTextField.text,@"goods_price":@([self.priceTextField.text floatValue]),@"goods_img":self.cameraImageStr,@"goods_id":[self getShopId]};
+    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"goods_name":self.nameTextField.text,@"goods_info":self.introTextField.text,@"goods_price":@([self.priceTextField.text floatValue]),@"goods_img":self.cameraImageStr,@"goods_id":[self getShopId],@"goods_disprice":self.discountPriceTextField.text};
     
     [[HttpObject manager]postDataWithType:YuWaType_Shoper_ShopAdmin_changGoods withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);

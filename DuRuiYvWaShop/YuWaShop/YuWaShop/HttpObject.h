@@ -90,6 +90,7 @@ typedef enum YuWaType{
     YuWaType_Shoper_ShopAdmin_RecordLists,//闪惠记录
     YuWaType_Shoper_ShopAdmin_GoodsLists,//商品管理之商品列表,支持分页
     YuWaType_Shoper_ShopAdmin_AddGoods,//商品管理之添加商品
+    YuWaType_Shoper_ShopAdmin_AddGoodsCategory,//商品管理之获取分类列表
     YuWaType_Shoper_ShopAdmin_changGoods,//修改商品
     YuWaType_Shoper_ShopAdmin_DelGoods,//商品管理之删除商品
     YuWaType_Shoper_ShopAdmin_AddCoupon,//优惠券之生成优惠券

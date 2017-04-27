@@ -34,11 +34,11 @@
     [super viewWillAppear:animated];
     [self.tableView.mj_header beginRefreshing];
     [self.navigationController setNavigationBarHidden:NO     animated:YES];
-      self.tabBarController.tabBar.hidden = YES;
+
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
+//    self.tabBarController.tabBar.hidden = NO;
 }
 - (void)makeUI{
     self.addCommoditiesBtn.layer.cornerRadius = 5.f;
@@ -66,6 +66,7 @@
 - (IBAction)addCommoditiesBtnAction:(id)sender {
     YWHomeAddCommoditiesVC * vc = [[YWHomeAddCommoditiesVC alloc]init];
     vc.staues = 0;
+    vc.catID = self.catID;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -165,7 +166,7 @@
         [self cancelRefreshWithIsHeader:(page==0?YES:NO)];
     });
     
-    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"pagen":@([self.pagens integerValue]),@"pages":@(page)};
+    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"pagen":@([self.pagens integerValue]),@"pages":@(page),@"goods_cat_id":self.catID};
     
     [[HttpObject manager]postNoHudWithType:YuWaType_Shoper_ShopAdmin_GoodsLists withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);
@@ -182,6 +183,7 @@
         MyLog(@"Regieter Code error is %@",responsObj);
     }];
 }
+//删除商品
 - (void)requestDelWithID:(NSString *)commoditiesID withIndexPath:(NSIndexPath *)indexPath{
     YWHomeCommoditiesModel * model = self.dataArr[indexPath.row];
     

@@ -136,10 +136,14 @@
 #define HTTP_Shoper_ShopAdmin_AddRecord   @"/api.php/ShopAdmin/addRecord/"   //买单收银，生成二维码
 #define HTTP_Shoper_ShopAdmin_RecordLists   @"/api.php/ShopAdmin/myRecordLists/"   //闪惠记录
 #define HTTP_Shoper_ShopAdmin_GoodsLists   @"/api.php/ShopAdmin/goodsLists/"   //商品管理之商品列表,支持分页
-#define HTTP_Shoper_ShopAdmin_AddGoods   @"/api.php/ShopAdmin/addgoodsClassify/ "   //商品管理之添加商品
+#define HTTP_Shoper_ShopAdmin_AddGoods   @"/api.php/ShopAdmin/addGoods/"   //商品管理之添加商品
 #define HTTP_Shoper_ShopAdmin_ChangeGoods @"/api.php/ShopAdmin/goodsEdit/"
 //修改商品
 #define HTTP_Shoper_ShopAdmin_DelGoods   @"/api.php/ShopAdmin/delGoods/"   //商品管理之删除商品
+#define HTTP_Shopr_ShopAdmin_AddCategory @"/api.php/ShopAdmin/addgoodsClassify"//添加商品分类
+#define HTTP_Shopr_ShopAdmin_RecomposeCategory @"//api.php/ShopAdmin/editgoodsClassify"//修改商品分类
+#define HTTP_SHOP_SHOPADMIN_CATEGORY   @"/api.php/ShopAdmin/goodsClassify/"//获取店铺分类列表
+
 #define HTTP_Shoper_ShopAdmin_AddCoupon   @"/api.php/ShopAdmin/addCoupon/"   //优惠券之生成优惠券
 #define HTTP_Shoper_ShopAdmin_CouponList   @"/api.php/ShopAdmin/couponList/"   //优惠券之列表
 #define HTTP_Shoper_ShopAdmin_DelCoupon   @"/api.php/ShopAdmin/delCoupon/"   //优惠券之删除

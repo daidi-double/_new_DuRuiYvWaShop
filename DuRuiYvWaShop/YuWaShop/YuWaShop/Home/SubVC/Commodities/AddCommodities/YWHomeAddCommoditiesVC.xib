@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YWHomeAddCommoditiesVC">
             <connections>
+                <outlet property="discountPriceTextField" destination="tZm-cG-bWj" id="GkP-RM-H1L"/>
                 <outlet property="imageBtn" destination="NVk-ge-VmX" id="T9j-Ag-4sa"/>
                 <outlet property="introTextField" destination="tPM-Jb-nly" id="cWW-Vi-zb9"/>
                 <outlet property="nameTextField" destination="upX-mN-st9" id="DPe-WC-yBN"/>
@@ -25,8 +26,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqm-W2-Diy">
-                    <rect key="frame" x="8" y="0.0" width="320" height="568"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqm-W2-Diy">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKx-TK-6iA">
                             <rect key="frame" x="20" y="74" width="280" height="25"/>
@@ -151,6 +152,9 @@
                             <rect key="frame" x="20" y="320" width="280" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="094-5O-AjY"/>
+                            </connections>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-bO-IhK">
                             <rect key="frame" x="0.0" y="367" width="320" height="1"/>
