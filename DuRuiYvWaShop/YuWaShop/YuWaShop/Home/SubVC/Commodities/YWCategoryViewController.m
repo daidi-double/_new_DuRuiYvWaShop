@@ -93,10 +93,6 @@
     YWCategoryModel * model = self.dataArr[indexPath.row];
     cell.textLabel.text = model.cat_name;
 
-//    UIImageView * imageview = [[UIImageView alloc]initWithFrame:CGRectMake(kScreen_Width - 22, 0, 7, cell.height * 0.3f)];
-//    imageview.centerY = cell.centerY;
-//    imageview.image = [UIImage imageNamed:@"右箭头"];
-//    [cell.contentView addSubview:imageview];
     return cell;
 }
 
@@ -117,8 +113,8 @@
     UITableViewRowAction * cancelAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         
         UIAlertAction * OKAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //            YWHomeCommoditiesModel * model = self.dataArr[indexPath.row];
-            //            [self requestDelWithID:model.commoditiesID withIndexPath:indexPath];
+            YWCategoryModel * model = self.dataArr[indexPath.row];
+            [self requestDelWithID:model.id withIndexPath:indexPath];
         }];
         UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
         UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"确认删除此分类?" preferredStyle:UIAlertControllerStyleAlert];
@@ -139,21 +135,26 @@
     }];
     return @[cancelAction,recompose];
 }
+
+//删除分类
 - (void)requestDelWithID:(NSString *)commoditiesID withIndexPath:(NSIndexPath *)indexPath{
-    //    YWHomeCommoditiesModel * model = self.dataArr[indexPath.row];
+//        YWCategoryModel * model = self.dataArr[indexPath.row];
     
-    //    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"goods_id":@([model.commoditiesID integerValue])};
-    //
-    //    [[HttpObject manager]postDataWithType:YuWaType_Shoper_ShopAdmin_DelGoods withPragram:pragram success:^(id responsObj) {
-    //        MyLog(@"Regieter Code pragram is %@",pragram);
-    //        MyLog(@"Regieter Code is %@",responsObj);
-    //        [self.dataArr removeObjectAtIndex:indexPath.row];
-    //        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-    //        [self.tableView reloadData];
-    //    } failur:^(id responsObj, NSError *error) {
-    //        MyLog(@"Regieter Code pragram is %@",pragram);
-    //        MyLog(@"Regieter Code error is %@",responsObj);
-    //    }];
+        NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"cat_id":@([commoditiesID integerValue])};
+    
+        [[HttpObject manager]postDataWithType:YuWaType_Shoper_ShopAdmin_DelCategory withPragram:pragram success:^(id responsObj) {
+            MyLog(@"Regieter Code pragram is %@",pragram);
+            MyLog(@"Regieter Code is %@",responsObj);
+            [JRToast showWithText:responsObj[@"data"] duration:1];
+            [self.dataArr removeObjectAtIndex:indexPath.row];
+            [self.categoryTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+//            [self.tableView reloadData];
+        } failur:^(id responsObj, NSError *error) {
+            [JRToast showWithText:responsObj[@"errorMessage"] duration:1];
+            MyLog(@"Regieter Code pragram is %@",pragram);
+            MyLog(@"Regieter Code error is %@",responsObj);
+            
+        }];
 }
 #pragma mark - Http
 - (void)requestDataWithPages:(NSInteger)page{

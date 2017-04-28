@@ -128,6 +128,10 @@
         case YuWaType_Shoper_ShopAdmin_DelGoods://商品管理之删除商品
             urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_Shoper_ShopAdmin_DelGoods];
             break;
+            
+        case YuWaType_Shoper_ShopAdmin_DelCategory://商品管理之删除分类
+            urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_Shoper_ShopAdmin_DelCategory];
+            break;
         case YuWaType_Shoper_ShopAdmin_AddCoupon://优惠券之生成优惠券
             urlStr = [NSString stringWithFormat:@"%@%@",HTTP_ADDRESS,HTTP_Shoper_ShopAdmin_AddCoupon];
             break;

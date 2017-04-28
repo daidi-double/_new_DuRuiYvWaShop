@@ -2371,9 +2371,6 @@
 			children = (
 				AA3A30651EB0C75500E2FCD7 /* model */,
 				AA3A30641EB0C62B00E2FCD7 /* 添加商品 */,
-				AA0361431EB0DF5400684ED7 /* YWCategoryViewController.h */,
-				AA0361441EB0DF5400684ED7 /* YWCategoryViewController.m */,
-				AA0361451EB0DF5400684ED7 /* YWCategoryViewController.xib */,
 				AA0361481EB0E40300684ED7 /* AddShopCategoryViewController.h */,
 				AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */,
 				AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */,
@@ -2551,6 +2548,9 @@
 			isa = PBXGroup;
 			children = (
 				AA3A305E1EB0BE1E00E2FCD7 /* 添加分类 */,
+				AA0361431EB0DF5400684ED7 /* YWCategoryViewController.h */,
+				AA0361441EB0DF5400684ED7 /* YWCategoryViewController.m */,
+				AA0361451EB0DF5400684ED7 /* YWCategoryViewController.xib */,
 			);
 			path = Commodities;
 			sourceTree = "<group>";
