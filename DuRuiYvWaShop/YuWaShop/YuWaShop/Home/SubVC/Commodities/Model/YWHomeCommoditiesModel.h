@@ -15,6 +15,6 @@
 @property (nonatomic,copy)NSString * goods_info;
 @property (nonatomic,copy)NSString * goods_name;
 @property (nonatomic,copy)NSString * goods_img;
-
+@property (nonatomic,copy)NSString * goods_disprice;
 
 @end

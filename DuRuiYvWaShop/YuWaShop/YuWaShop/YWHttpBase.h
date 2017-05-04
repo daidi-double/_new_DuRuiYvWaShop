@@ -140,6 +140,11 @@
 #define HTTP_Shoper_ShopAdmin_ChangeGoods @"/api.php/ShopAdmin/goodsEdit/"
 //修改商品
 #define HTTP_Shoper_ShopAdmin_DelGoods   @"/api.php/ShopAdmin/delGoods/"   //商品管理之删除商品
+#define HTTP_Shoper_ShopAdmin_DelCategory   @"/api.php/ShopAdmin/delGoodsCat/"   //商品管理之删除分类
+#define HTTP_Shopr_ShopAdmin_AddCategory @"/api.php/ShopAdmin/addgoodsClassify"//添加商品分类
+#define HTTP_Shopr_ShopAdmin_RecomposeCategory @"//api.php/ShopAdmin/editgoodsClassify"//修改商品分类
+#define HTTP_SHOP_SHOPADMIN_CATEGORY   @"/api.php/ShopAdmin/goodsClassify/"//获取店铺分类列表
+
 #define HTTP_Shoper_ShopAdmin_AddCoupon   @"/api.php/ShopAdmin/addCoupon/"   //优惠券之生成优惠券
 #define HTTP_Shoper_ShopAdmin_CouponList   @"/api.php/ShopAdmin/couponList/"   //优惠券之列表
 #define HTTP_Shoper_ShopAdmin_DelCoupon   @"/api.php/ShopAdmin/delCoupon/"   //优惠券之删除

@@ -71,7 +71,11 @@
 }
 #pragma mark - Http
 - (void)aldumReload{
-    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1)};
+    
+    if ([self.auser_type isKindOfClass:[NSNull class]] || [self.auser_type isEqualToString:@""] ||self.auser_type == nil) {
+        self.auser_type = @"1";
+    }
+    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"user_type":@([UserSession instance].isVIP==3?2:1),@"auser_type":self.auser_type};
     
     [[HttpObject manager]postNoHudWithType:YuWaType_RB_ALDUM withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);

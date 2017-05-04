@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		253542381EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */; };
+		AA0361411EB0CA6B00684ED7 /* AddShopCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */; };
+		AA0361421EB0CA6B00684ED7 /* AddShopCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */; };
+		AA0361461EB0DF5400684ED7 /* YWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0361441EB0DF5400684ED7 /* YWCategoryViewController.m */; };
+		AA0361471EB0DF5400684ED7 /* YWCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0361451EB0DF5400684ED7 /* YWCategoryViewController.xib */; };
 		AA2B2BEE1E8CA6FC008CB3C6 /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2B2BEC1E8CA6FC008CB3C6 /* SuccessViewController.m */; };
 		AA2B2BEF1E8CA6FC008CB3C6 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA2B2BED1E8CA6FC008CB3C6 /* SuccessViewController.xib */; };
 		AA2BB25C1E7F71F40030BDEB /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2BB25B1E7F71F40030BDEB /* MyLabel.m */; };
@@ -26,6 +30,7 @@
 		AA37888C1E8ABA4700B7F9CC /* PassWordTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37887A1E8ABA4700B7F9CC /* PassWordTextView.m */; };
 		AA37888D1E8ABA4700B7F9CC /* YWBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37887C1E8ABA4700B7F9CC /* YWBankViewController.m */; };
 		AA37888E1E8ABA4700B7F9CC /* YWBankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA37887D1E8ABA4700B7F9CC /* YWBankViewController.xib */; };
+		AA3A30681EB0C77100E2FCD7 /* YWCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3A30671EB0C77100E2FCD7 /* YWCategoryModel.m */; };
 		AA3C14121EA729F000530095 /* defineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C14111EA729F000530095 /* defineButton.m */; };
 		AA3C14151EA73D6000530095 /* YWFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C14141EA73D6000530095 /* YWFansViewController.m */; };
 		AA3C141D1EA73D7900530095 /* AbountAndFansModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C14171EA73D7900530095 /* AbountAndFansModel.m */; };
@@ -833,6 +838,12 @@
 
 /* Begin PBXFileReference section */
 		253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponTableViewCell.xib; sourceTree = "<group>"; };
+		AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShopCategoryViewController.m; sourceTree = "<group>"; };
+		AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddShopCategoryViewController.xib; sourceTree = "<group>"; };
+		AA0361431EB0DF5400684ED7 /* YWCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCategoryViewController.h; sourceTree = "<group>"; };
+		AA0361441EB0DF5400684ED7 /* YWCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCategoryViewController.m; sourceTree = "<group>"; };
+		AA0361451EB0DF5400684ED7 /* YWCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWCategoryViewController.xib; sourceTree = "<group>"; };
+		AA0361481EB0E40300684ED7 /* AddShopCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShopCategoryViewController.h; sourceTree = "<group>"; };
 		AA2B2BEB1E8CA6FC008CB3C6 /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessViewController.h; sourceTree = "<group>"; };
 		AA2B2BEC1E8CA6FC008CB3C6 /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessViewController.m; sourceTree = "<group>"; };
 		AA2B2BED1E8CA6FC008CB3C6 /* SuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccessViewController.xib; sourceTree = "<group>"; };
@@ -862,6 +873,8 @@
 		AA37887B1E8ABA4700B7F9CC /* YWBankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWBankViewController.h; sourceTree = "<group>"; };
 		AA37887C1E8ABA4700B7F9CC /* YWBankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWBankViewController.m; sourceTree = "<group>"; };
 		AA37887D1E8ABA4700B7F9CC /* YWBankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWBankViewController.xib; sourceTree = "<group>"; };
+		AA3A30661EB0C77100E2FCD7 /* YWCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCategoryModel.h; sourceTree = "<group>"; };
+		AA3A30671EB0C77100E2FCD7 /* YWCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCategoryModel.m; sourceTree = "<group>"; };
 		AA3C14101EA729F000530095 /* defineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defineButton.h; sourceTree = "<group>"; };
 		AA3C14111EA729F000530095 /* defineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = defineButton.m; sourceTree = "<group>"; };
 		AA3C14131EA73D6000530095 /* YWFansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWFansViewController.h; sourceTree = "<group>"; };
@@ -2353,6 +2366,40 @@
 			name = viewControll;
 			sourceTree = "<group>";
 		};
+		AA3A305E1EB0BE1E00E2FCD7 /* 添加分类 */ = {
+			isa = PBXGroup;
+			children = (
+				AA3A30651EB0C75500E2FCD7 /* model */,
+				AA3A30641EB0C62B00E2FCD7 /* 添加商品 */,
+				AA0361481EB0E40300684ED7 /* AddShopCategoryViewController.h */,
+				AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */,
+				AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */,
+			);
+			name = "添加分类";
+			sourceTree = "<group>";
+		};
+		AA3A30641EB0C62B00E2FCD7 /* 添加商品 */ = {
+			isa = PBXGroup;
+			children = (
+				B302EAC01DED65480000B0A0 /* AddCommodities */,
+				B302EABF1DED653B0000B0A0 /* Model */,
+				B302EABE1DED652C0000B0A0 /* Cell */,
+				B302EAB91DED640D0000B0A0 /* YWHomeCommoditiesVC.h */,
+				B302EABA1DED640D0000B0A0 /* YWHomeCommoditiesVC.m */,
+				B302EABB1DED640D0000B0A0 /* YWHomeCommoditiesVC.xib */,
+			);
+			name = "添加商品";
+			sourceTree = "<group>";
+		};
+		AA3A30651EB0C75500E2FCD7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AA3A30661EB0C77100E2FCD7 /* YWCategoryModel.h */,
+				AA3A30671EB0C77100E2FCD7 /* YWCategoryModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		AA3C140F1EA729CA00530095 /* 关注 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2500,12 +2547,10 @@
 		B302EAB81DED63E20000B0A0 /* Commodities */ = {
 			isa = PBXGroup;
 			children = (
-				B302EAC01DED65480000B0A0 /* AddCommodities */,
-				B302EABF1DED653B0000B0A0 /* Model */,
-				B302EABE1DED652C0000B0A0 /* Cell */,
-				B302EAB91DED640D0000B0A0 /* YWHomeCommoditiesVC.h */,
-				B302EABA1DED640D0000B0A0 /* YWHomeCommoditiesVC.m */,
-				B302EABB1DED640D0000B0A0 /* YWHomeCommoditiesVC.xib */,
+				AA3A305E1EB0BE1E00E2FCD7 /* 添加分类 */,
+				AA0361431EB0DF5400684ED7 /* YWCategoryViewController.h */,
+				AA0361441EB0DF5400684ED7 /* YWCategoryViewController.m */,
+				AA0361451EB0DF5400684ED7 /* YWCategoryViewController.xib */,
 			);
 			path = Commodities;
 			sourceTree = "<group>";
@@ -6308,6 +6353,7 @@
 				B387EAAE1DE45E110045323C /* JWLocationBasicViewController.xib in Resources */,
 				B3334B8B1E14B48C00710A7D /* YWHomeRefundVC.xib in Resources */,
 				B35C9F0D1DEC3FE80051E352 /* MDHotelChooseTypeTableVC.xib in Resources */,
+				AA0361471EB0DF5400684ED7 /* YWCategoryViewController.xib in Resources */,
 				AA3C41761E8DD9510052C732 /* GetMoneyToBankViewController.xib in Resources */,
 				B317AFAC1DE5D3C90093C511 /* PersonHeaderBG16@2x.png in Resources */,
 				B31098EB1DE4543E0033A984 /* YWPersonHeaderView.xib in Resources */,
@@ -6456,6 +6502,7 @@
 				B35C9EEA1DEC3FE80051E352 /* RBNodeDetailHeader.xib in Resources */,
 				B3334B921E14CB2800710A7D /* YWHomeRefundTableViewCell.xib in Resources */,
 				B317AFC21DE5D3C90093C511 /* PersonHeaderBG36@2x.png in Resources */,
+				AA0361421EB0CA6B00684ED7 /* AddShopCategoryViewController.xib in Resources */,
 				B317AF221DE5B4C90093C511 /* YWPersonHelpViewController.xib in Resources */,
 				B35C9EBA1DEC3FE80051E352 /* EmojisList.plist in Resources */,
 				B302EACA1DED65AA0000B0A0 /* YWHomeCommoditiesTableViewCell.xib in Resources */,
@@ -6725,6 +6772,7 @@
 				B35C9CBF1DEC3ECD0051E352 /* MBProgressHUD+Add.m in Sources */,
 				B35C9F231DEC3FE80051E352 /* RBCommentToolsView.m in Sources */,
 				B35C9CC11DEC3ECD0051E352 /* MWGridCell.m in Sources */,
+				AA0361411EB0CA6B00684ED7 /* AddShopCategoryViewController.m in Sources */,
 				B3F177EC1DEFDECF007DB9A3 /* YWHomeAdvanceOrderModel.m in Sources */,
 				B35C9EF11DEC3FE80051E352 /* RBNodeShowModel.m in Sources */,
 				B35C9ED21DEC3FE80051E352 /* RBPublishSession.m in Sources */,
@@ -6901,6 +6949,7 @@
 				B35C9CF81DEC3ECD0051E352 /* EaseConversationListViewController.m in Sources */,
 				C14BA39C1DF93A9F001BDFBD /* IntroduceMoneyViewController.m in Sources */,
 				B35C9EC41DEC3FE80051E352 /* RBIMGToolsCollectionViewCell.m in Sources */,
+				AA0361461EB0DF5400684ED7 /* YWCategoryViewController.m in Sources */,
 				B35C9CE71DEC3ECD0051E352 /* EaseSDKHelper.m in Sources */,
 				B35C9E991DEC3FE80051E352 /* YWMessageFriendsAddViewController.m in Sources */,
 				B35C9CCB1DEC3ECD0051E352 /* EMSDWebImageDecoder.m in Sources */,
@@ -6911,6 +6960,7 @@
 				B3F177FC1DEFF48D007DB9A3 /* YWHomeOrderNoticaficationTableViewCell.m in Sources */,
 				B31098A21DE4543E0033A984 /* MASViewAttribute.m in Sources */,
 				C14BA3A41DF93A9F001BDFBD /* BusinessBaseInfoModel.m in Sources */,
+				AA3A30681EB0C77100E2FCD7 /* YWCategoryModel.m in Sources */,
 				B35C9CE21DEC3ECD0051E352 /* PSTGridLayoutInfo.m in Sources */,
 				B31098BD1DE4543E0033A984 /* MJDIYAutoFooter.m in Sources */,
 				B35C9F2A1DEC3FE80051E352 /* JWSharedView.m in Sources */,

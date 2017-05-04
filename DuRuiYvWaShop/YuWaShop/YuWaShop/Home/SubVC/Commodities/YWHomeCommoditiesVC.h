@@ -9,5 +9,5 @@
 #import "JWBasicViewController.h"
 
 @interface YWHomeCommoditiesVC : JWBasicViewController
-
+@property (nonatomic,copy)NSString * catID;
 @end

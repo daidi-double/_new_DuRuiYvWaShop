@@ -13,4 +13,5 @@
 @property(nonatomic,strong)NSMutableArray *shopDataArr;
 @property(nonatomic,assign)NSInteger staues;
 @property(nonatomic,assign)NSInteger row;
+@property(nonatomic,copy)NSString * catID;
 @end

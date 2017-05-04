@@ -24,7 +24,7 @@
 #define CELL0   @"PCBottomTableViewCell"
 @interface YWMyContactViewController ()<UITableViewDelegate,UITableViewDataSource,YJSegmentedControlDelegate,PCBottomTableViewCellDelegate,TZImagePickerControllerDelegate>
 {
-    UIView * menuView;
+    
 }
 @property(nonatomic,strong)UITableView*tableView;
 @property (nonatomic,strong)RBHomeCollectionViewCell * heighCell;   //collectionView 的cell
@@ -32,6 +32,7 @@
 @property(nonatomic,assign)NSInteger type; //0为笔记   1为专辑
 @property(nonatomic,assign)int pagen;
 @property(nonatomic,assign)int pages;
+@property(nonatomic,strong)UIView * menuView;
 @property(nonatomic,strong)NSMutableArray*allDatasModel;
 
 @end
@@ -40,7 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.tableView.mj_header beginRefreshing];
-    
+    [self menu];
     [self getNewBaseInfo];
 }
 - (void)viewDidLoad {
@@ -69,12 +70,6 @@
 }
 //下拉菜单
 - (void)menu{
-    if (!menuView) {
-        
-        menuView = [[UIView alloc]initWithFrame:CGRectMake(kScreen_Width * 0.68f, 64, kScreen_Width * 0.32, 35 * 4 +50.f)];
-        menuView.backgroundColor = CNaviColor;
-        [self.view addSubview:menuView];
-    }
     NSMutableArray*fourArray=[NSMutableArray array];
     if ([UserSession instance].attentionCount == nil) {
         [UserSession instance].attentionCount = @"0";
@@ -94,37 +89,43 @@
     [fourArray addObject:@[@"被赞",[UserSession instance].praised]];
     [fourArray addObject:@[@"被收藏",[UserSession instance].collected]];
     
-    CGFloat btnHeight = (menuView.frame.size.height - 20 - 30)/4;
-    MyLog(@"btnHeight = %f",btnHeight);
-    for (int i=0; i<4; i++) {
-        defineButton*button=[[defineButton alloc]init];
-        button.frame = CGRectMake(25, 10+( btnHeight +10)* i,menuView.width *0.9, btnHeight);
-        button.tag = 12 + i;
-        [button addTarget:self action:@selector(touchFourButton:) forControlEvents:UIControlEventTouchUpInside];
+    if (!_menuView) {
         
-        button.topLabel.text=fourArray[i][0];
-        button.bottomLabel.text=fourArray[i][1];
-        
-        [menuView addSubview:button];
-        
-        if (i==3) {
-            button.VlineView.hidden=YES;
+        _menuView = [[UIView alloc]initWithFrame:CGRectMake(kScreen_Width * 0.68f, 64, kScreen_Width * 0.32, 35 * 4 +50.f)];
+        _menuView.backgroundColor = CNaviColor;
+        [self.view addSubview:_menuView];
+        CGFloat btnHeight = (_menuView.frame.size.height - 20 - 30)/4;
+        MyLog(@"btnHeight = %f",btnHeight);
+        for (int i=0; i<4; i++) {
+            defineButton*button=[[defineButton alloc]init];
+            button.frame = CGRectMake(25, 10+( btnHeight +10)* i,_menuView.width *0.9, btnHeight);
+            button.tag = 12 + i;
+            [button addTarget:self action:@selector(touchFourButton:) forControlEvents:UIControlEventTouchUpInside];
+            
+            button.topLabel.text=fourArray[i][0];
+            button.bottomLabel.text=fourArray[i][1];
+            
+            [_menuView addSubview:button];
+            
+            if (i==3) {
+                button.VlineView.hidden=YES;
+            }
+            
+            
         }
-        
-        
     }
-    menuView.hidden = YES;
+    _menuView.hidden = YES;
 }
 -(void)guanzhu{
     
-    menuView.hidden = !menuView.hidden;
+    _menuView.hidden = !_menuView.hidden;
 
 }
 
 #pragma mark  --touch
 
 -(void)touchFourButton:(UIButton*)sender{
-    menuView.hidden = !menuView.hidden;
+    _menuView.hidden = !_menuView.hidden;
     NSInteger number =sender.tag-11;
         MyLog(@"%lu",number);
     if (number==1) {
@@ -411,8 +412,32 @@
             [UserSession instance].attentionCount = data[@"data"][@"attentioncount"];
             [UserSession instance].fans = data[@"data"][@"fans"];
             [UserSession instance].collected = data[@"data"][@"collected"];
-            [self menu];
-           
+            
+            NSMutableArray*fourArray=[NSMutableArray array];
+            if ([UserSession instance].attentionCount == nil) {
+                [UserSession instance].attentionCount = @"0";
+            }
+            if ([UserSession instance].fans == nil) {
+                [UserSession instance].fans = @"0";
+            }
+            if ([UserSession instance].praised == nil) {
+                [UserSession instance].praised = @"0";
+            }
+            if ([UserSession instance].collected == nil) {
+                [UserSession instance].collected = @"0";
+            }
+            
+            [fourArray addObject:@[@"关注",[UserSession instance].attentionCount]];
+            [fourArray addObject:@[@"粉丝",[UserSession instance].fans]];
+            [fourArray addObject:@[@"被赞",[UserSession instance].praised]];
+            [fourArray addObject:@[@"被收藏",[UserSession instance].collected]];
+
+            [self.menuView.subviews enumerateObjectsUsingBlock:^(__kindof defineButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                obj.topLabel.text=fourArray[idx][0];
+                obj.bottomLabel.text=fourArray[idx][1];
+                
+
+            }];
         }
     }];
 }
