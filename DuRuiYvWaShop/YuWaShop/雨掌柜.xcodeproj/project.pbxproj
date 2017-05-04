@@ -997,16 +997,16 @@
 		B30E4DEE1DEF03B7008684BA /* YWHomeCouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWHomeCouponViewController.h; sourceTree = "<group>"; };
 		B30E4DEF1DEF03B7008684BA /* YWHomeCouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWHomeCouponViewController.m; sourceTree = "<group>"; };
 		B30E4DF01DEF03B7008684BA /* YWHomeCouponViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponViewController.xib; sourceTree = "<group>"; };
-		B31097001DE44EA00033A984 /* YuWaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuWaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31097001DE44EA00033A984 /* 雨掌柜.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "雨掌柜.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31097041DE44EA00033A984 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B310970D1DE44EA00033A984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B310970F1DE44EA00033A984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B31097121DE44EA00033A984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B31097141DE44EA00033A984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B31097191DE44EA00033A984 /* YuWaShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YuWaShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31097191DE44EA00033A984 /* 雨掌柜Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "雨掌柜Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B310971D1DE44EA00033A984 /* YuWaShopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YuWaShopTests.m; sourceTree = "<group>"; };
 		B310971F1DE44EA00033A984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B31097241DE44EA00033A984 /* YuWaShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YuWaShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31097241DE44EA00033A984 /* 雨掌柜UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "雨掌柜UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31097281DE44EA00033A984 /* YuWaShopUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YuWaShopUITests.m; sourceTree = "<group>"; };
 		B310972A1DE44EA00033A984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31097371DE4543E0033A984 /* YWDataAnalyseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWDataAnalyseViewController.h; sourceTree = "<group>"; };
@@ -2693,9 +2693,9 @@
 		B31097011DE44EA00033A984 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B31097001DE44EA00033A984 /* YuWaShop.app */,
-				B31097191DE44EA00033A984 /* YuWaShopTests.xctest */,
-				B31097241DE44EA00033A984 /* YuWaShopUITests.xctest */,
+				B31097001DE44EA00033A984 /* 雨掌柜.app */,
+				B31097191DE44EA00033A984 /* 雨掌柜Tests.xctest */,
+				B31097241DE44EA00033A984 /* 雨掌柜UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -6085,9 +6085,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B31096FF1DE44EA00033A984 /* YuWaShop */ = {
+		B31096FF1DE44EA00033A984 /* 雨掌柜 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B310972D1DE44EA00033A984 /* Build configuration list for PBXNativeTarget "YuWaShop" */;
+			buildConfigurationList = B310972D1DE44EA00033A984 /* Build configuration list for PBXNativeTarget "雨掌柜" */;
 			buildPhases = (
 				B31096FC1DE44EA00033A984 /* Sources */,
 				B31096FD1DE44EA00033A984 /* Frameworks */,
@@ -6097,14 +6097,14 @@
 			);
 			dependencies = (
 			);
-			name = YuWaShop;
+			name = "雨掌柜";
 			productName = YuWaShop;
-			productReference = B31097001DE44EA00033A984 /* YuWaShop.app */;
+			productReference = B31097001DE44EA00033A984 /* 雨掌柜.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B31097181DE44EA00033A984 /* YuWaShopTests */ = {
+		B31097181DE44EA00033A984 /* 雨掌柜Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31097301DE44EA00033A984 /* Build configuration list for PBXNativeTarget "YuWaShopTests" */;
+			buildConfigurationList = B31097301DE44EA00033A984 /* Build configuration list for PBXNativeTarget "雨掌柜Tests" */;
 			buildPhases = (
 				B31097151DE44EA00033A984 /* Sources */,
 				B31097161DE44EA00033A984 /* Frameworks */,
@@ -6115,14 +6115,14 @@
 			dependencies = (
 				B310971B1DE44EA00033A984 /* PBXTargetDependency */,
 			);
-			name = YuWaShopTests;
+			name = "雨掌柜Tests";
 			productName = YuWaShopTests;
-			productReference = B31097191DE44EA00033A984 /* YuWaShopTests.xctest */;
+			productReference = B31097191DE44EA00033A984 /* 雨掌柜Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B31097231DE44EA00033A984 /* YuWaShopUITests */ = {
+		B31097231DE44EA00033A984 /* 雨掌柜UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31097331DE44EA00033A984 /* Build configuration list for PBXNativeTarget "YuWaShopUITests" */;
+			buildConfigurationList = B31097331DE44EA00033A984 /* Build configuration list for PBXNativeTarget "雨掌柜UITests" */;
 			buildPhases = (
 				B31097201DE44EA00033A984 /* Sources */,
 				B31097211DE44EA00033A984 /* Frameworks */,
@@ -6133,9 +6133,9 @@
 			dependencies = (
 				B31097261DE44EA00033A984 /* PBXTargetDependency */,
 			);
-			name = YuWaShopUITests;
+			name = "雨掌柜UITests";
 			productName = YuWaShopUITests;
-			productReference = B31097241DE44EA00033A984 /* YuWaShopUITests.xctest */;
+			productReference = B31097241DE44EA00033A984 /* 雨掌柜UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -6169,7 +6169,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B31096FB1DE44EA00033A984 /* Build configuration list for PBXProject "YuWaShop" */;
+			buildConfigurationList = B31096FB1DE44EA00033A984 /* Build configuration list for PBXProject "雨掌柜" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -6183,9 +6183,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B31096FF1DE44EA00033A984 /* YuWaShop */,
-				B31097181DE44EA00033A984 /* YuWaShopTests */,
-				B31097231DE44EA00033A984 /* YuWaShopUITests */,
+				B31096FF1DE44EA00033A984 /* 雨掌柜 */,
+				B31097181DE44EA00033A984 /* 雨掌柜Tests */,
+				B31097231DE44EA00033A984 /* 雨掌柜UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -7021,12 +7021,12 @@
 /* Begin PBXTargetDependency section */
 		B310971B1DE44EA00033A984 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B31096FF1DE44EA00033A984 /* YuWaShop */;
+			target = B31096FF1DE44EA00033A984 /* 雨掌柜 */;
 			targetProxy = B310971A1DE44EA00033A984 /* PBXContainerItemProxy */;
 		};
 		B31097261DE44EA00033A984 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B31096FF1DE44EA00033A984 /* YuWaShop */;
+			target = B31096FF1DE44EA00033A984 /* 雨掌柜 */;
 			targetProxy = B31097251DE44EA00033A984 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -7225,7 +7225,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.duruikeji.YuWaShopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YuWaShop.app/YuWaShop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/雨掌柜.app/雨掌柜";
 			};
 			name = Debug;
 		};
@@ -7239,7 +7239,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.duruikeji.YuWaShopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YuWaShop.app/YuWaShop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/雨掌柜.app/雨掌柜";
 			};
 			name = Release;
 		};
@@ -7268,7 +7268,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B31096FB1DE44EA00033A984 /* Build configuration list for PBXProject "YuWaShop" */ = {
+		B31096FB1DE44EA00033A984 /* Build configuration list for PBXProject "雨掌柜" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B310972B1DE44EA00033A984 /* Debug */,
@@ -7277,7 +7277,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B310972D1DE44EA00033A984 /* Build configuration list for PBXNativeTarget "YuWaShop" */ = {
+		B310972D1DE44EA00033A984 /* Build configuration list for PBXNativeTarget "雨掌柜" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B310972E1DE44EA00033A984 /* Debug */,
@@ -7286,7 +7286,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31097301DE44EA00033A984 /* Build configuration list for PBXNativeTarget "YuWaShopTests" */ = {
+		B31097301DE44EA00033A984 /* Build configuration list for PBXNativeTarget "雨掌柜Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31097311DE44EA00033A984 /* Debug */,
@@ -7295,7 +7295,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31097331DE44EA00033A984 /* Build configuration list for PBXNativeTarget "YuWaShopUITests" */ = {
+		B31097331DE44EA00033A984 /* Build configuration list for PBXNativeTarget "雨掌柜UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31097341DE44EA00033A984 /* Debug */,
