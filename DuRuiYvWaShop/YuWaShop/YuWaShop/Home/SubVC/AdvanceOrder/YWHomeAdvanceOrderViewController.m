@@ -102,11 +102,11 @@
     if (self.status <= 1) {
         advanceOrderCell.rePlayBlock = ^(){
             UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"Hello Boss" message:@"请接收您的订单" preferredStyle:UIAlertControllerStyleAlert];
-//            [alertVC addTextFieldWithConfigurationHandler:^(UITextField *textField){
-//                textField.placeholder = @"请输入您对客户的回复";
-//                textField.secureTextEntry = NO;
+            [alertVC addTextFieldWithConfigurationHandler:^(UITextField *textField){
+                textField.placeholder = @"请输入您对客户的回复";
+                textField.secureTextEntry = NO;
             
-//            }];
+            }];
             UIAlertAction * OKAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 UITextField * replayTextField = alertVC.textFields.firstObject;
                 [weakSelf requestDelOrderWithReplay:replayTextField.text withIndexPath:indexPath withType:2];
@@ -186,9 +186,11 @@
         MyLog(@"Regieter Code is %@",responsObj);
         if (page == 0)[self.dataArr removeAllObjects];
         NSArray * dataArr = responsObj[@"data"];
+        
         for (int i = 0; i<dataArr.count; i++) {
             YWHomeAdvanceOrderModel * model =[YWHomeAdvanceOrderModel yy_modelWithDictionary:dataArr[i]];
             model.customer_time = [model.customer_time integerValue]>0?model.customer_time:[JWTools dateWithTodayYearMonthDayNumberStr];
+
             [self.dataArr addObject:model];
         }
         [self.tableView reloadData];
