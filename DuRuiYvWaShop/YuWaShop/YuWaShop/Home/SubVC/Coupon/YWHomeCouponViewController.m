@@ -50,8 +50,8 @@
 //}
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0.f];
-    self.navigationController.navigationBarHidden = NO;
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0.f];
+//    self.navigationController.navigationBarHidden = NO;
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [self.tableView.mj_header beginRefreshing];
 }

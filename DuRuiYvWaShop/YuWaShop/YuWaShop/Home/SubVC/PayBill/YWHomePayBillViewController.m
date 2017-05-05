@@ -20,8 +20,8 @@
 
 @property (nonatomic,assign)BOOL isCut;
 @property (nonatomic,assign)CGFloat cut;
-@property (nonatomic,assign)CGFloat cutNumber;
-@property (nonatomic,assign)CGFloat costNumber;
+@property (nonatomic,assign)CGFloat cutNumber;//消费总额
+@property (nonatomic,assign)CGFloat costNumber;//不打折金额
 @property (nonatomic,assign)CGFloat payNumber;
 
 @end
@@ -76,6 +76,7 @@
         self.cutLabel.text = [NSString stringWithFormat:@"%.1f折",[UserSession instance].cut/10];
     }
     self.cutSwitchBtn.on = YES;
+    self.isCut = self.cutSwitchBtn.on;
     self.cutShowBtn.layer.cornerRadius = 3.f;
     self.cutShowBtn.layer.masksToBounds = YES;
     self.submitBtn.layer.cornerRadius = 5.f;
@@ -138,9 +139,9 @@
         [self showHUDWithStr:@"付款不能小于0元哟~" withSuccess:NO];
         return;
     }
-    
+    NSString * noDiscountMoney = [NSString stringWithFormat:@"%.2f",self.cutNumber];
     CGFloat cut = self.isCut?self.cut:100.f;
-    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"total_money":@(self.costNumber),@"non_discount_money":@(self.cutNumber),@"discount":@(cut/100)};
+    NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid),@"total_money":@(self.costNumber),@"non_discount_money":noDiscountMoney,@"discount":@(cut/100)};
     
     [[HttpObject manager]postDataWithType:YuWaType_Shoper_ShopAdmin_AddRecord withPragram:pragram success:^(id responsObj) {
         MyLog(@"Regieter Code pragram is %@",pragram);
