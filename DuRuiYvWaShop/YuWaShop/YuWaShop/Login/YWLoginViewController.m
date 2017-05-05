@@ -189,7 +189,7 @@
     NSDictionary * pragram = @{@"phone":account,@"password":password};
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
-        [[HttpObject manager]postDataWithType:YuWaType_Logion withPragram:pragram success:^(id responsObj) {
+        [[HttpObject manager]postNoHudWithType:YuWaType_Logion withPragram:pragram success:^(id responsObj) {
             MyLog(@"Pragram is %@",pragram);
             MyLog(@"Data is %@",responsObj);
             [UserSession saveUserLoginWithAccount:account withPassword:password];
