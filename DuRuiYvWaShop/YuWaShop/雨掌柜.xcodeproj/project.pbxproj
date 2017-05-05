@@ -2728,9 +2728,9 @@
 		B31096F71DE44EA00033A984 = {
 			isa = PBXGroup;
 			children = (
-				B31097021DE44EA00033A984 /* YuWaShop */,
-				B310971C1DE44EA00033A984 /* YuWaShopTests */,
-				B31097271DE44EA00033A984 /* YuWaShopUITests */,
+				B31097021DE44EA00033A984 /* 雨掌柜 */,
+				B310971C1DE44EA00033A984 /* 雨掌柜Tests */,
+				B31097271DE44EA00033A984 /* 雨掌柜UITests */,
 				B31097011DE44EA00033A984 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -2745,7 +2745,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B31097021DE44EA00033A984 /* YuWaShop */ = {
+		B31097021DE44EA00033A984 /* 雨掌柜 */ = {
 			isa = PBXGroup;
 			children = (
 				B3E2BA411E0C095F006EE3AF /* YuWaShop.entitlements */,
@@ -2762,6 +2762,7 @@
 				B31097141DE44EA00033A984 /* Info.plist */,
 				B31097031DE44EA00033A984 /* Supporting Files */,
 			);
+			name = "雨掌柜";
 			path = YuWaShop;
 			sourceTree = "<group>";
 		};
@@ -2787,21 +2788,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B310971C1DE44EA00033A984 /* YuWaShopTests */ = {
+		B310971C1DE44EA00033A984 /* 雨掌柜Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B310971D1DE44EA00033A984 /* YuWaShopTests.m */,
 				B310971F1DE44EA00033A984 /* Info.plist */,
 			);
+			name = "雨掌柜Tests";
 			path = YuWaShopTests;
 			sourceTree = "<group>";
 		};
-		B31097271DE44EA00033A984 /* YuWaShopUITests */ = {
+		B31097271DE44EA00033A984 /* 雨掌柜UITests */ = {
 			isa = PBXGroup;
 			children = (
 				B31097281DE44EA00033A984 /* YuWaShopUITests.m */,
 				B310972A1DE44EA00033A984 /* Info.plist */,
 			);
+			name = "雨掌柜UITests";
 			path = YuWaShopUITests;
 			sourceTree = "<group>";
 		};
