@@ -39,14 +39,26 @@
     return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    OrderDetailModel * model;
+    if (self.dataAry.count > 0) {
+        model = self.dataAry[0];
+        
+    }
     if (section == 0) {
         return 3;
     }else{
+        if (model.is_coupon == 0) {
         if (self.status == 0) {
-            
-            return 8;
+                return 8;
         }else{
             return 7;
+        }
+        }else{
+            if (self.status == 1) {
+                return 11;
+            }else{
+                return 10;
+        }
         }
     }
 }
@@ -145,15 +157,19 @@
             }else if (indexPath.row == 3){
                 if (self.status == 0) {
                     cell.textLabel.text = @"订单总额:";
-                    cell.detailTextLabel.text = model.total_money;
+                    cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.total_money];
                 }else{
                     cell.textLabel.text = @"实际折扣:";
-                    cell.detailTextLabel.text = model.discount;
+                    NSString * cut = [model.discount substringFromIndex:2];
+                    CGFloat cutNum = [cut floatValue]/10;
+                    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.1f折",cutNum];
                 }
             }else if (indexPath.row == 4){
                 if (self.status == 0) {
                     cell.textLabel.text = @"实际折扣:";
-                    cell.detailTextLabel.text = model.discount;
+                    NSString * cut = [model.discount substringFromIndex:2];
+                    CGFloat cutNum = [cut floatValue]/10;
+                    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.1f折",cutNum];
                 }else{
                     cell.textLabel.text = @"参与折扣金额:";
                      cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.discount_money];
@@ -167,19 +183,62 @@
                     cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.seller_money];
                 }
             }else if (indexPath.row == 6){
-                if (self.status == 0) {
-                    cell.textLabel.text = @"第三方支付手续费:";
-                    cell.detailTextLabel.text = model.counter_fee_money;
+                if (model.is_coupon == 0) {
+                    
+                    if (self.status == 0) {
+                        cell.textLabel.text = @"第三方支付手续费:";
+                        cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.counter_fee_money];
+                    }else{
+                        cell.textLabel.text = @"交易状态:";
+                        cell.detailTextLabel.text = model.order_type;
+                    }
                 }else{
-                    cell.textLabel.text = @"交易状态:";
-                    cell.detailTextLabel.text = model.order_type;
+                        cell.textLabel.text = @"已使用优惠券";
+
                 }
             }else if (indexPath.row == 7){
-                if (self.status == 0) {
-                    cell.textLabel.text = @"平台抽成:";
-                    cell.detailTextLabel.text = model.plateform_income_money ;
+                if (model.is_coupon == 0) {
+                    
+                    if (self.status == 0) {
+                        cell.textLabel.text = @"平台抽成:";
+                        cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.plateform_income_money];
+                    }else{
+                        
+                    }
                 }else{
-
+                        cell.textLabel.text = @"优惠券金额:";
+                        cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.coupon_money] ;
+                   
+                }
+            }else if (indexPath.row == 8){
+                if (model.is_coupon == 1) {
+                    cell.textLabel.text = @"优惠券类型:";
+                    if (model.coupon_type ==1) {
+                        
+                        cell.detailTextLabel.text =@"商家自发券";
+                    }else{
+                        cell.detailTextLabel.text =@"平台发放券";
+                    }
+                }
+            }else if (indexPath.row == 9){
+                
+                if (model.is_coupon == 1) {
+                    if (self.status == 0) {
+                        cell.textLabel.text = @"第三方支付手续费:";
+                        cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.counter_fee_money];
+                    }else{
+                        cell.textLabel.text = @"交易状态:";
+                        cell.detailTextLabel.text = model.order_type;
+                    }
+ 
+                }
+            }else if (indexPath.row == 10){
+                if (model.is_coupon == 1) {
+                    
+                    if (self.status == 0) {
+                        cell.textLabel.text = @"平台抽成:";
+                        cell.detailTextLabel.text = [NSString stringWithFormat:@"￥%@",model.plateform_income_money ];
+                    }
                 }
             }
         }

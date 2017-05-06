@@ -32,4 +32,8 @@
 @property (nonatomic,copy)NSString * seller_money;
 @property (nonatomic,assign)NSInteger create_time;
 
+@property (nonatomic,copy)NSString * coupon_money;//优惠券金额
+@property (nonatomic,assign)NSInteger is_coupon;//是否使用优惠券 1是使用。0 未使用
+@property (nonatomic,assign)NSInteger coupon_type;//优惠券类型 1商家自发券 2平台通用 3平台指定商家 4平台活动赠送
+
 @end
