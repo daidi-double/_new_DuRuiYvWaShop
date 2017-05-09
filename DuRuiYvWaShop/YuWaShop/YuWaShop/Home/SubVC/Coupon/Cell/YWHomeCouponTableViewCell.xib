@@ -25,12 +25,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qh0-xQ-eXk">
                         <rect key="frame" x="165" y="20" width="202" height="108.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youhuiquan_061" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-Cv-hVM">
-                                <rect key="frame" x="22" y="10" width="176" height="91"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Fg1-Cv-hVM" secondAttribute="height" multiplier="2:1" constant="-6" id="IGG-dN-Ziz"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.4.10-2017.4.20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAt-8s-8bx">
                                 <rect key="frame" x="22" y="48" width="172" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -65,13 +59,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ud6-aF-h23" firstAttribute="trailing" secondItem="qAt-8s-8bx" secondAttribute="trailing" id="1J2-nC-dDl"/>
-                            <constraint firstItem="Fg1-Cv-hVM" firstAttribute="centerX" secondItem="qh0-xQ-eXk" secondAttribute="centerX" constant="9" id="3iV-fB-3xC"/>
-                            <constraint firstItem="Fg1-Cv-hVM" firstAttribute="leading" secondItem="qh0-xQ-eXk" secondAttribute="leading" constant="22" id="Bn2-4c-khP"/>
                             <constraint firstItem="mHK-bD-0Ed" firstAttribute="trailing" secondItem="qAt-8s-8bx" secondAttribute="trailing" id="FzS-JL-iVl"/>
                             <constraint firstItem="mHK-bD-0Ed" firstAttribute="top" secondItem="qAt-8s-8bx" secondAttribute="bottom" constant="4" id="LqY-aB-PoQ"/>
-                            <constraint firstItem="Fg1-Cv-hVM" firstAttribute="top" secondItem="qh0-xQ-eXk" secondAttribute="top" constant="10" id="LsH-UL-9G3"/>
                             <constraint firstItem="qAt-8s-8bx" firstAttribute="centerY" secondItem="qh0-xQ-eXk" secondAttribute="centerY" id="TgE-IG-opS"/>
-                            <constraint firstItem="Fg1-Cv-hVM" firstAttribute="centerY" secondItem="qh0-xQ-eXk" secondAttribute="centerY" constant="1.25" id="Wsd-me-D49"/>
                             <constraint firstAttribute="bottom" secondItem="mHK-bD-0Ed" secondAttribute="bottom" constant="15" id="gEg-jd-duX"/>
                             <constraint firstItem="qAt-8s-8bx" firstAttribute="top" secondItem="Ud6-aF-h23" secondAttribute="bottom" constant="4" id="ntT-U1-d7K"/>
                             <constraint firstAttribute="trailing" secondItem="qAt-8s-8bx" secondAttribute="trailing" constant="8" id="tvI-Jd-7XD"/>
@@ -140,7 +130,6 @@
     </objects>
     <resources>
         <image name="youhuiquan_06" width="660" height="232"/>
-        <image name="youhuiquan_061" width="324" height="170"/>
         <image name="youhuiquan_062" width="178" height="178"/>
     </resources>
 </document>
