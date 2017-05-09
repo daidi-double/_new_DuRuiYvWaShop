@@ -29,6 +29,7 @@
         titleSize = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}];
     } else {
         titleSize = [title sizeWithFont:[UIFont systemFontOfSize:10]];
+        
     }
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self setImageEdgeInsets:UIEdgeInsetsMake(0,
