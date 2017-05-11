@@ -280,7 +280,14 @@
         [self cancelComment];
         self.commentToolsView.hidden = YES;
     }
-    self.toolsBottomView.hidden = scrollView.contentOffset.y <= self.bottomToolsHeight ?NO:YES;
+    [UIView animateWithDuration:1 animations:^{
+        if (scrollView.contentOffset.y <= self.bottomToolsHeight) {
+            self.toolsBottomView.alpha = 1;
+        }else{
+            self.toolsBottomView.alpha = 0;
+        }
+    }];
+//    self.toolsBottomView.hidden = scrollView.contentOffset.y <= self.bottomToolsHeight ?NO:YES;
 }
 
 #pragma mark - Set ScrollImageView Height
