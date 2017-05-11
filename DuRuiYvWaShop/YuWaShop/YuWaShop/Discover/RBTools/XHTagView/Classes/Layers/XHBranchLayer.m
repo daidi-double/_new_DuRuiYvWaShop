@@ -8,7 +8,7 @@
 
 #import "XHBranchLayer.h"
 
-@interface XHBranchLayer ()
+@interface XHBranchLayer ()<CAAnimationDelegate>
 
 @property (nonatomic, copy) XHBranchLayerAnimationCompletion completion;
 
@@ -92,6 +92,7 @@
 
 - (CABasicAnimation *)animation {
     if (!_animation) {
+        
         _animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
         _animation.delegate = self;
         _animation.fromValue = @(0);

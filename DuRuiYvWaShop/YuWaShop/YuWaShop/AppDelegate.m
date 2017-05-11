@@ -233,9 +233,20 @@ forRemoteNotification:(NSDictionary *)userInfo
         NSLog(@"iOS10 收到远程通知:%@", [self logDic:userInfo]);
         [self saveJupshNotificationDicWithDic:userInfo];
         
+        NSString * documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
+        NSString * filePath1 = [NSString stringWithFormat:@"%@/isPush.plist",documentPath];
+        NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithContentsOfFile:filePath1];
+        if ([dic objectForKey:@"ispush"]) {
+            //表示存在这个key，
+            [dic setValue:@"1" forKey:@"ispush"];
+        }else{
+            [dic setValue:@"1" forKey:@"ispush"];
+        }
+        [dic writeToFile:filePath1 atomically:YES];
+            self.window = [UIWindow windowInitWithRootViewController:[[VIPTabBarController alloc]init]];
     }else {
         // 判断为本地通知
-        NSLog(@"iOS10 收到本地通知:{\nbody:%@，\ntitle:%@,\nsubtitle:%@,\nbadge：%@，\nsound：%@，\nuserInfo：%@\n}",body,title,subtitle,badge,sound,userInfo);
+        NSLog(@"iOS10    收到本地通知:{\nbody:%@，\ntitle:%@,\nsubtitle:%@,\nbadge：%@，\nsound：%@，\nuserInfo：%@\n}",body,title,subtitle,badge,sound,userInfo);
     }
     
     completionHandler();  // 系统要求执行这个方法

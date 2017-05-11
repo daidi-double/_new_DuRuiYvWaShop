@@ -81,6 +81,30 @@
     self.subVCArr = @[[YWFinancialViewController class],[YWHomeFestivalViewController class],[YWCategoryViewController class],[ShowMoreCommitViewController class],[YWHomeRefundVC class],[YWHomeAdvanceOrderViewController class],[YWHomeCouponViewController class],[StorePhotoViewController class],[YWHomeCompareViewController class]];
     [self.collectionView registerNib:[UINib nibWithNibName:@"YWHomeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"YWHomeCollectionViewCell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"YWHomeCollectionHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"YWHomeCollectionHeaderView"];
+    
+    
+    
+    //加载完数据之后，判断是否是推送了通知，如果是，就跳转制定页面
+    NSString * documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
+    NSString * filePath1 = [NSString stringWithFormat:@"%@/isPush.plist",documentPath];
+    NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithContentsOfFile:filePath1];
+    if (dic == nil) {
+        //表示没有这个文件时候。我们创建一个.plist文件
+        NSMutableDictionary* arrM = [NSMutableDictionary dictionary];
+        [arrM setObject:@"0" forKey:@"ispush"];
+        [arrM writeToFile:filePath1 atomically:YES];
+    }else{
+        //说明已经有数据，在字典里面
+        NSString * str = dic[@"ispush"];
+        if ([str isEqualToString:@"1"]) {
+            //说明是通知发送过来的
+            YWHomeAdvanceOrderViewController*vc=[[YWHomeAdvanceOrderViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+            //跳转之后，把数据还原；
+            [dic setValue:@"0" forKey:@"ispush"];
+            [dic writeToFile:filePath1 atomically:YES];
+        }
+    }
 }
 
 - (void)messageAction{
