@@ -39,10 +39,8 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
    
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
-    if (![UserSession userToComfired])return;
-        if (!self.showArr){
+    [UserSession userToComfired];
             [self dataSet];
-        }
      [self refreshUI];
 }
 -(void)viewDidAppear:(BOOL)animated{

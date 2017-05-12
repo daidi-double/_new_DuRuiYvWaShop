@@ -47,6 +47,7 @@
         self.showImageView.contentMode = UIViewContentModeCenter;
     [self.showImageView sd_setImageWithURL:[NSURL URLWithString:imageModel.url] placeholderImage:[UIImage imageNamed:@"placeholder"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         weakSelf.showImageView.alpha = 0.3f;
+        self.showImageView.contentMode = UIViewContentModeScaleToFill;
         [UIView animateWithDuration:0.8 animations:^{
             weakSelf.showImageView.alpha = 1.f;
         }];
