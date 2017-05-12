@@ -33,14 +33,17 @@
     [super viewDidLoad];
     [self makeNavi];
     [self makeUI];
-    [self dataSet];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    [self refreshUI];
+   
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
-    [UserSession userToComfired];
+    if (![UserSession userToComfired])return;
+        if (!self.showArr){
+            [self dataSet];
+        }
+     [self refreshUI];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear: animated];
