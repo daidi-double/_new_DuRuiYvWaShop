@@ -29,9 +29,9 @@
     self.nameLabel.text = self.model.goods_name;
     self.conLabel.text = self.model.goods_info;
     
-    NSString * priceStr = [self.model.goods_price stringByReplacingOccurrencesOfString:@".00" withString:@""];
-    priceStr = [priceStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
-    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",priceStr];
+//    NSString * priceStr = [self.model.goods_price stringByReplacingOccurrencesOfString:@".00" withString:@""];
+//    priceStr = [priceStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",self.model.goods_price];
 }
 
 @end
