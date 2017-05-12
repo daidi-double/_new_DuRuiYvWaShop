@@ -39,7 +39,7 @@
                         <action selector="noLoginBGBtnAvtion:" destination="-1" eventType="touchUpInside" id="vWd-Ix-EWZ"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="消息" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-Cn-zFf">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="消息" translatesAutoresizingMaskIntoConstraints="NO" id="Jsw-r2-o42">
                     <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                 </imageView>
             </subviews>
@@ -50,15 +50,15 @@
                 <constraint firstAttribute="trailing" secondItem="T07-aF-Hsb" secondAttribute="trailing" id="CEd-ix-5fZ"/>
                 <constraint firstItem="T07-aF-Hsb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FK8-19-CYC"/>
                 <constraint firstItem="HNC-jo-nPZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hjr-nC-F06"/>
-                <constraint firstItem="j0x-Cn-zFf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nlu-YO-qTc"/>
+                <constraint firstAttribute="trailing" secondItem="Jsw-r2-o42" secondAttribute="trailing" id="N5O-QU-zAU"/>
+                <constraint firstItem="Jsw-r2-o42" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VYF-W0-5O5"/>
                 <constraint firstItem="T07-aF-Hsb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vvl-yc-JGY"/>
+                <constraint firstItem="Jsw-r2-o42" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="YnF-rV-dLB"/>
                 <constraint firstAttribute="trailing" secondItem="HNC-jo-nPZ" secondAttribute="trailing" id="cEv-dl-Pp4"/>
                 <constraint firstAttribute="bottom" secondItem="T07-aF-Hsb" secondAttribute="bottom" constant="49" id="e8H-rC-0Ug"/>
-                <constraint firstItem="j0x-Cn-zFf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="i6F-l2-oa4"/>
-                <constraint firstAttribute="trailing" secondItem="j0x-Cn-zFf" secondAttribute="trailing" id="oHg-Pj-DLN"/>
-                <constraint firstAttribute="bottom" secondItem="j0x-Cn-zFf" secondAttribute="bottom" id="zmZ-dF-fgX"/>
+                <constraint firstAttribute="bottom" secondItem="Jsw-r2-o42" secondAttribute="bottom" id="u4i-4t-R4D"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="73.5"/>
+            <point key="canvasLocation" x="134" y="155"/>
         </view>
     </objects>
     <resources>
