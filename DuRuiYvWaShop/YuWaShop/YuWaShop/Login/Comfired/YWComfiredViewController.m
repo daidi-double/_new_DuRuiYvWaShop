@@ -77,6 +77,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+      [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self makeNavi];
     [self makeUI];
     UIView * view = [[UIView alloc]initWithFrame:self.view.bounds];
