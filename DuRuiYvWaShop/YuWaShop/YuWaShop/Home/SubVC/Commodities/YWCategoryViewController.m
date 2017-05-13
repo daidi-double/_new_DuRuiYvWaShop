@@ -24,6 +24,7 @@
     [super viewDidLoad];
    self.title = @"分类管理";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.categoryTableView.backgroundColor = [UIColor whiteColor];
     self.pagens = @"10";
     self.dataArr = [NSMutableArray arrayWithCapacity:0];
     [self makeUI];
@@ -90,6 +91,8 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"categoryCell"];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.textColor = RGBCOLOR(80, 88, 88, 1);
     YWCategoryModel * model = self.dataArr[indexPath.row];
     cell.textLabel.text = model.cat_name;
 

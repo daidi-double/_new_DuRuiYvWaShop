@@ -164,10 +164,10 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXU-mG-ZlY">
-                            <rect key="frame" x="8" y="530" width="304" height="30"/>
-                            <color key="backgroundColor" red="0.33333333329999998" green="0.67843137249999996" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="8" y="520" width="304" height="40"/>
+                            <color key="backgroundColor" red="0.25098039215686274" green="0.70196078431372544" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="0IU-Mv-V6P"/>
+                                <constraint firstAttribute="height" constant="40" id="0IU-Mv-V6P"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                             <state key="normal" title="确认提交">
