@@ -49,12 +49,12 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setUserInteractionEnabled:YES];
-    self.noLoginBGBtnView.hidden = YES;
-    self.noChatBGBtnView.hidden = YES;
-    self.noChatlabel.hidden = self.noChatBGBtnView.hidden;
-    if (self.status == 1&&![UserSession instance].isLogin){
-        self.segmentedControl.selectedSegmentIndex = 0;
-    }
+//    self.noLoginBGBtnView.hidden = YES;
+//    self.noChatBGBtnView.hidden = YES;
+//    self.noChatlabel.hidden = self.noChatBGBtnView.hidden;
+//    if (self.status == 1&&![UserSession instance].isLogin){
+//        self.segmentedControl.selectedSegmentIndex = 0;
+//    }
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
