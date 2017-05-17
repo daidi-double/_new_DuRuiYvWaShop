@@ -35,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.title = @"同业排行";
+    self.title = @"同业排行";
 //    [self dataSet];
 //    [self makeUI];
 //    [self setupRefresh];
