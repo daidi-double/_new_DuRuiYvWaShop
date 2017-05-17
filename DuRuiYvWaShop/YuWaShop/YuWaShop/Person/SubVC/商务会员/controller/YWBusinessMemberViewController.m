@@ -40,7 +40,8 @@
 @property(nonatomic,strong)ScoreModel*scoreModel;
 @property(nonatomic,strong)BindingPersonModel*BiningModel;
 
-
+@property (nonatomic, assign) CGRect bolangImageVIewFrame;
+@property (nonatomic, strong) UIImageView *bolangImageVIew;
 
 @end
 
@@ -77,7 +78,19 @@
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    CGFloat yoffset=scrollView.contentOffset.y;
+//    if (yoffset<0) {
+//        CGRect frame = self.bolangImageVIew.frame;
+//        frame.origin.x = self.bolangImageVIew.origin.x +yoffset/2;
+//        frame.origin.y=  yoffset ;
+//        frame.size.height = -yoffset+self.bolangImageVIewFrame.size.height;
+//        frame.size.width = self.bolangImageVIewFrame.size.width/self.bolangImageVIewFrame.size.height*frame.size.height;
+//        //改变头部视图的fram
+//        MyLog(@"~~~~~~!!!!!!!%@",NSStringFromCGRect(frame));
+//        self.bolangImageVIew.frame= frame;
+//    }
     
+
     CGFloat aa =scrollView.contentOffset.y;
     if (aa<=190) {
           [[[self.navigationController.navigationBar subviews]objectAtIndex:0] setAlpha:0];
@@ -268,7 +281,12 @@
     WEAKSELF;
     if (section==0) {
         BusinessMumberHeaderView*view=[[NSBundle mainBundle]loadNibNamed:@"BusinessMumberHeaderView" owner:nil options:nil].firstObject;
-        
+        if (!self.bolangImageVIew) {
+            self.bolangImageVIew =  view.boliangImageView;
+            self.bolangImageVIewFrame = view.boliangImageView.frame;
+        }else{
+            view.boliangImageView.frame = self.bolangImageVIew.frame ;
+        }
         //今日收益
         UILabel*label2=[view viewWithTag:2];
         label2.text=self.base_infoModel.today_money;

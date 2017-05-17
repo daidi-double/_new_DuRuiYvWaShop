@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-ho-q4A">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <rect key="frame" x="0.0" y="-317" width="375" height="567"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uru-Wa-BY1">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
@@ -88,8 +88,8 @@
                         <constraint firstAttribute="bottom" secondItem="TH2-fu-sw8" secondAttribute="bottom" id="VXK-fO-7Gi"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日收益（rmb）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-lK-1Oh">
-                    <rect key="frame" x="120" y="70" width="135" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日收益（RMB）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-lK-1Oh">
+                    <rect key="frame" x="118" y="70" width="140" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -101,24 +101,23 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.23517224192619324" green="0.73073107004165649" blue="0.9185757040977478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="uHV-ho-q4A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0oU-fo-pve"/>
+                <constraint firstAttribute="bottom" secondItem="uHV-ho-q4A" secondAttribute="bottom" id="0Lb-aX-VjI"/>
                 <constraint firstItem="uru-Wa-BY1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0vf-19-ZfF"/>
                 <constraint firstItem="pbS-lK-1Oh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="2ht-hy-rB0"/>
                 <constraint firstAttribute="bottom" secondItem="uru-Wa-BY1" secondAttribute="bottom" id="5xd-GJ-VY6"/>
                 <constraint firstItem="6Kq-wq-8W5" firstAttribute="top" secondItem="pbS-lK-1Oh" secondAttribute="bottom" constant="10" id="GYE-x0-f7X"/>
-                <constraint firstAttribute="trailing" secondItem="uHV-ho-q4A" secondAttribute="trailing" id="J4n-zS-HXv"/>
                 <constraint firstAttribute="trailing" secondItem="uru-Wa-BY1" secondAttribute="trailing" id="MMD-eW-xys"/>
                 <constraint firstItem="pbS-lK-1Oh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mv4-G5-9K7"/>
-                <constraint firstAttribute="bottom" secondItem="uHV-ho-q4A" secondAttribute="bottom" id="Usw-z9-Mo4"/>
+                <constraint firstItem="uHV-ho-q4A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-317" id="QWk-Sk-TwP"/>
                 <constraint firstItem="uru-Wa-BY1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aVt-cz-Oo3"/>
                 <constraint firstItem="uru-Wa-BY1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gXF-zH-KZX"/>
                 <constraint firstItem="TH2-fu-sw8" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:2" id="h05-zF-vG2"/>
                 <constraint firstAttribute="bottom" secondItem="uru-Wa-BY1" secondAttribute="bottom" id="kTi-7Q-46h"/>
+                <constraint firstItem="uHV-ho-q4A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lkH-fb-UcN"/>
                 <constraint firstAttribute="trailing" secondItem="uru-Wa-BY1" secondAttribute="trailing" id="nYN-8j-rCa"/>
                 <constraint firstItem="6Kq-wq-8W5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qgU-L7-AYX"/>
-                <constraint firstItem="uHV-ho-q4A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rAH-Dd-BEt"/>
+                <constraint firstAttribute="trailing" secondItem="uHV-ho-q4A" secondAttribute="trailing" id="w2B-pe-BGY"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
