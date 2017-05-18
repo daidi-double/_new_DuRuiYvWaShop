@@ -38,10 +38,12 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
     [self.accountTextField becomeFirstResponder];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:1];
     if (self.timer.isValid) {
         [self.timer invalidate];
     }
@@ -50,14 +52,15 @@
 
 - (void)makeUI{
     self.passwordtextField.secureTextEntry = YES;
-    
-    self.registerBtn.layer.cornerRadius = 5.f;
+    self.registerBtn.layer.cornerRadius = 22.f;
     self.registerBtn.layer.masksToBounds = YES;
-    self.secuirtyCodeBtn.layer.cornerRadius = 3.f;
-    self.secuirtyCodeBtn.layer.masksToBounds = YES;
     
-    [self.agreeBtn setImage:[UIImage imageNamed:@"dagougray.png"] forState:UIControlStateNormal];
-    [self.agreeBtn setImage:[UIImage imageNamed:@"dagou.png"] forState:UIControlStateSelected];
+    self.secuirtyCodeBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.secuirtyCodeBtn.layer.borderWidth = 1;
+    self.secuirtyCodeBtn.layer.cornerRadius = 10.f;
+    self.secuirtyCodeBtn.layer.masksToBounds = YES;
+    [self.agreeBtn setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
+    [self.agreeBtn setImage:[UIImage imageNamed:@"选中"] forState:UIControlStateSelected];
     self.agreeBtn.selected = YES;
 }
 

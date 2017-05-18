@@ -13,14 +13,15 @@
 #import "JPUSHService.h"
 #import "VIPTabBarController.h"
 
-@interface YWLoginViewController ()<UITextFieldDelegate,YJSegmentedControlDelegate>
+@interface YWLoginViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordtextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *hiddenPasswordBtn;
 
-@property (nonatomic,strong)YJSegmentedControl * segmentControl;
+@property (nonatomic,strong)UIView * segmentLineView;
+
 @property (nonatomic,assign)BOOL isHiddenPassword;
 
 @property (weak, nonatomic) IBOutlet UIView *quickLoginView;
@@ -44,6 +45,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
     if (self.state == 0) {
         [self.accountTextField becomeFirstResponder];
     }else{
@@ -53,6 +55,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:1];
     if (self.timer.isValid) {
         [self.timer invalidate];
     }
@@ -61,26 +64,53 @@
 
 - (void)makeNavi{
     self.title = @"登录";
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barItemWithImageName:@"NaviBack" withSelectImage:@"NaviBack" withHorizontalAlignment:UIControlContentHorizontalAlignmentCenter withTarget:self action:@selector(backBarAction) forControlEvents:UIControlEventTouchUpInside withSize:CGSizeMake(25.f, 25.f)];
+
     self.navigationController.navigationBar.barTintColor = CNaviColor;
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.leftBarButtonItem = nil;
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(registerAction)];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIColor whiteColor],
+                                NSForegroundColorAttributeName, nil];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:attributes];
 }
 
 - (void)makeUI{
     self.passwordtextField.secureTextEntry = YES;
-    
-    self.loginBtn.layer.cornerRadius = 5.f;
-    self.loginBtn.layer.masksToBounds = YES;
-    self.quickLoginBtn.layer.cornerRadius = 5.f;
-    self.quickLoginBtn.layer.masksToBounds = YES;
-    self.secuirtyCodeBtn.layer.cornerRadius = 3.f;
+
+    self.secuirtyCodeBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.secuirtyCodeBtn.layer.borderWidth = 1;
+    self.secuirtyCodeBtn.layer.cornerRadius = 10.f;
     self.secuirtyCodeBtn.layer.masksToBounds = YES;
     
-    self.segmentControl = [YJSegmentedControl segmentedControlFrame:CGRectMake(0.f, NavigationHeight, kScreen_Width, 40.f) titleDataSource:@[@"账号密码登录",@"手机号快捷登录"] backgroundColor:[UIColor whiteColor] titleColor:CtitleColor titleFont:[UIFont systemFontOfSize:15.f] selectColor:CNaviColor buttonDownColor:CNaviColor Delegate:self];
-    [self.view addSubview:self.segmentControl];
-}
+    NSArray * titleAry = @[@"账号密码登入",@"手机号快速登入"];
+    for (int i = 0; i<2; i++) {
+        UIButton * segmentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        segmentBtn.frame = CGRectMake(kScreen_Width/2*i, NavigationHeight, kScreen_Width/2, 39.f);
+        [segmentBtn setTitle:titleAry[i] forState:UIControlStateNormal];
+        [segmentBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [segmentBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        segmentBtn.tag = 222 + i;
+        [segmentBtn addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:segmentBtn];
+        
+    }
+    self.segmentLineView = [[UIView alloc]initWithFrame:CGRectMake(0, NavigationHeight+39, kScreen_Width/2, 1.f)];
+    self.segmentLineView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.segmentLineView];
 
+}
+//第三方登录
+- (IBAction)QQLoginAction:(UIButton *)sender {
+    
+}
+- (IBAction)weiXLoginAction:(UIButton *)sender {
+    
+}
+- (IBAction)weiboLoginAction:(UIButton *)sender {
+    
+}
 #pragma mark - ButtonAction
 - (void)registerAction{
     YWRegisterViewController * vc = [[YWRegisterViewController alloc]init];
@@ -148,12 +178,12 @@
         self.timer = nil;
         self.time = 60;
         [self.secuirtyCodeBtn setTitle:[NSString stringWithFormat:@"重获验证码"] forState:UIControlStateNormal];
-        self.secuirtyCodeBtn.backgroundColor = CNaviColor;
+        
         [self.secuirtyCodeBtn setUserInteractionEnabled:YES];
         return;
     }
     [self.secuirtyCodeBtn setTitle:[NSString stringWithFormat:@"获取中(%zi)s",self.time] forState:UIControlStateNormal];
-    [self.secuirtyCodeBtn setBackgroundColor:[UIColor grayColor]];
+    
     self.time--;
 }
 
@@ -173,14 +203,19 @@
     return YES;
 }
 
-#pragma mark - YJSegmentedControlDelegate
-- (void)segumentSelectionChange:(NSInteger)selection{
-    self.state = selection;
-    self.quickLoginView.hidden = selection==0?YES:NO;
-    if (selection == 0) {
-        [self.accountTextField becomeFirstResponder];
-    }else{
-        [self.mobileTextField becomeFirstResponder];
+- (void)segmentAction:(UIButton*)sender{
+    self.state = sender.tag - 222;
+    self.segmentLineView.centerX = sender.centerX;
+    switch (sender.tag) {
+        case 222:
+            [self.accountTextField becomeFirstResponder];
+            self.quickLoginView.hidden = YES;
+            break;
+            
+        default:
+            [self.mobileTextField becomeFirstResponder];
+            self.quickLoginView.hidden = NO;
+            break;
     }
 }
 

@@ -32,10 +32,12 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
     [self.accountTextField becomeFirstResponder];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:1];
     if (self.timer.isValid) {
         [self.timer invalidate];
     }
@@ -43,9 +45,12 @@
 }
 
 - (void)makeUI{
-    self.submitBtn.layer.cornerRadius = 5.f;
+    self.submitBtn.layer.cornerRadius = 22.f;
     self.submitBtn.layer.masksToBounds = YES;
-    self.secuirtyCodeBtn.layer.cornerRadius = 3.f;
+
+    self.secuirtyCodeBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.secuirtyCodeBtn.layer.borderWidth = 1;
+    self.secuirtyCodeBtn.layer.cornerRadius = 10.f;
     self.secuirtyCodeBtn.layer.masksToBounds = YES;
 }
 
