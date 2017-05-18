@@ -28,7 +28,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.14778482913970947" green="0.75102478265762329" blue="0.91425001621246338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="hdT-AC-iVa" firstAttribute="top" secondItem="wb2-At-20L" secondAttribute="bottom" constant="15" id="Li5-Qt-V5T"/>
                 <constraint firstItem="wb2-At-20L" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="1" id="Nra-zt-DX2"/>

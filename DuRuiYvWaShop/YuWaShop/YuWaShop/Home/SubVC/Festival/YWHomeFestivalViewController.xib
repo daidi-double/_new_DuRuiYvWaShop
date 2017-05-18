@@ -41,7 +41,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.25098039215686274" green="0.69411764705882351" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="AFT-XN-uX2" firstAttribute="top" secondItem="5Os-U6-ACw" secondAttribute="bottom" constant="20" id="4tf-FZ-2Qg"/>
                         <constraint firstItem="AFT-XN-uX2" firstAttribute="centerX" secondItem="3fE-7N-mSR" secondAttribute="centerX" id="EQS-dS-ALU"/>
@@ -53,7 +53,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE0-aM-J7P">
                     <rect key="frame" x="15" y="357" width="345" height="40"/>
-                    <color key="backgroundColor" red="0.25098039215686274" green="0.69411764705882351" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="WDT-J1-Pb6"/>
                     </constraints>

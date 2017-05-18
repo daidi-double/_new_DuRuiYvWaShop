@@ -44,7 +44,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.25098039215686274" green="0.70196078431372544" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="JbC-2I-VlH" secondAttribute="bottom" constant="4" id="AMC-kE-l2B"/>
                                 <constraint firstItem="JbC-2I-VlH" firstAttribute="top" secondItem="SfL-bn-ttv" secondAttribute="top" constant="5" id="MRm-Pj-c3k"/>
@@ -80,7 +80,7 @@
                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0c-RV-YDP">
                             <rect key="frame" x="77.5" y="154" width="62" height="35"/>
                             <state key="normal" title="全部提现">
-                                <color key="titleColor" red="0.25098039215686274" green="0.70196078431372544" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="getAllMoney:" destination="-1" eventType="touchUpInside" id="sFJ-GW-56S"/>
@@ -143,7 +143,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCf-lz-cKN">
                     <rect key="frame" x="16" y="333" width="343" height="45"/>
-                    <color key="backgroundColor" red="0.32549019610000002" green="0.78823529410000004" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="pwX-rK-tu4"/>
                     </constraints>

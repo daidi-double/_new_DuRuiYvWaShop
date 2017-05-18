@@ -90,7 +90,7 @@
                                 <constraint firstAttribute="height" constant="31" id="Tzu-KC-KvA"/>
                                 <constraint firstAttribute="width" constant="49" id="kFy-rl-UNC"/>
                             </constraints>
-                            <color key="onTintColor" red="0.1450980392" green="0.75294117650000003" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="onTintColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cutUseSwichAction:" destination="-1" eventType="valueChanged" id="pCn-vW-zIh"/>
                             </connections>
@@ -165,7 +165,7 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juL-2z-mdV">
                             <rect key="frame" x="15" y="49" width="345" height="40"/>
-                            <color key="backgroundColor" red="0.1450980392" green="0.75294117650000003" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.28235294119999998" green="0.53333333329999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="akz-BV-Xnc"/>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="nvJ-hg-JKO"/>
