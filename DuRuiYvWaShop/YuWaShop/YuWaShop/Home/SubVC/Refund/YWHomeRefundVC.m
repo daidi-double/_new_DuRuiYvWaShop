@@ -45,7 +45,7 @@
     self.typeSegmentView = [[UISegmentedControl alloc]initWithItems:@[@"待处理",@"已同意"]];
     self.typeSegmentView.frame = CGRectMake(20.f, 10.f, kScreen_Width - 40.f, 30.f);
     self.typeSegmentView.selectedSegmentIndex = 0;
-    [self.typeSegmentView setTitleTextAttributes:[NSDictionary dicOfTextAttributeWithFont:[UIFont systemFontOfSize:15.f] withTextColor:[UIColor colorWithHexString:@"#25C0E9"]] forState:UIControlStateNormal];
+    [self.typeSegmentView setTitleTextAttributes:[NSDictionary dicOfTextAttributeWithFont:[UIFont systemFontOfSize:15.f] withTextColor:[UIColor colorWithHexString:@"#3c8cd9"]] forState:UIControlStateNormal];
     [self.typeSegmentView setTitleTextAttributes:[NSDictionary dicOfTextAttributeWithFont:[UIFont systemFontOfSize:15.f] withTextColor:[UIColor whiteColor]] forState:UIControlStateSelected];
     self.typeSegmentView.tintColor = CNaviColor;
     self.typeSegmentView.layer.borderColor = CNaviColor.CGColor;

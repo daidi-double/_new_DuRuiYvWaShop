@@ -79,9 +79,10 @@
     
     CGFloat proporton = [str floatValue];
     
-    ProgressView * gressView = [[ProgressView alloc]initWithFrame:CGRectMake(0, 0, kScreen_Width/3, kScreen_Width/3) backColor:CNaviColor color:CNaviColor proportion:proporton];
+    ProgressView * gressView = [[ProgressView alloc]initWithFrame:CGRectMake(0, 0, kScreen_Width/3, kScreen_Width/3) backColor:CNaviColor color:CNaviColor proportion:0.5];
     
     gressView.center = view.center;
+     gressView.centerY = view.centerY+10;
     //如果需要内容数据时使用
     gressView.data = [NSString stringWithFormat:@"%@",self.model.total_score];//当前积分
     if (self.model.total_score == nil || [self.model.total_score isKindOfClass:[NSNull class]]) {

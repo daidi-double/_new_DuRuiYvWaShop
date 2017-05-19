@@ -66,7 +66,7 @@
                 </view>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnE-bd-yR9">
                     <rect key="frame" x="16" y="314" width="343" height="45"/>
-                    <color key="backgroundColor" red="0.23137254901960785" green="0.66274509803921566" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.28235294119999998" green="0.52941176469999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="z2d-E4-aof"/>
                     </constraints>
@@ -87,7 +87,7 @@
                         <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwH-Fw-ENW">
                             <rect key="frame" x="305" y="15" width="62" height="30"/>
                             <state key="normal" title="全部提现">
-                                <color key="titleColor" red="0.23137254901960785" green="0.66274509803921566" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.28235294119999998" green="0.52941176469999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-SM-Bsd">

@@ -16,7 +16,7 @@
     self.backgroundColor=[UIColor whiteColor];
     
     UIImageView*imageView=[self viewWithTag:1];
-    imageView.backgroundColor=[UIColor greenColor];
+    imageView.backgroundColor=RGBCOLOR(222, 223, 224, 1);
     
     UIView*BottomView=[self viewWithTag:22];
     BottomView.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:0.1];

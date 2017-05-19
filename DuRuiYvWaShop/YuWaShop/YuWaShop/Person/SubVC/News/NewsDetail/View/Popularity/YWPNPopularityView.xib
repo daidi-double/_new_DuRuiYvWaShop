@@ -57,7 +57,7 @@
                         <constraint firstAttribute="height" constant="60" id="OZA-j0-4HT"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                    <color key="textColor" red="0.25098039215686274" green="0.69803921568627447" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.28235294119999998" green="0.52941176469999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

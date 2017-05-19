@@ -16,6 +16,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuanhuan" translatesAutoresizingMaskIntoConstraints="NO" id="8jP-YB-lUh">
+                    <rect key="frame" x="112.5" y="85" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8jP-YB-lUh" secondAttribute="height" multiplier="1:1" id="isb-km-PWx"/>
+                        <constraint firstAttribute="height" constant="150" id="ofH-dp-CPR"/>
+                        <constraint firstAttribute="width" constant="150" id="pnV-vz-ydj"/>
+                    </constraints>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="普通会员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMy-2E-h5e">
                     <rect key="frame" x="15" y="65" width="58" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -38,20 +46,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="可兑换积分：100"/>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="圆环" translatesAutoresizingMaskIntoConstraints="NO" id="8jP-YB-lUh">
-                    <rect key="frame" x="120" y="82.5" width="135" height="135"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="8jP-YB-lUh" secondAttribute="height" multiplier="1:1" id="isb-km-PWx"/>
-                        <constraint firstAttribute="height" constant="135" id="ofH-dp-CPR"/>
-                        <constraint firstAttribute="width" constant="135" id="pnV-vz-ydj"/>
-                    </constraints>
-                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.23012551665306091" green="0.73476451635360718" blue="0.91849935054779053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.28235294119999998" green="0.52941176469999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="xZI-en-2Dh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="73h-BI-PXx"/>
                 <constraint firstAttribute="trailing" secondItem="21h-QG-LbK" secondAttribute="trailing" constant="15" id="AzX-7F-b6n"/>
-                <constraint firstItem="8jP-YB-lUh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BnQ-SX-Bhh"/>
+                <constraint firstItem="8jP-YB-lUh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="BnQ-SX-Bhh"/>
                 <constraint firstItem="eMy-2E-h5e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="65" id="DDE-tO-JJq"/>
                 <constraint firstItem="eMy-2E-h5e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="XWG-wL-ScZ"/>
                 <constraint firstAttribute="bottom" secondItem="xZI-en-2Dh" secondAttribute="bottom" constant="10" id="cmk-WE-41r"/>
@@ -66,6 +66,6 @@
         </view>
     </objects>
     <resources>
-        <image name="圆环" width="151" height="150"/>
+        <image name="yuanhuan" width="303" height="300"/>
     </resources>
 </document>

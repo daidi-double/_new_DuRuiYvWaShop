@@ -55,7 +55,7 @@
     self.typeSegmentView = [[UISegmentedControl alloc]initWithItems:@[@"付款消息",@"订单消息"]];
     self.typeSegmentView.frame = CGRectMake(15.f, 10.f, kScreen_Width - 30.f, 30.f);
     self.typeSegmentView.selectedSegmentIndex = 0;
-    [self.typeSegmentView setTitleTextAttributes:[NSDictionary dicOfTextAttributeWithFont:[UIFont systemFontOfSize:15.f] withTextColor:[UIColor colorWithHexString:@"#25C0E9"]] forState:UIControlStateNormal];
+    [self.typeSegmentView setTitleTextAttributes:[NSDictionary dicOfTextAttributeWithFont:[UIFont systemFontOfSize:15.f] withTextColor:[UIColor colorWithHexString:@"#3c8cd9"]] forState:UIControlStateNormal];
     [self.typeSegmentView setTitleTextAttributes:[NSDictionary dicOfTextAttributeWithFont:[UIFont systemFontOfSize:15.f] withTextColor:[UIColor whiteColor]] forState:UIControlStateSelected];
     self.typeSegmentView.tintColor = CNaviColor;
     self.typeSegmentView.layer.borderColor = CNaviColor.CGColor;
