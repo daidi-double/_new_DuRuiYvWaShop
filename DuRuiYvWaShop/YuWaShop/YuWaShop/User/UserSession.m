@@ -180,8 +180,8 @@ static UserSession * user=nil;
         user.comfired_Status = 4;
     }
     
-    user.cut = ceilf([((dataDic[@"company_discount"]&&![dataDic[@"company_discount"]isKindOfClass:[NSNull class]])?dataDic[@"company_discount"]:@"1") floatValue]*100);
-    if (!user.cut||user.cut<10)user.cut = 100;
+    user.cut = ([((dataDic[@"company_discount"]&&![dataDic[@"company_discount"]isKindOfClass:[NSNull class]])?dataDic[@"company_discount"]:@"9") floatValue]*10);
+    if (!user.cut||user.cut<0.1)user.cut = 9;
     user.serventPhone = dataDic[@"invite_phone"];
     user.star = [((dataDic[@"star"]&&![dataDic[@"star"]isKindOfClass:[NSNull class]])?dataDic[@"star"]:@"5.0") floatValue];
     NSArray * infrastructure = dataDic[@"infrastructure"];

@@ -69,11 +69,16 @@
     self.cut = [UserSession instance].cut;
 }
 - (void)makeUI{
-    NSInteger cutInter = [UserSession instance].cut;
+    NSString * cutStr = [NSString stringWithFormat:@"%.0f",[UserSession instance].cut*10];
+    NSInteger cutInter = [cutStr integerValue];
     if (cutInter%10 == 0) {
-        self.cutLabel.text = cutInter== 100?@"全付":[NSString stringWithFormat:@"%zi折",(cutInter/10)];
+
+           self.cutLabel.text = cutInter== 100?@"不打折":[NSString stringWithFormat:@"%.0f折",[UserSession instance].cut];
+
     }else{
-        self.cutLabel.text = [NSString stringWithFormat:@"%.1f折",[UserSession instance].cut/10];
+
+        self.cutLabel.text = [NSString stringWithFormat:@"%.1f折",[UserSession instance].cut];
+
     }
     self.cutSwitchBtn.on = YES;
     self.isCut = self.cutSwitchBtn.on;

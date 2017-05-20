@@ -17,6 +17,7 @@
 #import "YWPCEveryPayViewController.h"
 #import "YWPCCutSetViewController.h"
 #import "YWPCCounselorViewController.h"
+#import "ChildAccountViewController.h"//子账号
 
 @interface YWPersonShopViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -42,9 +43,9 @@
 }
 
 - (void)dataSet{
-    NSArray * typeNameArr = @[@"",@"    基础信息",@"    附加信息",@"    寻求帮助"];
-    self.nameArr = @[@[],@[@"基本信息",@"门店地图",@"营业时间"],@[@"人均消费",@"折扣设置",@"环境设置"],@[@"营销顾问"]];
-    self.subViewClassArr = @[@[],@[[YWPCBasicSetViewController class],[YWPCMapViewController class],[YWPCTimeViewController class]],@[[YWPCEveryPayViewController class],[YWPCCutSetViewController class],[YWPCEnvironmentViewController class]],@[[YWPCCounselorViewController class]]];
+    NSArray * typeNameArr = @[@"",@"    基础信息",@"    子账号管理",@"    附加信息",@"    寻求帮助"];
+    self.nameArr = @[@[],@[@"基本信息",@"门店地图",@"营业时间"],@[@"子账号"],@[@"人均消费",@"折扣设置",@"环境设置"],@[@"营销顾问"]];
+    self.subViewClassArr = @[@[],@[[YWPCBasicSetViewController class],[YWPCMapViewController class],[YWPCTimeViewController class]],@[[ChildAccountViewController class]],@[[YWPCEveryPayViewController class],[YWPCCutSetViewController class],[YWPCEnvironmentViewController class]],@[[YWPCCounselorViewController class]]];
     self.model = [YWPersonShopModel sharePersonShop];
     self.headerArr = [NSMutableArray arrayWithCapacity:0];
     for (int i = 1; i < typeNameArr.count; i++) {
@@ -63,6 +64,10 @@
     return self.model.dataArr.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    if (section == 2) {
+        return 1;
+    }
     return [self.model.dataArr[section] count];
 }
 
@@ -109,7 +114,7 @@
 
 #pragma mark - Http
 - (void)requestData{
-    if (self.model.headerModel)return;
+//    if (self.model.headerModel)return;
     NSDictionary * pragram = @{@"device_id":[JWTools getUUID],@"token":[UserSession instance].token,@"user_id":@([UserSession instance].uid)};
     
     [[HttpObject manager]postDataWithType:YuWaType_ShopAdmin_Home withPragram:pragram success:^(id responsObj) {
@@ -126,13 +131,18 @@
 
 
         if ((NSInteger)(([self.model.headerModel.discount floatValue]*10)>1)) {
-            [UserSession instance].cut = [self.model.headerModel.discount floatValue]*10;
+            [UserSession instance].cut = [self.model.headerModel.discount floatValue];
         }
         [UserSession instance].logo = self.model.headerModel.company_img;
-        
-        NSString * showCut = [NSString stringWithFormat:@"%.1f折",[UserSession instance].cut];
-        
-        self.model.dataArr = [NSMutableArray arrayWithArray:@[@[],@[[UserSession instance].nickName,([self.model.headerModel.is_map integerValue]==0?@"无地图":@"有地图"),(self.model.headerModel.business_time[@"payDays"]?:@"暂无设置")],@[[NSString stringWithFormat:@"%@元",self.model.headerModel.per_capita],showCut,[UserSession instance].infrastructure],@[@""]]];
+        MyLog(@"%f",[UserSession instance].cut);
+        NSInteger cut = [self.model.headerModel.discount floatValue]*100;
+        NSString * showCut;
+        if (cut%10 == 0) {  
+            showCut = [NSString stringWithFormat:@"%.0f折",[self.model.headerModel.discount floatValue]*10];
+        }else{
+            showCut = [NSString stringWithFormat:@"%.1f折",[self.model.headerModel.discount floatValue]*10];
+        }
+        self.model.dataArr = [NSMutableArray arrayWithArray:@[@[],@[[UserSession instance].nickName,([self.model.headerModel.is_map integerValue]==0?@"无地图":@"有地图"),(self.model.headerModel.business_time[@"payDays"]?:@"暂无设置")],@[@"管理子账号"],@[[NSString stringWithFormat:@"%@元",self.model.headerModel.per_capita],showCut,[UserSession instance].infrastructure],@[@""]]];
         [self.tableView reloadData];
     } failur:^(id responsObj, NSError *error) {
         MyLog(@"Regieter Code pragram is %@",pragram);

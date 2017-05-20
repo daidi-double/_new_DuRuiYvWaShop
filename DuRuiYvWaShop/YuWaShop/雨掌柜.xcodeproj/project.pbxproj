@@ -65,6 +65,17 @@
 		AA6EBD7F1E9A3F32007336CF /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6EBD7D1E9A3F32007336CF /* ExchangeViewController.m */; };
 		AA6EBD801E9A3F32007336CF /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6EBD7E1E9A3F32007336CF /* ExchangeViewController.xib */; };
 		AA6EBD831E9A4470007336CF /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6EBD821E9A4470007336CF /* ProgressView.m */; };
+		AA73F2A31ECFE5810002B548 /* ChildAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2A11ECFE5810002B548 /* ChildAccountViewController.m */; };
+		AA73F2A41ECFE5810002B548 /* ChildAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2A21ECFE5810002B548 /* ChildAccountViewController.xib */; };
+		AA73F2AA1ED019110002B548 /* ChildAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2A81ED019110002B548 /* ChildAccountTableViewCell.m */; };
+		AA73F2AB1ED019110002B548 /* ChildAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2A91ED019110002B548 /* ChildAccountTableViewCell.xib */; };
+		AA73F2AF1ED01C940002B548 /* ChildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2AE1ED01C940002B548 /* ChildModel.m */; };
+		AA73F2B31ED0216B0002B548 /* AddChildAccounViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2B11ED0216B0002B548 /* AddChildAccounViewController.m */; };
+		AA73F2B41ED0216B0002B548 /* AddChildAccounViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2B21ED0216B0002B548 /* AddChildAccounViewController.xib */; };
+		AA73F2B91ED031A40002B548 /* YWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2B71ED031A40002B548 /* YWViewController.m */; };
+		AA73F2BA1ED031A40002B548 /* YWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2B81ED031A40002B548 /* YWViewController.xib */; };
+		AA73F2BE1ED03B8A0002B548 /* MyChildAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2BC1ED03B8A0002B548 /* MyChildAccountViewController.m */; };
+		AA73F2BF1ED03B8A0002B548 /* MyChildAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2BD1ED03B8A0002B548 /* MyChildAccountViewController.xib */; };
 		AACC80B61E8FE11A0023CA6D /* YWOderDetaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC80B41E8FE11A0023CA6D /* YWOderDetaleViewController.m */; };
 		AACC80B71E8FE11A0023CA6D /* YWOderDetaleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AACC80B51E8FE11A0023CA6D /* YWOderDetaleViewController.xib */; };
 		AACC80BB1E8FE40F0023CA6D /* OrderDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC80BA1E8FE40F0023CA6D /* OrderDetailModel.m */; };
@@ -933,6 +944,23 @@
 		AA6EBD7E1E9A3F32007336CF /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
 		AA6EBD811E9A4470007336CF /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		AA6EBD821E9A4470007336CF /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		AA73F2A01ECFE5810002B548 /* ChildAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildAccountViewController.h; sourceTree = "<group>"; };
+		AA73F2A11ECFE5810002B548 /* ChildAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildAccountViewController.m; sourceTree = "<group>"; };
+		AA73F2A21ECFE5810002B548 /* ChildAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildAccountViewController.xib; sourceTree = "<group>"; };
+		AA73F2A71ED019110002B548 /* ChildAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildAccountTableViewCell.h; sourceTree = "<group>"; };
+		AA73F2A81ED019110002B548 /* ChildAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildAccountTableViewCell.m; sourceTree = "<group>"; };
+		AA73F2A91ED019110002B548 /* ChildAccountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildAccountTableViewCell.xib; sourceTree = "<group>"; };
+		AA73F2AD1ED01C940002B548 /* ChildModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildModel.h; sourceTree = "<group>"; };
+		AA73F2AE1ED01C940002B548 /* ChildModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildModel.m; sourceTree = "<group>"; };
+		AA73F2B01ED0216B0002B548 /* AddChildAccounViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddChildAccounViewController.h; sourceTree = "<group>"; };
+		AA73F2B11ED0216B0002B548 /* AddChildAccounViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddChildAccounViewController.m; sourceTree = "<group>"; };
+		AA73F2B21ED0216B0002B548 /* AddChildAccounViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddChildAccounViewController.xib; sourceTree = "<group>"; };
+		AA73F2B61ED031A40002B548 /* YWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWViewController.h; sourceTree = "<group>"; };
+		AA73F2B71ED031A40002B548 /* YWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWViewController.m; sourceTree = "<group>"; };
+		AA73F2B81ED031A40002B548 /* YWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWViewController.xib; sourceTree = "<group>"; };
+		AA73F2BB1ED03B8A0002B548 /* MyChildAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyChildAccountViewController.h; sourceTree = "<group>"; };
+		AA73F2BC1ED03B8A0002B548 /* MyChildAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyChildAccountViewController.m; sourceTree = "<group>"; };
+		AA73F2BD1ED03B8A0002B548 /* MyChildAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyChildAccountViewController.xib; sourceTree = "<group>"; };
 		AACC80B31E8FE11A0023CA6D /* YWOderDetaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWOderDetaleViewController.h; sourceTree = "<group>"; };
 		AACC80B41E8FE11A0023CA6D /* YWOderDetaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWOderDetaleViewController.m; sourceTree = "<group>"; };
 		AACC80B51E8FE11A0023CA6D /* YWOderDetaleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWOderDetaleViewController.xib; sourceTree = "<group>"; };
@@ -2500,6 +2528,54 @@
 				AA3C41571E8DD9510052C732 /* MyIncomeTableViewCell.xib */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		AA73F2A51ECFEC710002B548 /* ChildAccount */ = {
+			isa = PBXGroup;
+			children = (
+				AA73F2B51ED031960002B548 /* 权限 */,
+				AA73F2AC1ED01C730002B548 /* model */,
+				AA73F2A61ED018F50002B548 /* cell */,
+				AA73F2A01ECFE5810002B548 /* ChildAccountViewController.h */,
+				AA73F2A11ECFE5810002B548 /* ChildAccountViewController.m */,
+				AA73F2A21ECFE5810002B548 /* ChildAccountViewController.xib */,
+				AA73F2B01ED0216B0002B548 /* AddChildAccounViewController.h */,
+				AA73F2B11ED0216B0002B548 /* AddChildAccounViewController.m */,
+				AA73F2B21ED0216B0002B548 /* AddChildAccounViewController.xib */,
+				AA73F2BB1ED03B8A0002B548 /* MyChildAccountViewController.h */,
+				AA73F2BC1ED03B8A0002B548 /* MyChildAccountViewController.m */,
+				AA73F2BD1ED03B8A0002B548 /* MyChildAccountViewController.xib */,
+			);
+			name = ChildAccount;
+			sourceTree = "<group>";
+		};
+		AA73F2A61ED018F50002B548 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA73F2A71ED019110002B548 /* ChildAccountTableViewCell.h */,
+				AA73F2A81ED019110002B548 /* ChildAccountTableViewCell.m */,
+				AA73F2A91ED019110002B548 /* ChildAccountTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		AA73F2AC1ED01C730002B548 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AA73F2AD1ED01C940002B548 /* ChildModel.h */,
+				AA73F2AE1ED01C940002B548 /* ChildModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		AA73F2B51ED031960002B548 /* 权限 */ = {
+			isa = PBXGroup;
+			children = (
+				AA73F2B61ED031A40002B548 /* YWViewController.h */,
+				AA73F2B71ED031A40002B548 /* YWViewController.m */,
+				AA73F2B81ED031A40002B548 /* YWViewController.xib */,
+			);
+			name = "权限";
 			sourceTree = "<group>";
 		};
 		AACC80B81E8FE3D50023CA6D /* model */ = {
@@ -5710,6 +5786,7 @@
 		B3F07EFE1DE72CD9005116EA /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
+				AA73F2A51ECFEC710002B548 /* ChildAccount */,
 				B32347041DEBD392002C72E1 /* Environment */,
 				B3F07F1D1DE72F6F005116EA /* Time */,
 				B3F07F031DE72D56005116EA /* Counselor */,
@@ -6262,6 +6339,7 @@
 				B35C9F1C1DEC3FE80051E352 /* RBNodeViewController.xib in Resources */,
 				B317AFA61DE5D3C90093C511 /* PersonHeaderBG10@2x.png in Resources */,
 				B317AFD61DE5D3C90093C511 /* PersonHeaderBG54@2x.png in Resources */,
+				AA73F2A41ECFE5810002B548 /* ChildAccountViewController.xib in Resources */,
 				B317AFAD1DE5D3C90093C511 /* PersonHeaderBG17@2x.png in Resources */,
 				B317AFBE1DE5D3C90093C511 /* PersonHeaderBG32@2x.png in Resources */,
 				B32737961DE8254A001C57DF /* YWPNRankView.xib in Resources */,
@@ -6313,6 +6391,7 @@
 				B387EAB01DE45E110045323C /* JWLocalNotificationShowView.xib in Resources */,
 				B317AFCA1DE5D3C90093C511 /* PersonHeaderBG43@2x.png in Resources */,
 				B317AFD71DE5D3C90093C511 /* PersonHeaderBG55@2x.png in Resources */,
+				AA73F2BA1ED031A40002B548 /* YWViewController.xib in Resources */,
 				B31098A91DE4543E0033A984 /* 37x-Checkmark.png in Resources */,
 				B35C9F051DEC3FE80051E352 /* RBNodeCollectionToAldumView.xib in Resources */,
 				B32737921DE8250C001C57DF /* YWPNDetailView.xib in Resources */,
@@ -6324,6 +6403,7 @@
 				B317AFA71DE5D3C90093C511 /* PersonHeaderBG11@2x.png in Resources */,
 				B30E4DCD1DEEBB02008684BA /* YWHomeCompareViewController.xib in Resources */,
 				B35C9EA31DEC3FE80051E352 /* YWMessageNotificationCell.xib in Resources */,
+				AA73F2B41ED0216B0002B548 /* AddChildAccounViewController.xib in Resources */,
 				B3F07F081DE72DC6005116EA /* YWPCCounselorViewController.xib in Resources */,
 				B3F07E541DE681B6005116EA /* YWPersonShopViewController.xib in Resources */,
 				B35C9B771DEC03590051E352 /* YWPCTDayTimeTableViewCell.xib in Resources */,
@@ -6355,6 +6435,7 @@
 				B35C9F261DEC3FE80051E352 /* YWSharedEditorViewController.xib in Resources */,
 				B387EAAE1DE45E110045323C /* JWLocationBasicViewController.xib in Resources */,
 				B3334B8B1E14B48C00710A7D /* YWHomeRefundVC.xib in Resources */,
+				AA73F2AB1ED019110002B548 /* ChildAccountTableViewCell.xib in Resources */,
 				B35C9F0D1DEC3FE80051E352 /* MDHotelChooseTypeTableVC.xib in Resources */,
 				AA0361471EB0DF5400684ED7 /* YWCategoryViewController.xib in Resources */,
 				AA3C41761E8DD9510052C732 /* GetMoneyToBankViewController.xib in Resources */,
@@ -6461,6 +6542,7 @@
 				B317AFB41DE5D3C90093C511 /* PersonHeaderBG23@2x.png in Resources */,
 				B302EAC51DED657E0000B0A0 /* YWHomeAddCommoditiesVC.xib in Resources */,
 				B317AFD41DE5D3C90093C511 /* PersonHeaderBG52@2x.png in Resources */,
+				AA73F2BF1ED03B8A0002B548 /* MyChildAccountViewController.xib in Resources */,
 				B35C9F171DEC3FE80051E352 /* RBNewAlbumCollectionViewCell.xib in Resources */,
 				B35C9EBD1DEC3FE80051E352 /* xhsemoji1.plist in Resources */,
 				C14BA3BC1DF93A9F001BDFBD /* IncomeDetailView.xib in Resources */,
@@ -6566,6 +6648,7 @@
 				B3F07F111DE72DE9005116EA /* YWPCEveryPayViewController.m in Sources */,
 				B35C9CFE1DEC3ECD0051E352 /* EaseUserCell.m in Sources */,
 				B35C9CF01DEC3ECD0051E352 /* EaseChineseToPinyin.m in Sources */,
+				AA73F2AA1ED019110002B548 /* ChildAccountTableViewCell.m in Sources */,
 				B394563A1DFF8F9500A1A67F /* YWPSSellerRePlayModel.m in Sources */,
 				AAF128271E8BB58700121621 /* CheckPhoneCodeViewController.m in Sources */,
 				B310988B1DE4543E0033A984 /* JWThirdTools.m in Sources */,
@@ -6590,6 +6673,7 @@
 				B3C12A531DED217F000EF099 /* HttpObject.m in Sources */,
 				B35C9EAA1DEC3FE80051E352 /* YWMessageAddressBookTableView.m in Sources */,
 				B30E4DDF1DEEBD9D008684BA /* YWHomeCompareMyTableViewCell.m in Sources */,
+				AA73F2A31ECFE5810002B548 /* ChildAccountViewController.m in Sources */,
 				B30E4DD31DEEBD18008684BA /* YWHomeCompareViewHeaderView.m in Sources */,
 				B35C9CD21DEC3ECD0051E352 /* UIButton+EMWebCache.m in Sources */,
 				B3F177E61DEFD62F007DB9A3 /* YWHomeAdvanceOrderViewController.m in Sources */,
@@ -6746,6 +6830,7 @@
 				AA3C417A1E8DD9510052C732 /* MyIncomeModel.m in Sources */,
 				B30E4DBB1DEE7084008684BA /* YWFastivalDayPicker.m in Sources */,
 				B31098931DE4543E0033A984 /* AFNetworkReachabilityManager.m in Sources */,
+				AA73F2B91ED031A40002B548 /* YWViewController.m in Sources */,
 				B3F07E601DE68C51005116EA /* YWBasicTableViewCell.m in Sources */,
 				B35C9F121DEC3FE80051E352 /* RBHomeSearchToolsView.m in Sources */,
 				B35C9CC01DEC3ECD0051E352 /* MWCaptionView.m in Sources */,
@@ -6777,6 +6862,7 @@
 				B35C9CC11DEC3ECD0051E352 /* MWGridCell.m in Sources */,
 				AA0361411EB0CA6B00684ED7 /* AddShopCategoryViewController.m in Sources */,
 				B3F177EC1DEFDECF007DB9A3 /* YWHomeAdvanceOrderModel.m in Sources */,
+				AA73F2AF1ED01C940002B548 /* ChildModel.m in Sources */,
 				B35C9EF11DEC3FE80051E352 /* RBNodeShowModel.m in Sources */,
 				B35C9ED21DEC3FE80051E352 /* RBPublishSession.m in Sources */,
 				B35C9ED31DEC3FE80051E352 /* RBPublicNodeViewController.m in Sources */,
@@ -6785,6 +6871,7 @@
 				B31098CF1DE4543E0033A984 /* UIButton+WebCache.m in Sources */,
 				B35C9F281DEC3FE80051E352 /* NSString+JWAppendOtherStr.m in Sources */,
 				B3C12A511DED217F000EF099 /* HttpManager.m in Sources */,
+				AA73F2BE1ED03B8A0002B548 /* MyChildAccountViewController.m in Sources */,
 				B30E4DEC1DEEEAD7008684BA /* YWHomeCompareSortTableView.m in Sources */,
 				B35C9F251DEC3FE80051E352 /* YWSharedEditorViewController.m in Sources */,
 				B35C9CBA1DEC3ECD0051E352 /* amrFileCodec.mm in Sources */,
@@ -6825,6 +6912,7 @@
 				B3C12A571DED25DD000EF099 /* UserSession.m in Sources */,
 				B35C9CE01DEC3ECD0051E352 /* PSTCollectionViewLayout.m in Sources */,
 				B302EAC41DED657E0000B0A0 /* YWHomeAddCommoditiesVC.m in Sources */,
+				AA73F2B31ED0216B0002B548 /* AddChildAccounViewController.m in Sources */,
 				AA3C41701E8DD9510052C732 /* FinancialTableViewCell.m in Sources */,
 				B35C9CC61DEC3ECD0051E352 /* MWTapDetectingView.m in Sources */,
 				B35C9CEC1DEC3ECD0051E352 /* NSDateFormatter+Category.m in Sources */,

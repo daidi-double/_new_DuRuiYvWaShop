@@ -46,8 +46,8 @@
 - (void)makeUI{
     self.sureBtn.layer.cornerRadius = 5.f;
     self.sureBtn.layer.masksToBounds = YES;
-//    MyLog(@"[UserSession instance].cut = %f, %f",[UserSession instance].cut,self.cutInter);
-    self.currentCutLabel.text = [NSString stringWithFormat:@"当前折扣%@",([NSString stringWithFormat:@"%.1f折",[UserSession instance].cut])];
+    MyLog(@"[UserSession instance].cut = %f, %f",[UserSession instance].cut,self.cutInter);
+    self.currentCutLabel.text = [NSString stringWithFormat:@"当前折扣%@",([NSString stringWithFormat:@"%.1f折",[UserSession instance].cut *10])];
 //    self.cutShowLabel.text = [NSString stringWithFormat:@"客服折扣%.1f+0.5=%.1f (0.5折为平台分配资金)\n\n不能低于9折,每日只能设置一次折扣",([UserSession instance].cut - 0.5),[UserSession instance].cut];
     self.cutShowLabel.text = @"最低折扣不能低于9折，每日只能设置1次折扣";
     [self makePickerView];

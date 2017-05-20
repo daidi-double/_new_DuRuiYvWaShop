@@ -26,7 +26,10 @@
 }
 
 - (IBAction)chooseSwichAction:(UISwitch *)sender {
-    self.chooseBlock(sender.isOn);
+    if (self.chooseBlock) {
+        
+        self.chooseBlock(sender.isOn);
+    }
 }
 
 
