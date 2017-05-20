@@ -42,8 +42,8 @@
 //    }
     
     NSMutableArray*imageArrays=[NSMutableArray array];
-    for (int i=0; i<32; i++) {
-        UIImage*image=[UIImage imageNamed:[NSString stringWithFormat:@"赛亚人000%d",i]];
+    for (int i=1; i<41; i++) {
+        UIImage*image=[UIImage imageNamed:[NSString stringWithFormat:@"%d",i]];
         [imageArrays addObject:image];
     }
     

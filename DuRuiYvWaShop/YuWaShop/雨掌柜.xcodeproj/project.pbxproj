@@ -76,6 +76,48 @@
 		AA73F2BA1ED031A40002B548 /* YWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2B81ED031A40002B548 /* YWViewController.xib */; };
 		AA73F2BE1ED03B8A0002B548 /* MyChildAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2BC1ED03B8A0002B548 /* MyChildAccountViewController.m */; };
 		AA73F2BF1ED03B8A0002B548 /* MyChildAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2BD1ED03B8A0002B548 /* MyChildAccountViewController.xib */; };
+		AA73F2C31ED046680002B548 /* YWload.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73F2C21ED046680002B548 /* YWload.m */; };
+		AA73F2EF1ED047280002B548 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2C61ED047280002B548 /* 1.png */; };
+		AA73F2F01ED047280002B548 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2C71ED047280002B548 /* 10.png */; };
+		AA73F2F11ED047280002B548 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2C81ED047280002B548 /* 11.png */; };
+		AA73F2F21ED047280002B548 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2C91ED047280002B548 /* 12.png */; };
+		AA73F2F31ED047280002B548 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2CA1ED047280002B548 /* 13.png */; };
+		AA73F2F41ED047280002B548 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2CB1ED047280002B548 /* 14.png */; };
+		AA73F2F51ED047280002B548 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2CC1ED047280002B548 /* 15.png */; };
+		AA73F2F61ED047280002B548 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2CD1ED047280002B548 /* 16.png */; };
+		AA73F2F71ED047280002B548 /* 17.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2CE1ED047280002B548 /* 17.png */; };
+		AA73F2F81ED047280002B548 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2CF1ED047280002B548 /* 18.png */; };
+		AA73F2F91ED047280002B548 /* 19.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D01ED047280002B548 /* 19.png */; };
+		AA73F2FA1ED047280002B548 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D11ED047280002B548 /* 2.png */; };
+		AA73F2FB1ED047280002B548 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D21ED047280002B548 /* 20.png */; };
+		AA73F2FC1ED047280002B548 /* 21.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D31ED047280002B548 /* 21.png */; };
+		AA73F2FD1ED047280002B548 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D41ED047280002B548 /* 22.png */; };
+		AA73F2FE1ED047280002B548 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D51ED047280002B548 /* 23.png */; };
+		AA73F2FF1ED047280002B548 /* 24.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D61ED047280002B548 /* 24.png */; };
+		AA73F3001ED047280002B548 /* 25.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D71ED047280002B548 /* 25.png */; };
+		AA73F3011ED047280002B548 /* 26.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D81ED047280002B548 /* 26.png */; };
+		AA73F3021ED047280002B548 /* 27.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2D91ED047280002B548 /* 27.png */; };
+		AA73F3031ED047280002B548 /* 28.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2DA1ED047280002B548 /* 28.png */; };
+		AA73F3041ED047280002B548 /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2DB1ED047280002B548 /* 29.png */; };
+		AA73F3051ED047280002B548 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2DC1ED047280002B548 /* 3.png */; };
+		AA73F3061ED047280002B548 /* 30.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2DD1ED047280002B548 /* 30.png */; };
+		AA73F3071ED047280002B548 /* 31.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2DE1ED047280002B548 /* 31.png */; };
+		AA73F3081ED047280002B548 /* 32.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2DF1ED047280002B548 /* 32.png */; };
+		AA73F3091ED047280002B548 /* 33.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E01ED047280002B548 /* 33.png */; };
+		AA73F30A1ED047280002B548 /* 34.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E11ED047280002B548 /* 34.png */; };
+		AA73F30B1ED047280002B548 /* 35.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E21ED047280002B548 /* 35.png */; };
+		AA73F30C1ED047280002B548 /* 36.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E31ED047280002B548 /* 36.png */; };
+		AA73F30D1ED047280002B548 /* 37.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E41ED047280002B548 /* 37.png */; };
+		AA73F30E1ED047280002B548 /* 38.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E51ED047280002B548 /* 38.png */; };
+		AA73F30F1ED047280002B548 /* 39.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E61ED047280002B548 /* 39.png */; };
+		AA73F3101ED047280002B548 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E71ED047280002B548 /* 4.png */; };
+		AA73F3111ED047280002B548 /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E81ED047280002B548 /* 40.png */; };
+		AA73F3121ED047280002B548 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2E91ED047280002B548 /* 5.png */; };
+		AA73F3131ED047280002B548 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2EA1ED047280002B548 /* 6.png */; };
+		AA73F3141ED047280002B548 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2EB1ED047280002B548 /* 7.png */; };
+		AA73F3151ED047280002B548 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2EC1ED047280002B548 /* 8.png */; };
+		AA73F3161ED047280002B548 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2ED1ED047280002B548 /* 9.png */; };
+		AA73F3171ED047280002B548 /* loading.psd in Resources */ = {isa = PBXBuildFile; fileRef = AA73F2EE1ED047280002B548 /* loading.psd */; };
 		AACC80B61E8FE11A0023CA6D /* YWOderDetaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC80B41E8FE11A0023CA6D /* YWOderDetaleViewController.m */; };
 		AACC80B71E8FE11A0023CA6D /* YWOderDetaleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AACC80B51E8FE11A0023CA6D /* YWOderDetaleViewController.xib */; };
 		AACC80BB1E8FE40F0023CA6D /* OrderDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC80BA1E8FE40F0023CA6D /* OrderDetailModel.m */; };
@@ -961,6 +1003,49 @@
 		AA73F2BB1ED03B8A0002B548 /* MyChildAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyChildAccountViewController.h; sourceTree = "<group>"; };
 		AA73F2BC1ED03B8A0002B548 /* MyChildAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyChildAccountViewController.m; sourceTree = "<group>"; };
 		AA73F2BD1ED03B8A0002B548 /* MyChildAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyChildAccountViewController.xib; sourceTree = "<group>"; };
+		AA73F2C11ED046680002B548 /* YWload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWload.h; sourceTree = "<group>"; };
+		AA73F2C21ED046680002B548 /* YWload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWload.m; sourceTree = "<group>"; };
+		AA73F2C61ED047280002B548 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		AA73F2C71ED047280002B548 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		AA73F2C81ED047280002B548 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		AA73F2C91ED047280002B548 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		AA73F2CA1ED047280002B548 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
+		AA73F2CB1ED047280002B548 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
+		AA73F2CC1ED047280002B548 /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
+		AA73F2CD1ED047280002B548 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
+		AA73F2CE1ED047280002B548 /* 17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 17.png; sourceTree = "<group>"; };
+		AA73F2CF1ED047280002B548 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
+		AA73F2D01ED047280002B548 /* 19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19.png; sourceTree = "<group>"; };
+		AA73F2D11ED047280002B548 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		AA73F2D21ED047280002B548 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20.png; sourceTree = "<group>"; };
+		AA73F2D31ED047280002B548 /* 21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 21.png; sourceTree = "<group>"; };
+		AA73F2D41ED047280002B548 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		AA73F2D51ED047280002B548 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
+		AA73F2D61ED047280002B548 /* 24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 24.png; sourceTree = "<group>"; };
+		AA73F2D71ED047280002B548 /* 25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 25.png; sourceTree = "<group>"; };
+		AA73F2D81ED047280002B548 /* 26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 26.png; sourceTree = "<group>"; };
+		AA73F2D91ED047280002B548 /* 27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 27.png; sourceTree = "<group>"; };
+		AA73F2DA1ED047280002B548 /* 28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 28.png; sourceTree = "<group>"; };
+		AA73F2DB1ED047280002B548 /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29.png; sourceTree = "<group>"; };
+		AA73F2DC1ED047280002B548 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		AA73F2DD1ED047280002B548 /* 30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 30.png; sourceTree = "<group>"; };
+		AA73F2DE1ED047280002B548 /* 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 31.png; sourceTree = "<group>"; };
+		AA73F2DF1ED047280002B548 /* 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32.png; sourceTree = "<group>"; };
+		AA73F2E01ED047280002B548 /* 33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 33.png; sourceTree = "<group>"; };
+		AA73F2E11ED047280002B548 /* 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 34.png; sourceTree = "<group>"; };
+		AA73F2E21ED047280002B548 /* 35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 35.png; sourceTree = "<group>"; };
+		AA73F2E31ED047280002B548 /* 36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 36.png; sourceTree = "<group>"; };
+		AA73F2E41ED047280002B548 /* 37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 37.png; sourceTree = "<group>"; };
+		AA73F2E51ED047280002B548 /* 38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 38.png; sourceTree = "<group>"; };
+		AA73F2E61ED047280002B548 /* 39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 39.png; sourceTree = "<group>"; };
+		AA73F2E71ED047280002B548 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		AA73F2E81ED047280002B548 /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40.png; sourceTree = "<group>"; };
+		AA73F2E91ED047280002B548 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		AA73F2EA1ED047280002B548 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		AA73F2EB1ED047280002B548 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		AA73F2EC1ED047280002B548 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		AA73F2ED1ED047280002B548 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		AA73F2EE1ED047280002B548 /* loading.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = loading.psd; sourceTree = "<group>"; };
 		AACC80B31E8FE11A0023CA6D /* YWOderDetaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWOderDetaleViewController.h; sourceTree = "<group>"; };
 		AACC80B41E8FE11A0023CA6D /* YWOderDetaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWOderDetaleViewController.m; sourceTree = "<group>"; };
 		AACC80B51E8FE11A0023CA6D /* YWOderDetaleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWOderDetaleViewController.xib; sourceTree = "<group>"; };
@@ -2578,6 +2663,71 @@
 			name = "权限";
 			sourceTree = "<group>";
 		};
+		AA73F2C01ED0465B0002B548 /* load */ = {
+			isa = PBXGroup;
+			children = (
+				AA73F2C11ED046680002B548 /* YWload.h */,
+				AA73F2C21ED046680002B548 /* YWload.m */,
+			);
+			name = load;
+			sourceTree = "<group>";
+		};
+		AA73F2C41ED046ED0002B548 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				AA73F2C51ED047280002B548 /* load */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		AA73F2C51ED047280002B548 /* load */ = {
+			isa = PBXGroup;
+			children = (
+				AA73F2C61ED047280002B548 /* 1.png */,
+				AA73F2C71ED047280002B548 /* 10.png */,
+				AA73F2C81ED047280002B548 /* 11.png */,
+				AA73F2C91ED047280002B548 /* 12.png */,
+				AA73F2CA1ED047280002B548 /* 13.png */,
+				AA73F2CB1ED047280002B548 /* 14.png */,
+				AA73F2CC1ED047280002B548 /* 15.png */,
+				AA73F2CD1ED047280002B548 /* 16.png */,
+				AA73F2CE1ED047280002B548 /* 17.png */,
+				AA73F2CF1ED047280002B548 /* 18.png */,
+				AA73F2D01ED047280002B548 /* 19.png */,
+				AA73F2D11ED047280002B548 /* 2.png */,
+				AA73F2D21ED047280002B548 /* 20.png */,
+				AA73F2D31ED047280002B548 /* 21.png */,
+				AA73F2D41ED047280002B548 /* 22.png */,
+				AA73F2D51ED047280002B548 /* 23.png */,
+				AA73F2D61ED047280002B548 /* 24.png */,
+				AA73F2D71ED047280002B548 /* 25.png */,
+				AA73F2D81ED047280002B548 /* 26.png */,
+				AA73F2D91ED047280002B548 /* 27.png */,
+				AA73F2DA1ED047280002B548 /* 28.png */,
+				AA73F2DB1ED047280002B548 /* 29.png */,
+				AA73F2DC1ED047280002B548 /* 3.png */,
+				AA73F2DD1ED047280002B548 /* 30.png */,
+				AA73F2DE1ED047280002B548 /* 31.png */,
+				AA73F2DF1ED047280002B548 /* 32.png */,
+				AA73F2E01ED047280002B548 /* 33.png */,
+				AA73F2E11ED047280002B548 /* 34.png */,
+				AA73F2E21ED047280002B548 /* 35.png */,
+				AA73F2E31ED047280002B548 /* 36.png */,
+				AA73F2E41ED047280002B548 /* 37.png */,
+				AA73F2E51ED047280002B548 /* 38.png */,
+				AA73F2E61ED047280002B548 /* 39.png */,
+				AA73F2E71ED047280002B548 /* 4.png */,
+				AA73F2E81ED047280002B548 /* 40.png */,
+				AA73F2E91ED047280002B548 /* 5.png */,
+				AA73F2EA1ED047280002B548 /* 6.png */,
+				AA73F2EB1ED047280002B548 /* 7.png */,
+				AA73F2EC1ED047280002B548 /* 8.png */,
+				AA73F2ED1ED047280002B548 /* 9.png */,
+				AA73F2EE1ED047280002B548 /* loading.psd */,
+			);
+			path = load;
+			sourceTree = "<group>";
+		};
 		AACC80B81E8FE3D50023CA6D /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2824,6 +2974,7 @@
 		B31097021DE44EA00033A984 /* 雨掌柜 */ = {
 			isa = PBXGroup;
 			children = (
+				AA73F2C41ED046ED0002B548 /* resource */,
 				B3E2BA411E0C095F006EE3AF /* YuWaShop.entitlements */,
 				B310973A1DE4543E0033A984 /* Fundation */,
 				B35C9D161DEC3FE80051E352 /* Message */,
@@ -2897,6 +3048,7 @@
 		B310973A1DE4543E0033A984 /* Fundation */ = {
 			isa = PBXGroup;
 			children = (
+				AA73F2C01ED0465B0002B548 /* load */,
 				B3F07E9A1DE6ACAA005116EA /* Framework */,
 				B3F07E8D1DE6A7BA005116EA /* SDK */,
 				B310973B1DE4543E0033A984 /* Custom Category */,
@@ -6337,18 +6489,23 @@
 				B317AFC11DE5D3C90093C511 /* PersonHeaderBG35@2x.png in Resources */,
 				B32346FD1DEBD1C1002C72E1 /* YWPersonSuggestViewController.xib in Resources */,
 				B35C9F1C1DEC3FE80051E352 /* RBNodeViewController.xib in Resources */,
+				AA73F3171ED047280002B548 /* loading.psd in Resources */,
 				B317AFA61DE5D3C90093C511 /* PersonHeaderBG10@2x.png in Resources */,
+				AA73F3081ED047280002B548 /* 32.png in Resources */,
+				AA73F2F51ED047280002B548 /* 15.png in Resources */,
 				B317AFD61DE5D3C90093C511 /* PersonHeaderBG54@2x.png in Resources */,
 				AA73F2A41ECFE5810002B548 /* ChildAccountViewController.xib in Resources */,
 				B317AFAD1DE5D3C90093C511 /* PersonHeaderBG17@2x.png in Resources */,
 				B317AFBE1DE5D3C90093C511 /* PersonHeaderBG32@2x.png in Resources */,
 				B32737961DE8254A001C57DF /* YWPNRankView.xib in Resources */,
 				AA3788811E8ABA4700B7F9CC /* AddBankInfomationViewController.xib in Resources */,
+				AA73F3091ED047280002B548 /* 33.png in Resources */,
 				C14BA3C01DF93A9F001BDFBD /* pointMoneyHeaderView.xib in Resources */,
 				B317AF661DE5CFB80093C511 /* YWHomeCollectionHeaderView.xib in Resources */,
 				B39456421DFF97E900A1A67F /* YWHomeNoPayListTableViewCell.xib in Resources */,
 				AA3788851E8ABA4700B7F9CC /* AddBankViewController.xib in Resources */,
 				B30E4DC71DEE900D008684BA /* YWHomePayBillViewController.xib in Resources */,
+				AA73F3111ED047280002B548 /* 40.png in Resources */,
 				B317AFDC1DE5D3C90093C511 /* PersonHeaderBG5@2x.png in Resources */,
 				B35C9ED41DEC3FE80051E352 /* RBPublicNodeViewController.xib in Resources */,
 				B35C9EB81DEC3FE80051E352 /* country.plist in Resources */,
@@ -6359,6 +6516,8 @@
 				AA2B2BEF1E8CA6FC008CB3C6 /* SuccessViewController.xib in Resources */,
 				B317AF271DE5B5110093C511 /* YWPersonCooperaViewController.xib in Resources */,
 				B30E4DE01DEEBD9D008684BA /* YWHomeCompareMyTableViewCell.xib in Resources */,
+				AA73F30D1ED047280002B548 /* 37.png in Resources */,
+				AA73F3001ED047280002B548 /* 25.png in Resources */,
 				B35C9EC71DEC3FE80051E352 /* RBPublicToolView.xib in Resources */,
 				B3F07F121DE72DE9005116EA /* YWPCEveryPayViewController.xib in Resources */,
 				B317AFC31DE5D3C90093C511 /* PersonHeaderBG37@2x.png in Resources */,
@@ -6375,16 +6534,21 @@
 				B302EADD1DEDAA370000B0A0 /* YWHomeFestivalTableViewCell.xib in Resources */,
 				B35C9EBB1DEC3FE80051E352 /* EmotionTextKeys.plist in Resources */,
 				B35C9EFA1DEC3FE80051E352 /* YWNodeAddAldumShowTableViewCell.xib in Resources */,
+				AA73F2FF1ED047280002B548 /* 24.png in Resources */,
 				B317AFCF1DE5D3C90093C511 /* PersonHeaderBG48@2x.png in Resources */,
 				B35C9EE01DEC3FE80051E352 /* RBNodeDCommentTableViewCell.xib in Resources */,
+				AA73F3061ED047280002B548 /* 30.png in Resources */,
 				B31098E91DE4543E0033A984 /* YWPersonTableViewCell.xib in Resources */,
 				B3ACF11B1DEF07380056FD64 /* YWHomeCouponHeaderView.xib in Resources */,
+				AA73F2FB1ED047280002B548 /* 20.png in Resources */,
 				B35C9D141DEC3ECD0051E352 /* EaseUIResource.bundle in Resources */,
 				B35C9EFE1DEC3FE80051E352 /* YWNodeAddAldumViewController.xib in Resources */,
 				B327376A1DE80F01001C57DF /* YWPCTimeTableViewCell.xib in Resources */,
 				B310987C1DE4543E0033A984 /* InfoPlist.strings in Resources */,
 				B302EAD31DEDA8ED0000B0A0 /* YWHomeFestivalViewController.xib in Resources */,
+				AA73F3101ED047280002B548 /* 4.png in Resources */,
 				B30E4DE51DEEBDAE008684BA /* YWHomeCompareOtherTableViewCell.xib in Resources */,
+				AA73F2F81ED047280002B548 /* 18.png in Resources */,
 				B35C9F4A1DEC3FE80051E352 /* tag-center@2x.png in Resources */,
 				B35C9F371DEC3FE80051E352 /* JWImgPickerAlbumChooseTableView.xib in Resources */,
 				B317AFDF1DE5D3C90093C511 /* PersonHeaderBG8@2x.png in Resources */,
@@ -6411,11 +6575,13 @@
 				B317AC871DE530780093C511 /* YWStormSubSortCollectionViewCell.xib in Resources */,
 				B317AFD21DE5D3C90093C511 /* PersonHeaderBG50@2x.png in Resources */,
 				C14BA3BE1DF93A9F001BDFBD /* PayDetailView.xib in Resources */,
+				AA73F2F91ED047280002B548 /* 19.png in Resources */,
 				B35C9EF81DEC3FE80051E352 /* RBNodeShowViewController.xib in Resources */,
 				B3F177FD1DEFF48D007DB9A3 /* YWHomeOrderNoticaficationTableViewCell.xib in Resources */,
 				B35C9F031DEC3FE80051E352 /* RBNodeAddToAldumTableViewCell.xib in Resources */,
 				B35C9EA91DEC3FE80051E352 /* YWMessageAddressBookHeader.xib in Resources */,
 				B387EAC71DE478160045323C /* YWLoginViewController.xib in Resources */,
+				AA73F3031ED047280002B548 /* 28.png in Resources */,
 				B317AFDB1DE5D3C90093C511 /* PersonHeaderBG59@2x.png in Resources */,
 				B32347091DEBD400002C72E1 /* YWPCEnvironmentViewController.xib in Resources */,
 				B310989D1DE4543E0033A984 /* LICENSE in Resources */,
@@ -6429,6 +6595,8 @@
 				B317AFCD1DE5D3C90093C511 /* PersonHeaderBG46@2x.png in Resources */,
 				B317AFA81DE5D3C90093C511 /* PersonHeaderBG12@2x.png in Resources */,
 				B317AFAB1DE5D3C90093C511 /* PersonHeaderBG15@2x.png in Resources */,
+				AA73F2FD1ED047280002B548 /* 22.png in Resources */,
+				AA73F30A1ED047280002B548 /* 34.png in Resources */,
 				B35C9F1E1DEC3FE80051E352 /* RBNodeBGView.xib in Resources */,
 				B31098791DE4543E0033A984 /* HUDLoadingShowView.xib in Resources */,
 				AAF1281E1E8BB44800121621 /* AgainSetPayPasswordViewController.xib in Resources */,
@@ -6452,10 +6620,12 @@
 				B317AFF21DE5E1330093C511 /* YWPersonSettingViewController.xib in Resources */,
 				C14BA3BB1DF93A9F001BDFBD /* SignUserTableViewCell.xib in Resources */,
 				B387EAAC1DE45E110045323C /* JWBasicViewController.xib in Resources */,
+				AA73F3051ED047280002B548 /* 3.png in Resources */,
 				B317AFD01DE5D3C90093C511 /* PersonHeaderBG49@2x.png in Resources */,
 				B35C9EFC1DEC3FE80051E352 /* YWNodeAddAldumTitleTableViewCell.xib in Resources */,
 				B317AFEC1DE5DC030093C511 /* YWPersonWeekCountTableViewCell.xib in Resources */,
 				B387EABD1DE46C3C0045323C /* YWComfiredViewController.xib in Resources */,
+				AA73F2F41ED047280002B548 /* 14.png in Resources */,
 				B317AFB71DE5D3C90093C511 /* PersonHeaderBG26@2x.png in Resources */,
 				B35C9EBE1DEC3FE80051E352 /* xhsemoji2.plist in Resources */,
 				AA3C41861E8DD9510052C732 /* PCMoneyDetailTableViewCell.xib in Resources */,
@@ -6464,17 +6634,24 @@
 				B35C9EA51DEC3FE80051E352 /* YWMessageSearchFriendAddCell.xib in Resources */,
 				B35557DA1DF03C74002E15A4 /* JWChatTableViewCell.xib in Resources */,
 				C14BA3B31DF93A9F001BDFBD /* MoneyDetailTableViewCell.xib in Resources */,
+				AA73F2F01ED047280002B548 /* 10.png in Resources */,
 				B317AFE51DE5DBC80093C511 /* YWPersonWeekCountViewController.xib in Resources */,
+				AA73F2FA1ED047280002B548 /* 2.png in Resources */,
 				B317AFB91DE5D3C90093C511 /* PersonHeaderBG28@2x.png in Resources */,
+				AA73F3121ED047280002B548 /* 5.png in Resources */,
 				B317AFAF1DE5D3C90093C511 /* PersonHeaderBG19@2x.png in Resources */,
+				AA73F30E1ED047280002B548 /* 38.png in Resources */,
 				B35C9F191DEC3FE80051E352 /* RBNewNodeCollectionViewCell.xib in Resources */,
 				B35C9F111DEC3FE80051E352 /* RBHomeSearchDetailViewController.xib in Resources */,
 				B317AFB81DE5D3C90093C511 /* PersonHeaderBG27@2x.png in Resources */,
 				C14BA3AF1DF93A9F001BDFBD /* BusinessMoneyTableViewCell.xib in Resources */,
+				AA73F3041ED047280002B548 /* 29.png in Resources */,
 				B35C9CE61DEC3ECD0051E352 /* MWPhotoBrowser.bundle in Resources */,
 				B35C9B601DEBFA630051E352 /* YWPCChooseTimeViewController.xib in Resources */,
 				B3C12A661DED3445000EF099 /* YWHomeQuickPayListVC.xib in Resources */,
 				B35C9ED61DEC3FE80051E352 /* RBPublicTagEditorViewController.xib in Resources */,
+				AA73F3141ED047280002B548 /* 7.png in Resources */,
+				AA73F3131ED047280002B548 /* 6.png in Resources */,
 				B35C9B7C1DEC036C0051E352 /* YWPCTTimeNameTableViewCell.xib in Resources */,
 				B35C9EA71DEC3FE80051E352 /* YWMessageTableViewCell.xib in Resources */,
 				B317AFC01DE5D3C90093C511 /* PersonHeaderBG34@2x.png in Resources */,
@@ -6484,6 +6661,7 @@
 				C174997B1DF6B59900F17B77 /* StorePhotoCollectionViewCell.xib in Resources */,
 				B35C9F331DEC3FE80051E352 /* JWSearchView.xib in Resources */,
 				B35C9E9D1DEC3FE80051E352 /* YWMessageNotificationViewController.xib in Resources */,
+				AA73F2F11ED047280002B548 /* 11.png in Resources */,
 				B317AFBA1DE5D3C90093C511 /* PersonHeaderBG29@2x.png in Resources */,
 				B35C9ED11DEC3FE80051E352 /* RBPublicLocationViewController.xib in Resources */,
 				B317AFA51DE5D3C90093C511 /* PersonHeaderBG0@2x.png in Resources */,
@@ -6494,9 +6672,11 @@
 				B35C9ECF1DEC3FE80051E352 /* RBPublicLocationEditorViewController.xib in Resources */,
 				C14BA3B71DF93A9F001BDFBD /* MyUserCell.xib in Resources */,
 				B317AFDE1DE5D3C90093C511 /* PersonHeaderBG7@2x.png in Resources */,
+				AA73F2EF1ED047280002B548 /* 1.png in Resources */,
 				AA3C41801E8DD9510052C732 /* WillAccountIncomeTableViewCell.xib in Resources */,
 				B32347031DEBD1FE002C72E1 /* YWPersonSuggRePlayViewController.xib in Resources */,
 				B3F07E611DE68C51005116EA /* YWBasicTableViewCell.xib in Resources */,
+				AA73F2F21ED047280002B548 /* 12.png in Resources */,
 				B31097101DE44EA00033A984 /* Assets.xcassets in Resources */,
 				B31098691DE4543E0033A984 /* YWDataAnalyseViewController.xib in Resources */,
 				AA6EBD801E9A3F32007336CF /* ExchangeViewController.xib in Resources */,
@@ -6514,12 +6694,17 @@
 				B35C9EA11DEC3FE80051E352 /* YWMessageFriendAddCell.xib in Resources */,
 				B35C9F2C1DEC3FE80051E352 /* JWTagCollectionViewCell.xib in Resources */,
 				B317AFB21DE5D3C90093C511 /* PersonHeaderBG21@2x.png in Resources */,
+				AA73F2F61ED047280002B548 /* 16.png in Resources */,
 				B317AF2C1DE5B53C0093C511 /* YWPersonSuperVipViewController.xib in Resources */,
 				B3F07F0D1DE72DD7005116EA /* YWPCCutSetViewController.xib in Resources */,
 				C174996A1DF6AC2D00F17B77 /* CommentHeadView.xib in Resources */,
+				AA73F3161ED047280002B548 /* 9.png in Resources */,
+				AA73F30C1ED047280002B548 /* 36.png in Resources */,
+				AA73F2FC1ED047280002B548 /* 21.png in Resources */,
 				B317AFB11DE5D3C90093C511 /* PersonHeaderBG20@2x.png in Resources */,
 				B317AFC41DE5D3C90093C511 /* PersonHeaderBG38@2x.png in Resources */,
 				B35C9EBC1DEC3FE80051E352 /* xhsemoji.plist in Resources */,
+				AA73F30B1ED047280002B548 /* 35.png in Resources */,
 				B35C9ECD1DEC3FE80051E352 /* RBPublicEditorViewController.xib in Resources */,
 				B387EAC21DE4732D0045323C /* YWComfiringViewController.xib in Resources */,
 				B317AFC91DE5D3C90093C511 /* PersonHeaderBG42@2x.png in Resources */,
@@ -6529,6 +6714,8 @@
 				AAF128191E8BB38D00121621 /* PayManageViewController.xib in Resources */,
 				B317AFD81DE5D3C90093C511 /* PersonHeaderBG56@2x.png in Resources */,
 				B30E4DF21DEF03B7008684BA /* YWHomeCouponViewController.xib in Resources */,
+				AA73F30F1ED047280002B548 /* 39.png in Resources */,
+				AA73F2FE1ED047280002B548 /* 23.png in Resources */,
 				B317AFFE1DE5E6230093C511 /* YWPersonNewsViewController.xib in Resources */,
 				B35C9F241DEC3FE80051E352 /* RBCommentToolsView.xib in Resources */,
 				B317AFDA1DE5D3C90093C511 /* PersonHeaderBG58@2x.png in Resources */,
@@ -6554,10 +6741,13 @@
 				B317AFC71DE5D3C90093C511 /* PersonHeaderBG40@2x.png in Resources */,
 				B317AFBF1DE5D3C90093C511 /* PersonHeaderBG33@2x.png in Resources */,
 				AAF1282D1E8BB8BE00121621 /* SetPayPasswordViewController.xib in Resources */,
+				AA73F2F31ED047280002B548 /* 13.png in Resources */,
 				B35C9B721DEC03390051E352 /* YWPCTIsAllDayTableViewCell.xib in Resources */,
 				B317AFBB1DE5D3C90093C511 /* PersonHeaderBG2@2x.png in Resources */,
 				B3F177E71DEFD62F007DB9A3 /* YWHomeAdvanceOrderViewController.xib in Resources */,
+				AA73F3021ED047280002B548 /* 27.png in Resources */,
 				B317AFBC1DE5D3C90093C511 /* PersonHeaderBG30@2x.png in Resources */,
+				AA73F3011ED047280002B548 /* 26.png in Resources */,
 				B3C12A6D1DED3575000EF099 /* YWHomeQuickPayListTableViewCell.xib in Resources */,
 				B35C9F151DEC3FE80051E352 /* RBAlbumCollectionViewCell.xib in Resources */,
 				B35C9F391DEC3FE80051E352 /* JWImgPickerAlbumChooseView.xib in Resources */,
@@ -6570,6 +6760,7 @@
 				B32347151DEBD73C002C72E1 /* YWPCEOnTableViewCell.xib in Resources */,
 				B317AC9F1DE557A80093C511 /* JWTagsCollectionViewCell.xib in Resources */,
 				B317AFCE1DE5D3C90093C511 /* PersonHeaderBG47@2x.png in Resources */,
+				AA73F3071ED047280002B548 /* 31.png in Resources */,
 				B31098751DE4543E0033A984 /* GifBundle.bundle in Resources */,
 				B317AC931DE53A6A0093C511 /* YWComfiredAgreeViewController.xib in Resources */,
 				B31098E51DE4543E0033A984 /* YWRegisterViewController.xib in Resources */,
@@ -6583,11 +6774,13 @@
 				B35C9F0F1DEC3FE80051E352 /* MDHotelRightBtn.xib in Resources */,
 				B35C9F091DEC3FE80051E352 /* RBHomeViewController.xib in Resources */,
 				B35C9EC51DEC3FE80051E352 /* RBIMGToolsCollectionViewCell.xib in Resources */,
+				AA73F2F71ED047280002B548 /* 17.png in Resources */,
 				B35C9E9A1DEC3FE80051E352 /* YWMessageFriendsAddViewController.xib in Resources */,
 				B35C9EEA1DEC3FE80051E352 /* RBNodeDetailHeader.xib in Resources */,
 				B3334B921E14CB2800710A7D /* YWHomeRefundTableViewCell.xib in Resources */,
 				B317AFC21DE5D3C90093C511 /* PersonHeaderBG36@2x.png in Resources */,
 				AA0361421EB0CA6B00684ED7 /* AddShopCategoryViewController.xib in Resources */,
+				AA73F3151ED047280002B548 /* 8.png in Resources */,
 				B317AF221DE5B4C90093C511 /* YWPersonHelpViewController.xib in Resources */,
 				B35C9EBA1DEC3FE80051E352 /* EmojisList.plist in Resources */,
 				B302EACA1DED65AA0000B0A0 /* YWHomeCommoditiesTableViewCell.xib in Resources */,
@@ -6813,6 +7006,7 @@
 				C1B427391DFA741600A3132E /* AlbumView.m in Sources */,
 				B35C9B711DEC03390051E352 /* YWPCTIsAllDayTableViewCell.m in Sources */,
 				B35C9D111DEC3ECD0051E352 /* EaseChatBarMoreView.m in Sources */,
+				AA73F2C31ED046680002B548 /* YWload.m in Sources */,
 				B327378A1DE824D3001C57DF /* YWPNRankView.m in Sources */,
 				B3ACF10D1DEF06C40056FD64 /* YWHomeAddCouponViewController.m in Sources */,
 				C14BA3B01DF93A9F001BDFBD /* IntroduceMoneyTableViewCell.m in Sources */,
