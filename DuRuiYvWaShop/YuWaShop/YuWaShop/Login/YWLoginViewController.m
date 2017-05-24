@@ -47,9 +47,9 @@
     [super viewWillAppear:animated];
     [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
     if (self.state == 0) {
-        [self.accountTextField becomeFirstResponder];
+//        [self.accountTextField becomeFirstResponder];
     }else{
-        [self.mobileTextField becomeFirstResponder];
+//        [self.mobileTextField becomeFirstResponder];
     }
 }
 
@@ -77,6 +77,10 @@
 }
 
 - (void)makeUI{
+    self.accountTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.mobileTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.secuirtyCodeTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"验证码" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.passwordtextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     self.passwordtextField.secureTextEntry = YES;
 
     self.secuirtyCodeBtn.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -208,12 +212,12 @@
     self.segmentLineView.centerX = sender.centerX;
     switch (sender.tag) {
         case 222:
-            [self.accountTextField becomeFirstResponder];
+//            [self.accountTextField becomeFirstResponder];    
             self.quickLoginView.hidden = YES;
             break;
             
         default:
-            [self.mobileTextField becomeFirstResponder];
+//            [self.mobileTextField becomeFirstResponder];
             self.quickLoginView.hidden = NO;
             break;
     }
