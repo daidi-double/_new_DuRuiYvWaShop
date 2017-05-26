@@ -90,7 +90,7 @@
                         <outlet property="delegate" destination="-1" id="dh7-rV-TEE"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckp-WR-HxR">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckp-WR-HxR">
                     <rect key="frame" x="240" y="212" width="80" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="LOD-Z4-4Cp"/>

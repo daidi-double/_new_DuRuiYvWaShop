@@ -228,7 +228,7 @@
                                 <outlet property="delegate" destination="-1" id="8LZ-lx-6yf"/>
                             </connections>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aal-Gx-A7g">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aal-Gx-A7g">
                             <rect key="frame" x="228" y="151" width="80" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="DeF-k1-y1o"/>
