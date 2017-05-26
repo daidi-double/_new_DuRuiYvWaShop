@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		253542381EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */; };
+		25EF07F61ED6896500C56823 /* YWStartAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EF07F51ED6896500C56823 /* YWStartAnimation.m */; };
 		AA0361411EB0CA6B00684ED7 /* AddShopCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */; };
 		AA0361421EB0CA6B00684ED7 /* AddShopCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */; };
 		AA0361461EB0DF5400684ED7 /* YWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0361441EB0DF5400684ED7 /* YWCategoryViewController.m */; };
@@ -891,6 +892,8 @@
 
 /* Begin PBXFileReference section */
 		253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponTableViewCell.xib; sourceTree = "<group>"; };
+		25EF07F41ED6896500C56823 /* YWStartAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWStartAnimation.h; sourceTree = "<group>"; };
+		25EF07F51ED6896500C56823 /* YWStartAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWStartAnimation.m; sourceTree = "<group>"; };
 		AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShopCategoryViewController.m; sourceTree = "<group>"; };
 		AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddShopCategoryViewController.xib; sourceTree = "<group>"; };
 		AA0361431EB0DF5400684ED7 /* YWCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCategoryViewController.h; sourceTree = "<group>"; };
@@ -2996,6 +2999,8 @@
 		B31097031DE44EA00033A984 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25EF07F41ED6896500C56823 /* YWStartAnimation.h */,
+				25EF07F51ED6896500C56823 /* YWStartAnimation.m */,
 				B317AF671DE5D3C90093C511 /* image */,
 				B387EA991DE45E110045323C /* mainController */,
 				B3C12A491DED217F000EF099 /* GlobalInfo.h */,
@@ -6968,6 +6973,7 @@
 				AA3788841E8ABA4700B7F9CC /* AddBankViewController.m in Sources */,
 				B35C9CB91DEC3ECD0051E352 /* EMCDDeviceManagerBase.m in Sources */,
 				B32737691DE80F01001C57DF /* YWPCTimeTableViewCell.m in Sources */,
+				25EF07F61ED6896500C56823 /* YWStartAnimation.m in Sources */,
 				AA3C416C1E8DD9510052C732 /* FinancailBaseModel.m in Sources */,
 				C14BA3AE1DF93A9F001BDFBD /* BusinessMoneyTableViewCell.m in Sources */,
 				B31098731DE4543E0033A984 /* NSObject+YYModel.m in Sources */,
