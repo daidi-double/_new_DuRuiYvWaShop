@@ -13,6 +13,7 @@
 #import "YWComfiredAgreeViewController.h"
 
 @interface YWRegisterViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *inviteTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *secuirtyCodeTextField;
@@ -39,7 +40,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
-    [self.accountTextField becomeFirstResponder];
+//    [self.accountTextField becomeFirstResponder];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -51,6 +52,13 @@
 }
 
 - (void)makeUI{
+    self.accountTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.secuirtyCodeTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"验证码" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.passwordtextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.inviteTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入邀请码(选填)" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    self.passwordtextField.secureTextEntry = YES;
+    
+    
     self.passwordtextField.secureTextEntry = YES;
     self.registerBtn.layer.cornerRadius = 22.f;
     self.registerBtn.layer.masksToBounds = YES;
