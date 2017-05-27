@@ -69,7 +69,7 @@
     self.secuirtyCodeBtn.layer.masksToBounds = YES;
     [self.agreeBtn setImage:[UIImage imageNamed:@"未选中"] forState:UIControlStateNormal];
     [self.agreeBtn setImage:[UIImage imageNamed:@"选中"] forState:UIControlStateSelected];
-    self.agreeBtn.selected = YES;
+    self.agreeBtn.selected = NO;
 }
 
 - (BOOL)canSendRequset{

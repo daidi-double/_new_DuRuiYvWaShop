@@ -127,11 +127,11 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWA-pH-Qtt">
-                    <rect key="frame" x="118" y="288" width="140" height="44"/>
+                    <rect key="frame" x="118" y="288" width="140" height="38"/>
                     <color key="backgroundColor" red="0.17254901960784313" green="0.43137254901960786" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="140" id="kQA-67-VR8"/>
-                        <constraint firstAttribute="height" constant="44" id="nMr-YO-X6z"/>
+                        <constraint firstAttribute="height" constant="38" id="nMr-YO-X6z"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="立即注册">
@@ -142,7 +142,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已阅读并同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-An-f6S">
-                    <rect key="frame" x="79" y="347" width="86" height="24"/>
+                    <rect key="frame" x="79" y="341" width="86" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="0i5-dn-ora"/>
                     </constraints>
@@ -151,7 +151,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW3-g5-Cta">
-                    <rect key="frame" x="165" y="347" width="86" height="24"/>
+                    <rect key="frame" x="165" y="341" width="86" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="H7n-iB-1uQ"/>
                     </constraints>
@@ -164,7 +164,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="OBt-BY-JUX">
-                    <rect key="frame" x="114" y="89" width="16" height="16"/>
+                    <rect key="frame" x="114" y="84" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="ifg-pK-UqL"/>
                         <constraint firstAttribute="width" constant="16" id="uPl-Av-gvi"/>
@@ -185,20 +185,20 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-ZA-9Ro">
-                    <rect key="frame" x="0.0" y="451" width="375" height="1"/>
+                    <rect key="frame" x="0.0" y="445" width="375" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="1Hh-EW-H3g"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tha-lu-Iwr">
-                    <rect key="frame" x="149" y="418" width="77" height="18"/>
+                    <rect key="frame" x="149" y="412" width="77" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqW-p7-X8V">
-                    <rect key="frame" x="167" y="472" width="40" height="40"/>
+                    <rect key="frame" x="167" y="466" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="Ix2-Kj-3f6"/>
                         <constraint firstAttribute="height" constant="40" id="dTZ-eV-NNa"/>
@@ -206,15 +206,15 @@
                     <state key="normal" image="weix"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9p-Vb-Riw">
-                    <rect key="frame" x="77" y="472" width="40" height="40"/>
+                    <rect key="frame" x="77" y="466" width="40" height="40"/>
                     <state key="normal" image="Tencent_QQ"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-II-dKW">
-                    <rect key="frame" x="257" y="472" width="40" height="40"/>
+                    <rect key="frame" x="257" y="466" width="40" height="40"/>
                     <state key="normal" image="weibo"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dE-dx-e8R">
-                    <rect key="frame" x="241" y="339" width="40" height="40"/>
+                    <rect key="frame" x="241" y="333" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="GAU-Dl-Otz"/>
                         <constraint firstAttribute="width" constant="40" id="pUT-Gg-V9M"/>
@@ -273,7 +273,7 @@
                 <constraint firstItem="rCS-hH-PMd" firstAttribute="leading" secondItem="Rzg-qz-syO" secondAttribute="leading" id="nLg-RO-jg7"/>
                 <constraint firstItem="BqW-p7-X8V" firstAttribute="width" secondItem="o9p-Vb-Riw" secondAttribute="width" id="oSq-o5-IdA"/>
                 <constraint firstAttribute="trailing" secondItem="lXh-iH-H2H" secondAttribute="trailing" id="ohg-Qt-2Lc"/>
-                <constraint firstItem="hC5-J9-s17" firstAttribute="bottom" secondItem="OBt-BY-JUX" secondAttribute="bottom" id="q5J-g0-z3E"/>
+                <constraint firstItem="hC5-J9-s17" firstAttribute="bottom" secondItem="OBt-BY-JUX" secondAttribute="bottom" constant="5" id="q5J-g0-z3E"/>
                 <constraint firstItem="qZg-fM-qxj" firstAttribute="centerY" secondItem="V34-99-le0" secondAttribute="centerY" id="rHS-0I-bpH"/>
                 <constraint firstItem="nGc-II-dKW" firstAttribute="width" secondItem="o9p-Vb-Riw" secondAttribute="width" id="s3h-6k-hTe"/>
                 <constraint firstItem="q4T-uB-go9" firstAttribute="top" secondItem="hC5-J9-s17" secondAttribute="bottom" id="stc-yd-0tY"/>
