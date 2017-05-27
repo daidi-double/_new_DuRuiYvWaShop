@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253303F41ED952AD001166E7 /* YWmodel1234.m in Sources */ = {isa = PBXBuildFile; fileRef = 253303F31ED952AD001166E7 /* YWmodel1234.m */; };
 		253542381EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */; };
 		AA0361411EB0CA6B00684ED7 /* AddShopCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */; };
 		AA0361421EB0CA6B00684ED7 /* AddShopCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */; };
@@ -891,6 +892,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253303F21ED952AD001166E7 /* YWmodel1234.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YWmodel1234.h; path = ../YWmodel1234.h; sourceTree = "<group>"; };
+		253303F31ED952AD001166E7 /* YWmodel1234.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YWmodel1234.m; path = ../YWmodel1234.m; sourceTree = "<group>"; };
 		253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponTableViewCell.xib; sourceTree = "<group>"; };
 		AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShopCategoryViewController.m; sourceTree = "<group>"; };
 		AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddShopCategoryViewController.xib; sourceTree = "<group>"; };
@@ -3534,6 +3537,8 @@
 		B310985C1DE4543E0033A984 /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				253303F21ED952AD001166E7 /* YWmodel1234.h */,
+				253303F31ED952AD001166E7 /* YWmodel1234.m */,
 				B317AF151DE5B3CD0093C511 /* SubVC */,
 				B387EAB41DE4603D0045323C /* Model */,
 				B310985D1DE4543E0033A984 /* Cell */,
@@ -7250,6 +7255,7 @@
 				B35C9B801DEC037D0051E352 /* YWPCTDayTimeAddTableViewCell.m in Sources */,
 				B3F177FC1DEFF48D007DB9A3 /* YWHomeOrderNoticaficationTableViewCell.m in Sources */,
 				B31098A21DE4543E0033A984 /* MASViewAttribute.m in Sources */,
+				253303F41ED952AD001166E7 /* YWmodel1234.m in Sources */,
 				C14BA3A41DF93A9F001BDFBD /* BusinessBaseInfoModel.m in Sources */,
 				AA3A30681EB0C77100E2FCD7 /* YWCategoryModel.m in Sources */,
 				B35C9CE21DEC3ECD0051E352 /* PSTGridLayoutInfo.m in Sources */,
