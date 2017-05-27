@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		253542381EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */; };
-		25EF07F61ED6896500C56823 /* YWStartAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EF07F51ED6896500C56823 /* YWStartAnimation.m */; };
 		AA0361411EB0CA6B00684ED7 /* AddShopCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */; };
 		AA0361421EB0CA6B00684ED7 /* AddShopCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */; };
 		AA0361461EB0DF5400684ED7 /* YWCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0361441EB0DF5400684ED7 /* YWCategoryViewController.m */; };
@@ -138,6 +137,7 @@
 		AAF1282D1E8BB8BE00121621 /* SetPayPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF1282B1E8BB8BE00121621 /* SetPayPasswordViewController.xib */; };
 		AAF128321E8BBB6500121621 /* ForgetPayPasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF128301E8BBB6500121621 /* ForgetPayPasswordTableViewCell.m */; };
 		AAF128331E8BBB6500121621 /* ForgetPayPasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF128311E8BBB6500121621 /* ForgetPayPasswordTableViewCell.xib */; };
+		AAFB34641ED90C5000ADBAFB /* YWStartAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFB34631ED90C5000ADBAFB /* YWStartAnimation.m */; };
 		B302EABC1DED640D0000B0A0 /* YWHomeCommoditiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B302EABA1DED640D0000B0A0 /* YWHomeCommoditiesVC.m */; };
 		B302EABD1DED640D0000B0A0 /* YWHomeCommoditiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B302EABB1DED640D0000B0A0 /* YWHomeCommoditiesVC.xib */; };
 		B302EAC41DED657E0000B0A0 /* YWHomeAddCommoditiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B302EAC21DED657E0000B0A0 /* YWHomeAddCommoditiesVC.m */; };
@@ -892,8 +892,6 @@
 
 /* Begin PBXFileReference section */
 		253542371EA49D78006F2C7A /* YWHomeCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCouponTableViewCell.xib; sourceTree = "<group>"; };
-		25EF07F41ED6896500C56823 /* YWStartAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWStartAnimation.h; sourceTree = "<group>"; };
-		25EF07F51ED6896500C56823 /* YWStartAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWStartAnimation.m; sourceTree = "<group>"; };
 		AA03613F1EB0CA6B00684ED7 /* AddShopCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShopCategoryViewController.m; sourceTree = "<group>"; };
 		AA0361401EB0CA6B00684ED7 /* AddShopCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddShopCategoryViewController.xib; sourceTree = "<group>"; };
 		AA0361431EB0DF5400684ED7 /* YWCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCategoryViewController.h; sourceTree = "<group>"; };
@@ -1078,6 +1076,8 @@
 		AAF1282F1E8BBB6500121621 /* ForgetPayPasswordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPayPasswordTableViewCell.h; sourceTree = "<group>"; };
 		AAF128301E8BBB6500121621 /* ForgetPayPasswordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPayPasswordTableViewCell.m; sourceTree = "<group>"; };
 		AAF128311E8BBB6500121621 /* ForgetPayPasswordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPayPasswordTableViewCell.xib; sourceTree = "<group>"; };
+		AAFB34621ED90C5000ADBAFB /* YWStartAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWStartAnimation.h; sourceTree = "<group>"; };
+		AAFB34631ED90C5000ADBAFB /* YWStartAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWStartAnimation.m; sourceTree = "<group>"; };
 		B302EAB91DED640D0000B0A0 /* YWHomeCommoditiesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWHomeCommoditiesVC.h; sourceTree = "<group>"; };
 		B302EABA1DED640D0000B0A0 /* YWHomeCommoditiesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWHomeCommoditiesVC.m; sourceTree = "<group>"; };
 		B302EABB1DED640D0000B0A0 /* YWHomeCommoditiesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWHomeCommoditiesVC.xib; sourceTree = "<group>"; };
@@ -2999,8 +2999,8 @@
 		B31097031DE44EA00033A984 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				25EF07F41ED6896500C56823 /* YWStartAnimation.h */,
-				25EF07F51ED6896500C56823 /* YWStartAnimation.m */,
+				AAFB34621ED90C5000ADBAFB /* YWStartAnimation.h */,
+				AAFB34631ED90C5000ADBAFB /* YWStartAnimation.m */,
 				B317AF671DE5D3C90093C511 /* image */,
 				B387EA991DE45E110045323C /* mainController */,
 				B3C12A491DED217F000EF099 /* GlobalInfo.h */,
@@ -6973,7 +6973,7 @@
 				AA3788841E8ABA4700B7F9CC /* AddBankViewController.m in Sources */,
 				B35C9CB91DEC3ECD0051E352 /* EMCDDeviceManagerBase.m in Sources */,
 				B32737691DE80F01001C57DF /* YWPCTimeTableViewCell.m in Sources */,
-				25EF07F61ED6896500C56823 /* YWStartAnimation.m in Sources */,
+				AAFB34641ED90C5000ADBAFB /* YWStartAnimation.m in Sources */,
 				AA3C416C1E8DD9510052C732 /* FinancailBaseModel.m in Sources */,
 				C14BA3AE1DF93A9F001BDFBD /* BusinessMoneyTableViewCell.m in Sources */,
 				B31098731DE4543E0033A984 /* NSObject+YYModel.m in Sources */,
