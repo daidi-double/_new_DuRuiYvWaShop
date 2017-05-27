@@ -70,7 +70,7 @@
                 break;
             }
             case 2:{
-                 //2笔记
+                 // 2笔记 
                 vc =[[YWMyContactViewController  alloc]init];
                  [weakSelf.navigationController pushViewController:vc animated:YES];
                 break;

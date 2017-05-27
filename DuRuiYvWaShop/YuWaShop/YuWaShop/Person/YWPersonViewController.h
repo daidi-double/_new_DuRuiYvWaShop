@@ -8,6 +8,6 @@
 
 #import "JWBasicViewController.h"
 
-@interface YWPersonViewController :  JWBasicViewController
+@interface YWPersonViewController : JWBasicViewController
 
 @end
